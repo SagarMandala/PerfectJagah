@@ -1644,6 +1644,223 @@
                 display: none;
             }
         }
+        /* Document Download Styles */
+        .document-item {
+            background: var(--glass-dark);
+            padding: 20px;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+            .document-item:hover {
+                background: rgba(255, 255, 255, 0.08);
+                transform: translateY(-2px);
+                border-color: rgba(255, 206, 84, 0.3);
+                color: white;
+                text-decoration: none;
+            }
+
+        .document-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gold-gradient);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            flex-shrink: 0;
+        }
+
+        .document-details h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: white;
+        }
+
+        .document-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        .download-indicator {
+            margin-left: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px;
+            border-radius: 50%;
+            transition: var(--transition-smooth);
+        }
+
+        .document-item:hover .download-indicator {
+            background: var(--gold-gradient);
+            color: var(--text-primary);
+        }
+
+        /* Approval Icons on Project Cards */
+        .approval-icons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            z-index: 2;
+        }
+
+        .approval-icon {
+            width: 100px;
+            height: 100px;
+            /*background: rgba(255, 255, 255, 0.95);*/
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+            .approval-icon:hover {
+                transform: scale(1.1);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            .approval-icon img {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+            }
+
+            /* Fallback for missing images */
+            .approval-icon .fallback-text {
+                font-size: 0.6rem;
+                font-weight: 700;
+                color: var(--text-primary);
+                text-align: center;
+                line-height: 1.1;
+            }
+
+        /* Modal Approval Section */
+        .modal-approvals {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-approval-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .modal-approval-icon {
+            width: 100px;
+            height: 100px;
+            /*background: rgba(255, 255, 255, 0.95);*/
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transition: var(--transition-smooth);
+        }
+
+            .modal-approval-icon:hover {
+                transform: scale(1.05);
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+            }
+
+            .modal-approval-icon img {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+            }
+
+            .modal-approval-icon .fallback-text {
+                font-size: 0.8rem;
+                font-weight: 700;
+                color: var(--text-primary);
+                text-align: center;
+                line-height: 1.1;
+            }
+
+        .modal-approval-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: white;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            /* Add these lines to your existing @media (max-width: 768px) rule */
+            .approval-icons {
+                position: static;
+                flex-direction: row;
+                justify-content: flex-end;
+                margin-top: 12px;
+                margin-right: 12px;
+            }
+
+            .approval-icon {
+                width: 35px;
+                height: 35px;
+            }
+
+                .approval-icon img {
+                    width: 24px;
+                    height: 24px;
+                }
+
+            .modal-approvals {
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .modal-approval-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+                .modal-approval-icon img {
+                    width: 45px;
+                    height: 45px;
+                }
+        }
+
+        @media (max-width: 480px) {
+            /* Add these lines to your existing @media (max-width: 480px) rule */
+            .approval-icons {
+                gap: 4px;
+            }
+
+            .approval-icon {
+                width: 30px;
+                height: 30px;
+            }
+
+                .approval-icon img {
+                    width: 20px;
+                    height: 20px;
+                }
+        }
     </style>
 </head>
 <body>
@@ -1731,12 +1948,12 @@
 
             <div class="hero-stats">
                 <div class="stat-item">
-                    <span class="stat-number">20+</span>
+                    <span class="stat-number">14+</span>
                     <span class="stat-label">Years Experience</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Projects Completed</span>
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Projects</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">1000+</span>
@@ -1751,7 +1968,7 @@
                 </a>
                 <a href="#contact" class="btn btn-outline">
                     <i class="fas fa-play"></i>
-                    <span>Watch Tour</span>
+                    <span>Book a visit</span>
                 </a>
             </div>
         </div>
@@ -1775,7 +1992,7 @@
                     Building Dreams with <span class="gradient-text">Trust & Excellence</span>
                 </h2>
                 <p class="section-subtitle">
-                    With over two decades of experience in premium real estate, we specialize in delivering verified, approved layouts that exceed expectations.
+                    With over <strong>two decades of experience</strong> in <strong>premium real estate</strong>, we specialize in delivering <strong>legally verified, approved layouts</strong> that <strong>exceed expectations</strong> — all at <strong>affordable pricing</strong>. We offer a wide range of <strong>residential apartments</strong>, <strong>luxury villas</strong>, and <strong>open plots</strong> to suit every lifestyle.
                 </p>
             </div>
 
@@ -1850,11 +2067,25 @@
             </div>
 
             <div class="projects-grid">
+
                 <!-- Project 1 -->
                 <div class="project-card" onclick="openProjectModal('project1')">
                     <div class="project-image has-image">
-                        <img src="assets/images/project1/exterior-golden-hour.jpg" alt="Skyline Residency Golden Hour" loading="lazy">
-                        <div class="project-badge">Ready to Move</div>
+                        <img src="assets/images/project1/exterior-golden-hour.jpg" alt="SRINIVASAM by PROTEK Realty" loading="lazy">
+                        <div class="project-badge"></div>
+
+                        <!-- NEW: Approval Icons -->
+                        <div class="approval-icons">
+                            <div class="approval-icon" title="RERA Approved">
+                                <img src="assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
+                            </div>
+                            <div class="approval-icon" title="DTCP Approved">
+                                <img src="assets/dtcp_approvedprojects_logo.jpeg" alt="DTCP Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="fallback-text" style="display: none;">DTCP<br>APPROVED</div>
+                            </div>
+                        </div>
+
                         <div class="project-overlay">
                             <button class="view-btn">
                                 <i class="fas fa-eye"></i>
@@ -1862,14 +2093,13 @@
                             </button>
                         </div>
                     </div>
-
                     <div class="project-content">
                         <div class="project-header">
                             <div>
-                                <h3 class="project-title">Skyline Residency</h3>
+                                <h3 class="project-title">SRINIVASAM by PROTEK Realty</h3>
                                 <p class="project-location">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    Electronic City, Bangalore
+                                    Vattimeenapally Grampanchayat
                                 </p>
                             </div>
                             <div class="project-rating">
@@ -1882,117 +2112,18 @@
                         </div>
 
                         <div class="project-highlights">
-                            <span class="highlight-tag">5min Airport</span>
-                            <span class="highlight-tag">2km IT Park</span>
-                            <span class="highlight-tag">Metro Connected</span>
+                            <span class="highlight-tag">70% Bank Loan available on MARKET Price</span>
+                            <span class="highlight-tag">Inside "Regional Ring Road"</span>
+                            <span class="highlight-tag">30 mins drive from Mokilla</span>
+                            <span class="highlight-tag">5 mins drive from "Telangana Mobility Valley"</span>
                         </div>
 
                         <div class="project-footer">
                             <div class="project-price">
                                 <span class="price-label">Starting from</span>
-                                <span class="price-value">₹45 Lakhs</span>
+                                <span class="price-value">₹24 Lakhs</span>
                             </div>
                             <button class="explore-btn" onclick="event.stopPropagation(); openProjectModal('project1')">
-                                <span>Explore</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card" onclick="openProjectModal('project2')">
-                    <div class="project-image has-image">
-                        <img src="assets/images/project2/eco-exterior-gardens.jpg" alt="Green Valley Eco Apartments" loading="lazy">
-                        <div class="project-badge" style="background: var(--success-gradient);">Eco-Friendly</div>
-                        <div class="project-overlay">
-                            <button class="view-btn">
-                                <i class="fas fa-eye"></i>
-                                <span>View Details</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div>
-                                <h3 class="project-title">Green Valley Apartments</h3>
-                                <p class="project-location">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Whitefield, Bangalore
-                                </p>
-                            </div>
-                            <div class="project-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-
-                        <div class="project-highlights">
-                            <span class="highlight-tag">1km Railway</span>
-                            <span class="highlight-tag">Near Hospital</span>
-                            <span class="highlight-tag">School Zone</span>
-                        </div>
-
-                        <div class="project-footer">
-                            <div class="project-price">
-                                <span class="price-label">Starting from</span>
-                                <span class="price-value">₹65 Lakhs</span>
-                            </div>
-                            <button class="explore-btn" onclick="event.stopPropagation(); openProjectModal('project2')">
-                                <span>Explore</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card" onclick="openProjectModal('project3')">
-                    <div class="project-image has-image">
-                        <img src="assets/images/project3/luxury-night-view.jpg" alt="Royal Heights Luxury View" loading="lazy">
-                        <div class="project-badge" style="background: var(--secondary-gradient);">Ultra Luxury</div>
-                        <div class="project-overlay">
-                            <button class="view-btn">
-                                <i class="fas fa-eye"></i>
-                                <span>View Details</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div>
-                                <h3 class="project-title">Royal Heights</h3>
-                                <p class="project-location">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Koramangala, Bangalore
-                                </p>
-                            </div>
-                            <div class="project-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-
-                        <div class="project-highlights">
-                            <span class="highlight-tag">Mall Nearby</span>
-                            <span class="highlight-tag">Park View</span>
-                            <span class="highlight-tag">Bus Stand 500m</span>
-                        </div>
-
-                        <div class="project-footer">
-                            <div class="project-price">
-                                <span class="price-label">Starting from</span>
-                                <span class="price-value">₹80 Lakhs</span>
-                            </div>
-                            <button class="explore-btn" onclick="event.stopPropagation(); openProjectModal('project3')">
                                 <span>Explore</span>
                                 <i class="fas fa-arrow-right"></i>
                             </button>
@@ -2089,7 +2220,7 @@
                         <div class="form-group">
                             <select name="property_interest" class="form-select" required>
                                 <option value="">Select Property Interest</option>
-                                <option value="skyline">Skyline Residency</option>
+                                <option value="skyline">SRINIVASAM by PROTEK Realty</option>
                                 <option value="green-valley">Green Valley Apartments</option>
                                 <option value="royal-heights">Royal Heights</option>
                                 <option value="general">General Inquiry</option>
@@ -2172,15 +2303,15 @@
         // Updated Project Data with Project1, Project2, Project3 folder structure
         const projectData = {
             project1: {
-                title: "Skyline Residency",
-                location: "Electronic City, Bangalore",
-                price: "₹45 Lakhs - ₹85 Lakhs",
-                status: "Ready to Move",
+                title: "SRINIVASAM by PROTEK Realty",
+                location: "Vattimeenapally Grampanchayat",
+                price: "₹24 Lakhs - ₹50 Lakhs",
+                status: "",
                 rating: 4.8,
                 images: [
                     {
                         src: "assets/images/project1/exterior-golden-hour.jpg",
-                        alt: "Skyline Residency - Golden Hour Exterior View",
+                        alt: "SRINIVASAM by PROTEK Realty",
                         title: "Golden Hour Exterior View"
                     },
                     {
@@ -2212,169 +2343,52 @@
                 video: {
                     src: "assets/videos/project1/walkthrough.mp4",
                     poster: "assets/images/project1/exterior-golden-hour.jpg",
-                    title: "Skyline Residency - Complete Walkthrough"
+                    title: "SRINIVASAM by PROTEK Realty"
                 },
                 highlights: [
-                    "5 minutes from Kempegowda International Airport",
-                    "2km from major IT parks (Infosys, Wipro, TCS)",
-                    "Direct metro connectivity - Purple Line",
-                    "24/7 security with CCTV surveillance",
-                    "Swimming pool with kids' section",
-                    "Fully equipped fitness center",
-                    "Children's play area and landscaped gardens",
-                    "Power backup and 24/7 water supply",
-                    "Vastu-compliant designs",
-                    "Car parking for every unit"
+                    "Very close proximity to Regional Ring Road",
+                    "near to Nawabpet",
+                    "20  mins drive from Shankerpally",
+                    "5 mins drive from Telangana Mobility Valley a project which is initiated in 3000 acres by Central & State Govt.",
+                    "5 mins from Mehtabkhan guda junction",
+                    "2 mins drive from Nawabpet.",
+                    "40 mins from Patancheru.",
+                    "30 mins drive from Mokilla",
+                    "40 mins from Neopolis(Kokapet)."
                 ],
                 amenities: [
-                    { icon: "fas fa-swimming-pool", name: "Swimming Pool" },
-                    { icon: "fas fa-dumbbell", name: "Gymnasium" },
-                    { icon: "fas fa-car", name: "Covered Parking" },
-                    { icon: "fas fa-shield-alt", name: "24/7 Security" },
-                    { icon: "fas fa-leaf", name: "Garden & Landscaping" },
-                    { icon: "fas fa-bolt", name: "Power Backup" }
+                    { icon: "fas fa-file-contract", name: "100% Clear Title" },
+                    { icon: "fas fa-road", name: "CC Roads" },
+                    { icon: "fas fa-shield-alt", name: "24x7 Security" },
+                    { icon: "fas fa-tint", name: "Underground Water Supply" },
+                    { icon: "fas fa-water", name: "Underground Drainage System" },
+                    { icon: "fas fa-compass", name: "100% Vastu Plotting" },
+                    { icon: "fas fa-child", name: "Children Play Area" },
+                    { icon: "fas fa-bolt", name: "Electricity" },
+                    { icon: "fas fa-lightbulb", name: "Street Lights" },
+                    { icon: "fas fa-tree", name: "Avenue Plantation" }
                 ],
                 documents: [
-                    { name: "Project Brochure", url: "#" },
-                    { name: "Floor Plans", url: "#" },
-                    { name: "Approval Documents", url: "#" },
-                    { name: "Payment Schedule", url: "#" }
-                ],
-                description: "Experience luxury living at Skyline Residency with premium 2BHK and 3BHK apartments featuring modern amenities and strategic location advantages."
-            },
-            project2: {
-                title: "Green Valley Apartments",
-                location: "Whitefield, Bangalore",
-                price: "₹65 Lakhs - ₹1.2 Cr",
-                status: "Eco-Friendly",
-                rating: 4.9,
-                images: [
                     {
-                        src: "assets/images/project2/eco-exterior-gardens.jpg",
-                        alt: "Green Valley - Eco Exterior with Gardens",
-                        title: "Eco Exterior with Gardens"
+                        name: "Project Brochure",
+                        url: "assets/documents/project1/SrinivasamBroucher2.pdf",
+                        icon: "fas fa-file-pdf",
+                        size: "4.03 MB"
                     },
                     {
-                        src: "assets/images/project2/sustainable-interior.jpg",
-                        alt: "Sustainable Interior Design",
-                        title: "Sustainable Interior Design"
+                        name: "TG RERA Certificate",
+                        url: "assets/documents/project1/CertificateFile_63523.pdf",
+                        icon: "fas fa-certificate",
+                        size: "225 KB"
                     },
                     {
-                        src: "assets/images/project2/rooftop-terrace-garden.jpg",
-                        alt: "Rooftop Terrace Garden",
-                        title: "Rooftop Terrace Garden"
-                    },
-                    {
-                        src: "assets/images/project2/solar-panel-installation.jpg",
-                        alt: "Solar Panel Installation",
-                        title: "Solar Panel Installation"
-                    },
-                    {
-                        src: "assets/images/project2/rainwater-harvesting.jpg",
-                        alt: "Rainwater Harvesting System",
-                        title: "Rainwater Harvesting System"
-                    },
-                    {
-                        src: "assets/images/project2/community-green-spaces.jpg",
-                        alt: "Community Green Spaces",
-                        title: "Community Green Spaces"
+                        name: "LP Number Document",
+                        url: "assets/documents/project1/PRO103.pdf",
+                        icon: "fas fa-file-alt",
+                        size: "555 KB"
                     }
                 ],
-                video: {
-                    src: "assets/videos/project2/eco-tour.mp4",
-                    poster: "assets/images/project2/eco-exterior-gardens.jpg",
-                    title: "Green Valley - Eco-Friendly Living Tour"
-                },
-                highlights: [
-                    "1km from Whitefield Railway Station",
-                    "Walking distance to Columbia Asia Hospital",
-                    "Top-rated schools within 2km radius",
-                    "IGBC Green Building certified",
-                    "Rooftop terrace garden with organic farming",
-                    "Solar power backup system"
-                ],
-                amenities: [
-                    { icon: "fas fa-solar-panel", name: "Solar Power" },
-                    { icon: "fas fa-seedling", name: "Organic Garden" },
-                    { icon: "fas fa-recycle", name: "Waste Management" },
-                    { icon: "fas fa-tint", name: "Rainwater Harvesting" },
-                    { icon: "fas fa-leaf", name: "Green Certification" },
-                    { icon: "fas fa-wind", name: "Natural Ventilation" }
-                ],
-                documents: [
-                    { name: "Green Building Certificate", url: "#" },
-                    { name: "Eco-Friendly Features", url: "#" },
-                    { name: "Energy Efficiency Report", url: "#" },
-                    { name: "Sustainability Guide", url: "#" }
-                ],
-                description: "Green Valley Apartments offers sustainable living with eco-friendly features and excellent connectivity to Whitefield's business district."
-            },
-            project3: {
-                title: "Royal Heights",
-                location: "Koramangala, Bangalore",
-                price: "₹80 Lakhs - ₹1.5 Cr",
-                status: "Ultra Luxury",
-                rating: 5.0,
-                images: [
-                    {
-                        src: "assets/images/project3/luxury-night-view.jpg",
-                        alt: "Royal Heights - Luxury Night View",
-                        title: "Luxury Night View"
-                    },
-                    {
-                        src: "assets/images/project3/penthouse-interior.jpg",
-                        alt: "Penthouse Interior",
-                        title: "Penthouse Interior"
-                    },
-                    {
-                        src: "assets/images/project3/premium-clubhouse.jpg",
-                        alt: "Premium Clubhouse",
-                        title: "Premium Clubhouse"
-                    },
-                    {
-                        src: "assets/images/project3/panoramic-city-view.jpg",
-                        alt: "Panoramic City View",
-                        title: "Panoramic City View"
-                    },
-                    {
-                        src: "assets/images/project3/grand-lobby-entrance.jpg",
-                        alt: "Grand Lobby Entrance",
-                        title: "Grand Lobby Entrance"
-                    },
-                    {
-                        src: "assets/images/project3/infinity-pool-deck.jpg",
-                        alt: "Infinity Pool Deck",
-                        title: "Infinity Pool Deck"
-                    }
-                ],
-                video: {
-                    src: "assets/videos/project3/luxury-showcase.mp4",
-                    poster: "assets/images/project3/luxury-night-view.jpg",
-                    title: "Royal Heights - Ultra Luxury Showcase"
-                },
-                highlights: [
-                    "Prime location in Koramangala 5th Block",
-                    "Forum Mall within 1km distance",
-                    "Lalbagh Botanical Garden view from higher floors",
-                    "500m from major bus terminal",
-                    "Premium club house with concierge services",
-                    "Infinity swimming pool with city view"
-                ],
-                amenities: [
-                    { icon: "fas fa-crown", name: "Concierge Service" },
-                    { icon: "fas fa-spa", name: "Luxury Spa" },
-                    { icon: "fas fa-cocktail", name: "Rooftop Lounge" },
-                    { icon: "fas fa-dumbbell", name: "Premium Gym" },
-                    { icon: "fas fa-car-side", name: "Valet Parking" },
-                    { icon: "fas fa-swimming-pool", name: "Infinity Pool" }
-                ],
-                documents: [
-                    { name: "Luxury Amenities Guide", url: "#" },
-                    { name: "Premium Floor Plans", url: "#" },
-                    { name: "Concierge Services", url: "#" },
-                    { name: "Investment Portfolio", url: "#" }
-                ],
-                description: "Royal Heights brings you ultra-luxury living in the heart of Bangalore with panoramic city views and world-class amenities."
+                description: "We have 9 acres villa plots geated community layout on Shankerpally to Vikarabad Highway.It is a DTCP approved & RERA certified project."
             }
         };
 
@@ -2515,6 +2529,7 @@
         }
 
         // Enhanced Project Modal Function
+        // Enhanced Project Modal Function with Document Downloads + Approval Icons
         function openProjectModal(projectId) {
             const project = projectData[projectId];
             if (!project) return;
@@ -2533,84 +2548,134 @@
 
             const modal = document.getElementById('projectModal');
             const modalContent = document.getElementById('modalContent');
+
             modalContent.innerHTML = `
-                        <div style="padding: 40px; color: white;">
-                            <div style="text-align: center; margin-bottom: 40px;">
-                                <h1 style="font-size: 2.5rem; margin-bottom: 16px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${project.title}</h1>
-                                <p style="font-size: 1.2rem; opacity: 0.8;"><i class="fas fa-map-marker-alt"></i> ${project.location}</p>
-                                <div style="font-size: 1.5rem; font-weight: 700; margin-top: 12px; color: #fbbf24;">${project.price}</div>
-                            </div>
+            <div style="padding: 40px; color: white;">
+                <!-- Project Title & Basic Info -->
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h1 style="font-size: 2.5rem; margin-bottom: 16px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${project.title}</h1>
+                    <p style="font-size: 1.2rem; opacity: 0.8;"><i class="fas fa-map-marker-alt"></i> ${project.location}</p>
+                    <div style="font-size: 1.5rem; font-weight: 700; margin-top: 12px; color: #fbbf24;">${project.price}</div>
+                </div>
 
-                            <div style="margin-bottom: 40px;">
-                                <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-images"></i> Project Gallery & Video</h3>
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-                                    ${project.images.map((img, index) =>
-                `<div style="background: var(--glass-dark); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(10px);" onclick="openLightbox(${JSON.stringify(galleryItems).replace(/"/g, '&quot;')}, ${index})">
-                                            <img src="${img.src}" alt="${img.alt}" style="width: 100%; height: 150px; object-fit: cover;">
-                                            <div style="padding: 12px; text-align: center; font-size: 0.9rem;">${img.title}</div>
-                                        </div>`
-            ).join('')}
-                                    ${project.video ?
-                    `<div style="background: var(--glass-dark); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(10px); position: relative;" onclick="openLightbox(${JSON.stringify(galleryItems).replace(/"/g, '&quot;')}, ${project.images.length})">
-                                            <img src="${project.video.poster}" alt="${project.video.title}" style="width: 100%; height: 150px; object-fit: cover;">
-                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
-                                                <i class="fas fa-play" style="color: white; font-size: 1.2rem; margin-left: 3px;"></i>
-                                            </div>
-                                            <div style="padding: 12px; text-align: center; font-size: 0.9rem;">${project.video.title}</div>
-                                        </div>` : ''
-                }
-                                </div>
-                            </div>
-
-                            <div style="margin-bottom: 40px;">
-                                <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-info-circle"></i> About This Project</h3>
-                                <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">${project.description}</p>
-                            </div>
-
-                            <div style="margin-bottom: 40px;">
-                                <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-pin"></i> Key Highlights</h3>
-                                <div style="display: grid; gap: 0.5rem;">
-                                    ${project.highlights.map(highlight =>
-                    `<div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: var(--glass-dark); border-radius: 8px; backdrop-filter: blur(10px);">
-                                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
-                                            <span>${highlight}</span>
-                                        </div>`
-                ).join('')}
-                                </div>
-                            </div>
-
-                            <div style="margin-bottom: 40px;">
-                                <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-star"></i> Premium Amenities</h3>
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                                    ${project.amenities.map(amenity =>
-                    `<div style="background: var(--glass-dark); padding: 24px; border-radius: var(--radius-lg); text-align: center; backdrop-filter: blur(10px);">
-                                            <i class="${amenity.icon}" style="font-size: 2rem; margin-bottom: 12px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                                            <div style="font-size: 0.95rem; font-weight: 600;">${amenity.name}</div>
-                                        </div>`
-                ).join('')}
-                                </div>
-                            </div>
-
-                            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                                <a href="tel:+919885588874" class="btn btn-primary">
-                                    <i class="fas fa-phone"></i>
-                                    <span>Call Now</span>
-                                </a>
-                                <a href="https://wa.me/919885588874?text=Hi, I'm interested in ${project.title}" class="btn btn-whatsapp">
-                                    <i class="fab fa-whatsapp"></i>
-                                    <span>WhatsApp</span>
-                                </a>
-                                <a href="#contact" class="btn btn-outline" onclick="closeModal()">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>Send Inquiry</span>
-                                </a>
-                            </div>
+                <!-- NEW: Approval Icons in Modal -->
+                <div class="modal-approvals">
+                    <div class="modal-approval-item">
+                        <div class="modal-approval-icon">
+                            <img src="assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
                         </div>
-                    `;
+                        <div class="modal-approval-label">RERA Approved</div>
+                    </div>
+                    <div class="modal-approval-item">
+                        <div class="modal-approval-icon">
+                            <img src="assets/dtcp_approvedprojects_logo.jpeg" alt="DTCP Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="fallback-text" style="display: none;">DTCP<br>APPROVED</div>
+                        </div>
+                        <div class="modal-approval-label">DTCP Approved</div>
+                    </div>
+                </div>
+
+                <!-- EXISTING: Project Gallery & Video -->
+                <div style="margin-bottom: 40px;">
+                    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-images"></i> Project Gallery & Video</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                        ${project.images.map((img, index) =>
+                `<div style="background: var(--glass-dark); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(10px);" onclick="openLightbox(${JSON.stringify(galleryItems).replace(/"/g, '&quot;')}, ${index})">
+                                <img src="${img.src}" alt="${img.alt}" style="width: 100%; height: 150px; object-fit: cover;">
+                                <div style="padding: 12px; text-align: center; font-size: 0.9rem;">${img.title}</div>
+                            </div>`
+            ).join('')}
+                        ${project.video ?
+                    `<div style="background: var(--glass-dark); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(10px); position: relative;" onclick="openLightbox(${JSON.stringify(galleryItems).replace(/"/g, '&quot;')}, ${project.images.length})">
+                                <img src="${project.video.poster}" alt="${project.video.title}" style="width: 100%; height: 150px; object-fit: cover;">
+                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-play" style="color: white; font-size: 1.2rem; margin-left: 3px;"></i>
+                                </div>
+                                <div style="padding: 12px; text-align: center; font-size: 0.9rem;">${project.video.title}</div>
+                            </div>` : ''
+                }
+                    </div>
+                </div>
+
+                <!-- EXISTING: About This Project -->
+                <div style="margin-bottom: 40px;">
+                    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-info-circle"></i> About This Project</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">${project.description}</p>
+                </div>
+
+                <!-- EXISTING: Key Highlights -->
+                <div style="margin-bottom: 40px;">
+                    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-pin"></i> Key Highlights</h3>
+                    <div style="display: grid; gap: 0.5rem;">
+                        ${project.highlights.map(highlight =>
+                    `<div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: var(--glass-dark); border-radius: 8px; backdrop-filter: blur(10px);">
+                                <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                                <span>${highlight}</span>
+                            </div>`
+                ).join('')}
+                    </div>
+                </div>
+
+                <!-- EXISTING: Premium Amenities -->
+                <div style="margin-bottom: 40px;">
+                    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-star"></i> Premium Amenities</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                        ${project.amenities.map(amenity =>
+                    `<div style="background: var(--glass-dark); padding: 24px; border-radius: var(--radius-lg); text-align: center; backdrop-filter: blur(10px);">
+                                <i class="${amenity.icon}" style="font-size: 2rem; margin-bottom: 12px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                                <div style="font-size: 0.95rem; font-weight: 600;">${amenity.name}</div>
+                            </div>`
+                ).join('')}
+                    </div>
+                </div>
+
+                <!-- NEW: Documents & Brochures Section -->
+                <div style="margin-bottom: 40px;">
+                    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-file-download"></i> Documents & Brochures</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+                        ${project.documents.map(doc =>
+                    `<a href="${doc.url}" class="document-item" download target="_blank" onclick="trackDocumentDownload('${project.title}', '${doc.name}')">
+                                <div class="document-icon">
+                                    <i class="${doc.icon}"></i>
+                                </div>
+                                <div class="document-details">
+                                    <h5>${doc.name}</h5>
+                                    <div class="document-meta">
+                                        <span><i class="fas fa-file"></i> PDF</span>
+                                        <span><i class="fas fa-hdd"></i> ${doc.size}</span>
+                                    </div>
+                                </div>
+                                <div class="download-indicator">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                            </a>`
+                ).join('')}
+                    </div>
+                </div>
+
+                <!-- EXISTING: Action Buttons -->
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:+919885588874" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        <span>Call Now</span>
+                    </a>
+                    <a href="https://wa.me/919885588874?text=Hi, I'm interested in ${project.title}" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="#contact" class="btn btn-outline" onclick="closeModal()">
+                        <i class="fas fa-envelope"></i>
+                        <span>Send Inquiry</span>
+                    </a>
+                </div>
+            </div>
+        `;
 
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
+
 
         function closeModal() {
             const modal = document.getElementById('projectModal');
@@ -2661,9 +2726,9 @@
                     if (data.status === 'success') {
                         // Success state
                         formMessage.innerHTML = `
-                                <i class="fas fa-check-circle"></i>
-                                Thank you! Your message has been sent successfully. We'll get back to you soon!
-                            `;
+                                    <i class="fas fa-check-circle"></i>
+                                    Thank you! Your message has been sent successfully. We'll get back to you soon!
+                                `;
                         formMessage.classList.add('success');
                         formMessage.style.display = 'block';
 
@@ -2688,9 +2753,9 @@
                 .catch(error => {
                     // Error state
                     formMessage.innerHTML = `
-                            <i class="fas fa-exclamation-circle"></i>
-                            Error: ${error.message}. Please try again or contact us directly.
-                        `;
+                                <i class="fas fa-exclamation-circle"></i>
+                                Error: ${error.message}. Please try again or contact us directly.
+                            `;
                     formMessage.classList.add('error');
                     formMessage.style.display = 'block';
 

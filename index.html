@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfect Jagah - Ultra Modern Real Estate</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <style>
         /* CSS Variables */
         :root {
@@ -17,25 +17,20 @@
             --blue-gradient: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
             --orange-gradient: linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%);
             --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-            
             --text-primary: #0f0f23;
             --text-secondary: #6b7280;
             --text-accent: #8b5cf6;
-            
             --bg-primary: #ffffff;
             --bg-glass: rgba(255, 255, 255, 0.15);
             --bg-dark: #0f0f23;
-            
             --shadow-soft: 0 4px 16px rgba(31, 38, 135, 0.2);
             --shadow-harsh: 0 20px 40px rgba(0, 0, 0, 0.1);
             --shadow-glow: 0 0 40px rgba(139, 92, 246, 0.3);
-            
             --border-glass: 1px solid rgba(255, 255, 255, 0.1);
             --radius-sm: 12px;
             --radius-md: 20px;
             --radius-lg: 28px;
             --radius-xl: 40px;
-            
             --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
@@ -57,6 +52,20 @@
             color: var(--text-primary);
             overflow-x: hidden;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* Fix for Font Awesome icons */
+        .feature-icon i,
+        .hero-badge i,
+        .fa, .fas, .far, .fal, .fab {
+            font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome" !important;
+            font-weight: 900 !important;
+            font-style: normal !important;
+            font-variant: normal !important;
+            text-rendering: auto !important;
+            line-height: 1 !important;
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
         }
 
         /* Animated Background */
@@ -89,24 +98,80 @@
             animation: float 20s infinite linear;
         }
 
-        .shape:nth-child(1) { width: 80px; height: 80px; left: 10%; animation-delay: 0s; }
-        .shape:nth-child(2) { width: 60px; height: 60px; left: 20%; animation-delay: 2s; }
-        .shape:nth-child(3) { width: 100px; height: 100px; left: 35%; animation-delay: 4s; }
-        .shape:nth-child(4) { width: 120px; height: 120px; left: 50%; animation-delay: 6s; }
-        .shape:nth-child(5) { width: 40px; height: 40px; left: 70%; animation-delay: 8s; }
-        .shape:nth-child(6) { width: 90px; height: 90px; left: 85%; animation-delay: 10s; }
+            .shape:nth-child(1) {
+                width: 80px;
+                height: 80px;
+                left: 10%;
+                animation-delay: 0s;
+            }
+
+            .shape:nth-child(2) {
+                width: 60px;
+                height: 60px;
+                left: 20%;
+                animation-delay: 2s;
+            }
+
+            .shape:nth-child(3) {
+                width: 100px;
+                height: 100px;
+                left: 35%;
+                animation-delay: 4s;
+            }
+
+            .shape:nth-child(4) {
+                width: 120px;
+                height: 120px;
+                left: 50%;
+                animation-delay: 6s;
+            }
+
+            .shape:nth-child(5) {
+                width: 40px;
+                height: 40px;
+                left: 70%;
+                animation-delay: 8s;
+            }
+
+            .shape:nth-child(6) {
+                width: 90px;
+                height: 90px;
+                left: 85%;
+                animation-delay: 10s;
+            }
 
         @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         @keyframes float {
-            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
         }
 
         /* Glass Morphism Components */
@@ -125,7 +190,7 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Normal Navigation - Fixed to top */
+        /* Navigation */
         .navbar {
             position: fixed;
             top: 0;
@@ -158,13 +223,13 @@
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .nav-logo i {
-            font-size: 1.6rem;
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+            .nav-logo i {
+                font-size: 1.6rem;
+                background: var(--gold-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
 
         .nav-menu {
             display: flex;
@@ -183,28 +248,28 @@
             position: relative;
         }
 
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gold-gradient);
-            transition: var(--transition-smooth);
-            border-radius: 2px;
-        }
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: var(--gold-gradient);
+                transition: var(--transition-smooth);
+                border-radius: 2px;
+            }
 
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: 100%;
-        }
+            .nav-link:hover::after,
+            .nav-link.active::after {
+                width: 100%;
+            }
 
-        .nav-link:hover,
-        .nav-link.active {
-            color: white;
-            background: rgba(255, 255, 255, 0.1);
-        }
+            .nav-link:hover,
+            .nav-link.active {
+                color: white;
+                background: rgba(255, 255, 255, 0.1);
+            }
 
         .nav-cta {
             display: flex;
@@ -225,11 +290,11 @@
             backdrop-filter: blur(10px);
         }
 
-        .cta-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            transform: translateY(-2px);
-        }
+            .cta-btn:hover {
+                background: rgba(255, 255, 255, 0.2);
+                color: white;
+                transform: translateY(-2px);
+            }
 
         .hamburger {
             display: none;
@@ -238,17 +303,17 @@
             gap: 4px;
         }
 
-        .hamburger span {
-            width: 26px;
-            height: 3px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 2px;
-            transition: var(--transition-smooth);
-        }
+            .hamburger span {
+                width: 26px;
+                height: 3px;
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 2px;
+                transition: var(--transition-smooth);
+            }
 
-        .hamburger:hover span {
-            background: white;
-        }
+            .hamburger:hover span {
+                background: white;
+            }
 
         /* Hero Section */
         .hero {
@@ -277,11 +342,32 @@
             padding: 12px 24px;
             border-radius: var(--radius-xl);
             margin-bottom: 30px;
-            font-size: 1.9rem;
+            font-size: 0.9rem;
             font-weight: 600;
             letter-spacing: 0.5px;
             text-transform: uppercase;
             animation: pulse 2s infinite;
+        }
+
+            /* Rotating Certificate Icon */
+            .hero-badge i.fas.fa-certificate {
+                background: var(--gold-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                font-size: 1.1rem;
+                display: inline-block;
+                animation: rotate-continuous 4s linear infinite;
+            }
+
+        @keyframes rotate-continuous {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .hero-title {
@@ -323,10 +409,10 @@
             transition: var(--transition-smooth);
         }
 
-        .stat-item:hover {
-            transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.2);
-        }
+            .stat-item:hover {
+                transform: translateY(-8px);
+                background: rgba(255, 255, 255, 0.2);
+            }
 
         .stat-number {
             font-size: 3rem;
@@ -370,20 +456,20 @@
             letter-spacing: 0.5px;
         }
 
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: var(--transition-smooth);
-        }
+            .btn::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+                transition: var(--transition-smooth);
+            }
 
-        .btn:hover::before {
-            left: 100%;
-        }
+            .btn:hover::before {
+                left: 100%;
+            }
 
         .btn-primary {
             background: var(--gold-gradient);
@@ -391,10 +477,10 @@
             box-shadow: 0 8px 25px rgba(255, 206, 84, 0.4);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(255, 206, 84, 0.6);
-        }
+            .btn-primary:hover {
+                transform: translateY(-4px) scale(1.05);
+                box-shadow: 0 15px 35px rgba(255, 206, 84, 0.6);
+            }
 
         .btn-outline {
             background: rgba(255, 255, 255, 0.1);
@@ -403,11 +489,22 @@
             backdrop-filter: blur(10px);
         }
 
-        .btn-outline:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-4px) scale(1.05);
-            border-color: rgba(255, 255, 255, 0.6);
+            .btn-outline:hover {
+                background: rgba(255, 255, 255, 0.2);
+                transform: translateY(-4px) scale(1.05);
+                border-color: rgba(255, 255, 255, 0.6);
+            }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
         }
+
+            .btn-whatsapp:hover {
+                background: #128c7e;
+                transform: translateY(-4px) scale(1.05);
+                box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+            }
 
         /* Scroll Indicator */
         .scroll-indicator {
@@ -441,24 +538,51 @@
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-10px); }
-            60% { transform: translateX(-50%) translateY(-5px); }
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
         }
 
         @keyframes scrollWheel {
-            0% { top: 8px; opacity: 1; }
-            100% { top: 24px; opacity: 0; }
+            0% {
+                top: 8px;
+                opacity: 1;
+            }
+
+            100% {
+                top: 24px;
+                opacity: 0;
+            }
         }
 
         /* Sections */
@@ -556,10 +680,10 @@
             transition: var(--transition-smooth);
         }
 
-        .feature-item:hover {
-            transform: translateX(10px);
-            background: rgba(255, 255, 255, 0.08);
-        }
+            .feature-item:hover {
+                transform: translateX(10px);
+                background: rgba(255, 255, 255, 0.08);
+            }
 
         .feature-icon {
             width: 60px;
@@ -592,7 +716,6 @@
         .about-image {
             width: 100%;
             height: 500px;
-            background: var(--blue-gradient);
             border-radius: var(--radius-xl);
             display: flex;
             align-items: center;
@@ -604,19 +727,40 @@
             box-shadow: var(--shadow-harsh);
             position: relative;
             overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: var(--blue-gradient);
         }
 
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
-            background-size: 20px 20px;
-            animation: float 10s infinite ease-in-out;
-        }
+            .about-image.has-image {
+                background-image: none;
+            }
+
+            .about-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: var(--transition-smooth);
+            }
+
+            .about-image:hover img {
+                transform: scale(1.02);
+            }
+
+            .about-image::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+                background-size: 20px 20px;
+                animation: float 10s infinite ease-in-out;
+            }
 
         .floating-card {
             position: absolute;
@@ -629,21 +773,26 @@
             backdrop-filter: blur(10px);
         }
 
-        .floating-card.card-1 {
-            top: 20px;
-            right: -20px;
-            animation-delay: 0s;
-        }
+            .floating-card.card-1 {
+                top: 20px;
+                right: -20px;
+                animation-delay: 0s;
+            }
 
-        .floating-card.card-2 {
-            bottom: 20px;
-            left: -20px;
-            animation-delay: 1.5s;
-        }
+            .floating-card.card-2 {
+                bottom: 20px;
+                left: -20px;
+                animation-delay: 1.5s;
+            }
 
         @keyframes floatingCard {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(2deg); }
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(2deg);
+            }
         }
 
         /* Projects Section */
@@ -662,31 +811,30 @@
             cursor: pointer;
         }
 
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--gold-gradient);
-            opacity: 0;
-            transition: var(--transition-smooth);
-            z-index: 1;
-        }
+            .project-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--gold-gradient);
+                opacity: 0;
+                transition: var(--transition-smooth);
+                z-index: 1;
+            }
 
-        .project-card:hover::before {
-            opacity: 0.08;
-        }
+            .project-card:hover::before {
+                opacity: 0.08;
+            }
 
-        .project-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-        }
+            .project-card:hover {
+                transform: translateY(-12px) scale(1.02);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            }
 
         .project-image {
             height: 280px;
-            background: var(--purple-gradient);
             position: relative;
             overflow: hidden;
             display: flex;
@@ -695,6 +843,24 @@
             color: white;
             font-size: 1.1rem;
             font-weight: 600;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+            .project-image.has-image {
+                background-image: none;
+            }
+
+            .project-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: var(--transition-smooth);
+            }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
         }
 
         .project-badge {
@@ -745,10 +911,10 @@
             backdrop-filter: blur(10px);
         }
 
-        .view-btn:hover {
-            transform: scale(1.1);
-            background: white;
-        }
+            .view-btn:hover {
+                transform: scale(1.1);
+                background: white;
+            }
 
         .project-content {
             padding: 32px;
@@ -783,10 +949,10 @@
             gap: 2px;
         }
 
-        .project-rating i {
-            color: #fbbf24;
-            font-size: 0.9rem;
-        }
+            .project-rating i {
+                color: #fbbf24;
+                font-size: 0.9rem;
+            }
 
         .project-highlights {
             display: flex;
@@ -847,10 +1013,10 @@
             gap: 8px;
         }
 
-        .explore-btn:hover {
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(255, 206, 84, 0.4);
-        }
+            .explore-btn:hover {
+                transform: translateY(-2px) scale(1.05);
+                box-shadow: 0 10px 25px rgba(255, 206, 84, 0.4);
+            }
 
         /* Contact Section */
         .contact-grid {
@@ -880,10 +1046,10 @@
             transition: var(--transition-smooth);
         }
 
-        .contact-item:hover {
-            transform: translateY(-4px);
-            background: rgba(255, 255, 255, 0.08);
-        }
+            .contact-item:hover {
+                transform: translateY(-4px);
+                background: rgba(255, 255, 255, 0.08);
+            }
 
         .contact-icon {
             width: 60px;
@@ -915,9 +1081,9 @@
             transition: var(--transition-smooth);
         }
 
-        .contact-details a:hover {
-            color: white;
-        }
+            .contact-details a:hover {
+                color: white;
+            }
 
         .quick-actions {
             display: flex;
@@ -925,18 +1091,7 @@
             margin-top: 40px;
         }
 
-        .btn-whatsapp {
-            background: #25d366;
-            color: white;
-        }
-
-        .btn-whatsapp:hover {
-            background: #128c7e;
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
-        }
-
-        /* Contact Form - Updated for Google Sheets */
+        /* Contact Form */
         .contact-form-container {
             background: var(--glass);
             border-radius: var(--radius-xl);
@@ -975,6 +1130,13 @@
             transition: var(--transition-smooth);
             backdrop-filter: blur(10px);
         }
+
+            .form-input::placeholder,
+            .form-textarea::placeholder {
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+        /* Enhanced Select Dropdown */
         .form-select {
             appearance: none;
             -webkit-appearance: none;
@@ -986,7 +1148,6 @@
             cursor: pointer;
         }
 
-            /* Style the dropdown options */
             .form-select option {
                 background-color: #1f2937 !important;
                 color: white !important;
@@ -999,47 +1160,14 @@
                     color: white !important;
                 }
 
-                .form-select option:checked {
-                    background-color: #6366f1 !important;
-                    color: white !important;
-                }
-
-            /* Focus state */
-            .form-select:focus {
+            .form-input:focus,
+            .form-select:focus,
+            .form-textarea:focus {
                 outline: none;
-                border-color: rgba(255, 206, 84, 0.8) !important;
-                background: rgba(255, 255, 255, 0.15) !important;
+                border-color: rgba(255, 206, 84, 0.8);
+                background: rgba(255, 255, 255, 0.15);
                 box-shadow: 0 0 20px rgba(255, 206, 84, 0.2);
             }
-
-        /* Dark mode specific fixes */
-        body.dark-mode .form-select {
-            background: rgba(255, 255, 255, 0.05) !important;
-            color: white !important;
-        }
-
-            body.dark-mode .form-select option {
-                background-color: #111827 !important;
-                color: #f9fafb !important;
-            }
-
-                body.dark-mode .form-select option:hover {
-                    background-color: #1f2937 !important;
-                }
-
-        .form-input::placeholder,
-        .form-textarea::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .form-input:focus,
-        .form-select:focus,
-        .form-textarea:focus {
-            outline: none;
-            border-color: rgba(255, 206, 84, 0.8);
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 20px rgba(255, 206, 84, 0.2);
-        }
 
         .form-textarea {
             resize: vertical;
@@ -1063,31 +1191,31 @@
             overflow: hidden;
         }
 
-        .submit-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: var(--transition-smooth);
-        }
+            .submit-btn::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+                transition: var(--transition-smooth);
+            }
 
-        .submit-btn:hover::before {
-            left: 100%;
-        }
+            .submit-btn:hover::before {
+                left: 100%;
+            }
 
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(255, 206, 84, 0.4);
-        }
+            .submit-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 15px 35px rgba(255, 206, 84, 0.4);
+            }
 
-        .submit-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-            transform: none;
-        }
+            .submit-btn:disabled {
+                opacity: 0.7;
+                cursor: not-allowed;
+                transform: none;
+            }
 
         /* Success/Error Messages */
         .form-message {
@@ -1100,16 +1228,134 @@
             animation: fadeInUp 0.5s ease;
         }
 
-        .form-message.success {
-            background: var(--success-gradient);
-            color: white;
-            display: block;
+            .form-message.success {
+                background: var(--success-gradient);
+                color: white;
+                display: block;
+            }
+
+            .form-message.error {
+                background: var(--secondary-gradient);
+                color: white;
+                display: block;
+            }
+
+        /* Enhanced Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            backdrop-filter: blur(5px);
         }
 
-        .form-message.error {
-            background: var(--secondary-gradient);
+            .lightbox.active {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox-media-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 90vw;
+            max-height: 80vh;
+        }
+
+        .lightbox-image,
+        .lightbox-video {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-harsh);
+        }
+
+        .lightbox-video {
+            width: 100%;
+            height: auto;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: rgba(255, 255, 255, 0.2);
             color: white;
-            display: block;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(10px);
+        }
+
+            .lightbox-close:hover {
+                background: rgba(255, 255, 255, 0.3);
+                transform: scale(1.1);
+            }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(10px);
+        }
+
+            .lightbox-nav:hover {
+                background: rgba(255, 255, 255, 0.3);
+            }
+
+        .lightbox-prev {
+            left: -70px;
+        }
+
+        .lightbox-next {
+            right: -70px;
+        }
+
+        .lightbox-info {
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+        }
+
+        .lightbox-counter {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+
+        .lightbox-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fbbf24;
         }
 
         /* Footer */
@@ -1141,12 +1387,12 @@
             margin-bottom: 20px;
         }
 
-        .footer-logo i {
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+            .footer-logo i {
+                background: var(--gold-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
 
         .footer-text {
             color: rgba(255, 255, 255, 0.7);
@@ -1172,11 +1418,11 @@
             transition: var(--transition-bounce);
         }
 
-        .social-link:hover {
-            background: var(--gold-gradient);
-            color: var(--text-primary);
-            transform: translateY(-4px) scale(1.1);
-        }
+            .social-link:hover {
+                background: var(--gold-gradient);
+                color: var(--text-primary);
+                transform: translateY(-4px) scale(1.1);
+            }
 
         .footer-section h4 {
             font-size: 1.2rem;
@@ -1188,19 +1434,19 @@
             list-style: none;
         }
 
-        .footer-links li {
-            margin-bottom: 12px;
-        }
+            .footer-links li {
+                margin-bottom: 12px;
+            }
 
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: var(--transition-smooth);
-        }
+            .footer-links a {
+                color: rgba(255, 255, 255, 0.7);
+                text-decoration: none;
+                transition: var(--transition-smooth);
+            }
 
-        .footer-links a:hover {
-            color: white;
-        }
+                .footer-links a:hover {
+                    color: white;
+                }
 
         .footer-bottom {
             text-align: center;
@@ -1221,6 +1467,12 @@
             background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(5px);
         }
+
+            .modal.active {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
         .modal-content {
             position: relative;
@@ -1254,14 +1506,21 @@
             backdrop-filter: blur(10px);
         }
 
-        .modal-close:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: scale(1.1);
-        }
+            .modal-close:hover {
+                background: rgba(255, 255, 255, 0.2);
+                transform: scale(1.1);
+            }
 
         @keyframes modalSlideIn {
-            from { opacity: 0; transform: translateY(-50px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Responsive Design */
@@ -1305,9 +1564,9 @@
                 border-top: 1px solid rgba(255, 255, 255, 0.1);
             }
 
-            .nav-menu.active {
-                left: 0;
-            }
+                .nav-menu.active {
+                    left: 0;
+                }
 
             .nav-cta {
                 display: none;
@@ -1339,6 +1598,20 @@
             .quick-actions {
                 flex-direction: column;
             }
+
+            .lightbox-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .lightbox-prev {
+                left: -50px;
+            }
+
+            .lightbox-next {
+                right: -50px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1366,28 +1639,11 @@
             .nav-container {
                 padding: 12px 16px;
             }
-        }
-        .hero-badge i.fas.fa-certificate {
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-size: 2rem;
-            animation: rotate-continuous 4s linear infinite;
-            display: inline-block; /* Required for rotation */
-        }
 
-        @keyframes rotate-continuous {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
+            .lightbox-nav {
+                display: none;
             }
         }
-
-
     </style>
 </head>
 <body>
@@ -1402,7 +1658,31 @@
         <div class="shape"></div>
     </div>
 
-    <!-- Normal Navigation Header -->
+    <!-- Enhanced Lightbox Gallery -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <button class="lightbox-nav lightbox-prev" onclick="prevImage()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="lightbox-media-container">
+                <img class="lightbox-image" id="lightboxImage" src="" alt="" style="display: none;">
+                <video class="lightbox-video" id="lightboxVideo" controls style="display: none;">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <button class="lightbox-nav lightbox-next" onclick="nextImage()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="lightbox-info">
+                <div class="lightbox-counter" id="lightboxCounter">1 / 6</div>
+                <div class="lightbox-title" id="lightboxTitle">Image Title</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -1419,7 +1699,7 @@
                 <a href="tel:+919885588874" class="cta-btn">
                     <i class="fas fa-phone"></i>
                 </a>
-                <a href="https://wa.me/919876543210" class="cta-btn">
+                <a href="https://wa.me/919885588874" class="cta-btn">
                     <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
@@ -1438,17 +1718,17 @@
                 <i class="fas fa-certificate"></i>
                 <span>Legally Verified & Approved Layouts</span>
             </div>
-            
+
             <h1 class="hero-title">
                 Discover Your<br>
                 <span class="gradient-text">Dream Property</span>
             </h1>
-            
+
             <p class="hero-subtitle">
                 Premium real estate projects with legally verified layouts, strategic locations,<br>
                 and world-class amenities. Your perfect home awaits.
             </p>
-            
+
             <div class="hero-stats">
                 <div class="stat-item">
                     <span class="stat-number">20+</span>
@@ -1463,7 +1743,7 @@
                     <span class="stat-label">Happy Families</span>
                 </div>
             </div>
-            
+
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">
                     <span>View Projects</span>
@@ -1475,7 +1755,7 @@
                 </a>
             </div>
         </div>
-        
+
         <div class="scroll-indicator">
             <div class="scroll-mouse">
                 <div class="scroll-wheel"></div>
@@ -1498,13 +1778,13 @@
                     With over two decades of experience in premium real estate, we specialize in delivering verified, approved layouts that exceed expectations.
                 </p>
             </div>
-            
+
             <div class="about-grid">
                 <div class="about-content">
                     <p class="about-text">
                         Perfect Jagah has established itself as a leading provider of premium residential projects. We understand that buying a home is one of life's most important decisions, which is why we ensure every project meets the highest standards of quality, compliance, and design excellence.
                     </p>
-                    
+
                     <div class="features-grid">
                         <div class="feature-item">
                             <div class="feature-icon">
@@ -1515,7 +1795,7 @@
                                 <p>All projects come with government-approved architectural plans and legal clearances</p>
                             </div>
                         </div>
-                        
+
                         <div class="feature-item">
                             <div class="feature-icon">
                                 <i class="fas fa-map-marked-alt"></i>
@@ -1525,7 +1805,7 @@
                                 <p>Prime locations near IT hubs, airports, and major connectivity points</p>
                             </div>
                         </div>
-                        
+
                         <div class="feature-item">
                             <div class="feature-icon">
                                 <i class="fas fa-handshake"></i>
@@ -1537,11 +1817,10 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="about-visual">
-                    <div class="about-image">
-                        <!-- Image Placeholder: Professional team photo or modern office interior -->
-                        <div>📸 Professional Team Photo<br>Recommended: Corporate office setting<br>800x600px</div>
+                    <div class="about-image has-image" onclick="openLightbox(aboutImages, 0)">
+                        <img src="assets/images/about/team-photo.jpg" alt="Perfect Jagah Professional Team" loading="lazy">
                     </div>
                     <div class="floating-card card-1">
                         <div>20+ Years<br>Experience</div>
@@ -1569,13 +1848,12 @@
                     Discover our portfolio of carefully curated residential projects with approved architectural designs
                 </p>
             </div>
-            
+
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card" onclick="openProjectModal('project1')">
-                    <div class="project-image">
-                        <!-- Image Placeholder: Modern apartment complex exterior during golden hour -->
-                        <div>📸 Skyline Residency<br>Golden Hour Exterior Shot<br>1200x800px</div>
+                    <div class="project-image has-image">
+                        <img src="assets/images/Project1/exterior-golden-hour.jpg" alt="Skyline Residency Golden Hour" loading="lazy">
                         <div class="project-badge">Ready to Move</div>
                         <div class="project-overlay">
                             <button class="view-btn">
@@ -1584,7 +1862,7 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="project-content">
                         <div class="project-header">
                             <div>
@@ -1602,19 +1880,19 @@
                                 <i class="fas fa-star"></i>
                             </div>
                         </div>
-                        
+
                         <div class="project-highlights">
                             <span class="highlight-tag">5min Airport</span>
                             <span class="highlight-tag">2km IT Park</span>
                             <span class="highlight-tag">Metro Connected</span>
                         </div>
-                        
+
                         <div class="project-footer">
                             <div class="project-price">
                                 <span class="price-label">Starting from</span>
                                 <span class="price-value">₹45 Lakhs</span>
                             </div>
-                            <button class="explore-btn">
+                            <button class="explore-btn" onclick="event.stopPropagation(); openProjectModal('project1')">
                                 <span>Explore</span>
                                 <i class="fas fa-arrow-right"></i>
                             </button>
@@ -1624,9 +1902,8 @@
 
                 <!-- Project 2 -->
                 <div class="project-card" onclick="openProjectModal('project2')">
-                    <div class="project-image">
-                        <!-- Image Placeholder: Green apartments with gardens and trees -->
-                        <div>📸 Green Valley Apartments<br>Eco-Friendly with Landscaping<br>1200x800px</div>
+                    <div class="project-image has-image">
+                        <img src="assets/images/Project2/eco-exterior-gardens.jpg" alt="Green Valley Eco Apartments" loading="lazy">
                         <div class="project-badge" style="background: var(--success-gradient);">Eco-Friendly</div>
                         <div class="project-overlay">
                             <button class="view-btn">
@@ -1635,7 +1912,7 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="project-content">
                         <div class="project-header">
                             <div>
@@ -1653,19 +1930,19 @@
                                 <i class="fas fa-star"></i>
                             </div>
                         </div>
-                        
+
                         <div class="project-highlights">
                             <span class="highlight-tag">1km Railway</span>
                             <span class="highlight-tag">Near Hospital</span>
                             <span class="highlight-tag">School Zone</span>
                         </div>
-                        
+
                         <div class="project-footer">
                             <div class="project-price">
                                 <span class="price-label">Starting from</span>
                                 <span class="price-value">₹65 Lakhs</span>
                             </div>
-                            <button class="explore-btn">
+                            <button class="explore-btn" onclick="event.stopPropagation(); openProjectModal('project2')">
                                 <span>Explore</span>
                                 <i class="fas fa-arrow-right"></i>
                             </button>
@@ -1675,9 +1952,8 @@
 
                 <!-- Project 3 -->
                 <div class="project-card" onclick="openProjectModal('project3')">
-                    <div class="project-image">
-                        <!-- Image Placeholder: Luxury high-rise building with city skyline background at night -->
-                        <div>📸 Royal Heights<br>Luxury Night Shot with City View<br>1200x800px</div>
+                    <div class="project-image has-image">
+                        <img src="assets/images/Project3/luxury-night-view.jpg" alt="Royal Heights Luxury View" loading="lazy">
                         <div class="project-badge" style="background: var(--secondary-gradient);">Ultra Luxury</div>
                         <div class="project-overlay">
                             <button class="view-btn">
@@ -1686,7 +1962,7 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="project-content">
                         <div class="project-header">
                             <div>
@@ -1704,19 +1980,19 @@
                                 <i class="fas fa-star"></i>
                             </div>
                         </div>
-                        
+
                         <div class="project-highlights">
                             <span class="highlight-tag">Mall Nearby</span>
                             <span class="highlight-tag">Park View</span>
                             <span class="highlight-tag">Bus Stand 500m</span>
                         </div>
-                        
+
                         <div class="project-footer">
                             <div class="project-price">
                                 <span class="price-label">Starting from</span>
                                 <span class="price-value">₹80 Lakhs</span>
                             </div>
-                            <button class="explore-btn">
+                            <button class="explore-btn" onclick="event.stopPropagation(); openProjectModal('project3')">
                                 <span>Explore</span>
                                 <i class="fas fa-arrow-right"></i>
                             </button>
@@ -1742,7 +2018,7 @@
                     Connect with our property experts for personalized recommendations and site visits
                 </p>
             </div>
-            
+
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="contact-methods">
@@ -1752,10 +2028,10 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Visit Our Office</h4>
-                                <p>Hyderabad</p>
+                                <p>Hyderabad, Telangana</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-item">
                             <div class="contact-icon">
                                 <i class="fas fa-phone"></i>
@@ -1765,18 +2041,18 @@
                                 <p><a href="tel:+919885588874">+91 98855 88874</a></p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-item">
                             <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="contact-details">
                                 <h4>Email Us</h4>
-                                <p><a href="mailto:perfectjagah@gmailcom">perfectjagah@gmailcom</a></p>
+                                <p><a href="mailto:perfectjagah@gmail.com">perfectjagah@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="quick-actions">
                         <a href="tel:+919885588874" class="btn btn-primary">
                             <i class="fas fa-phone"></i>
@@ -1788,7 +2064,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="contact-form-container">
                     <h3 class="form-title">Send us a Message</h3>
                     <form id="contactForm" method="POST" action="https://script.google.com/macros/s/AKfycbyM9XGRKt5DxmPCOVu5V1tVw5wl2hvPdXOJfasCT8UQTwKpzvBQjRHpJ6OUHelHjd1odA/exec">
@@ -1800,7 +2076,7 @@
                                 <input type="text" name="last_name" class="form-input" placeholder="Last Name" required>
                             </div>
                         </div>
-                        
+
                         <div class="form-grid">
                             <div class="form-group">
                                 <input type="email" name="email" class="form-input" placeholder="Email Address" required>
@@ -1809,7 +2085,7 @@
                                 <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <select name="property_interest" class="form-select" required>
                                 <option value="">Select Property Interest</option>
@@ -1820,16 +2096,16 @@
                                 <option value="site-visit">Schedule Site Visit</option>
                             </select>
                         </div>
-                        
+
                         <div class="form-group">
                             <textarea name="message" class="form-textarea" placeholder="Tell us about your requirements..." required></textarea>
                         </div>
-                        
+
                         <button type="submit" class="submit-btn" id="submitBtn">
                             <span id="btnText">Send Message</span>
                             <i class="fas fa-paper-plane" id="btnIcon"></i>
                         </button>
-                        
+
                         <!-- Success/Error Message -->
                         <div id="formMessage" class="form-message"></div>
                     </form>
@@ -1857,7 +2133,7 @@
                         <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
@@ -1867,15 +2143,15 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Contact Info</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Hyderabad</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana</p>
                     <p><i class="fas fa-phone"></i> +91 98855 88874</p>
                     <p><i class="fas fa-envelope"></i> perfectjagah@gmail.com</p>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2024 Perfect Jagah. All rights reserved.</p>
             </div>
@@ -1893,7 +2169,7 @@
     </div>
 
     <script>
-        // Project Data
+        // Updated Project Data with Project1, Project2, Project3 folder structure
         const projectData = {
             project1: {
                 title: "Skyline Residency",
@@ -1902,14 +2178,42 @@
                 status: "Ready to Move",
                 rating: 4.8,
                 images: [
-                    "📸 Exterior Golden Hour View",
-                    "📸 Modern Living Room Interior", 
-                    "📸 Spacious Master Bedroom",
-                    "📸 Modular Kitchen Design",
-                    "📸 City View Balcony",
-                    "📸 Swimming Pool & Amenities"
+                    {
+                        src: "assets/images/Project1/exterior-golden-hour.jpg",
+                        alt: "Skyline Residency - Golden Hour Exterior View",
+                        title: "Golden Hour Exterior View"
+                    },
+                    {
+                        src: "assets/images/Project1/living-room-interior.jpg",
+                        alt: "Modern Living Room Interior",
+                        title: "Modern Living Room Interior"
+                    },
+                    {
+                        src: "assets/images/Project1/master-bedroom.jpg",
+                        alt: "Spacious Master Bedroom",
+                        title: "Spacious Master Bedroom"
+                    },
+                    {
+                        src: "assets/images/Project1/modular-kitchen.jpg",
+                        alt: "Modular Kitchen Design",
+                        title: "Modular Kitchen Design"
+                    },
+                    {
+                        src: "assets/images/Project1/city-view-balcony.jpg",
+                        alt: "City View Balcony",
+                        title: "City View Balcony"
+                    },
+                    {
+                        src: "assets/images/Project1/swimming-pool-amenities.jpg",
+                        alt: "Swimming Pool & Amenities",
+                        title: "Swimming Pool & Amenities"
+                    }
                 ],
-                video: "🎥 Project Walkthrough Video",
+                video: {
+                    src: "assets/videos/Project1/walkthrough.mp4",
+                    poster: "assets/images/Project1/exterior-golden-hour.jpg",
+                    title: "Skyline Residency - Complete Walkthrough"
+                },
                 highlights: [
                     "5 minutes from Kempegowda International Airport",
                     "2km from major IT parks (Infosys, Wipro, TCS)",
@@ -1937,18 +2241,174 @@
                     { name: "Payment Schedule", url: "#" }
                 ],
                 description: "Experience luxury living at Skyline Residency with premium 2BHK and 3BHK apartments featuring modern amenities and strategic location advantages."
+            },
+            project2: {
+                title: "Green Valley Apartments",
+                location: "Whitefield, Bangalore",
+                price: "₹65 Lakhs - ₹1.2 Cr",
+                status: "Eco-Friendly",
+                rating: 4.9,
+                images: [
+                    {
+                        src: "assets/images/Project2/eco-exterior-gardens.jpg",
+                        alt: "Green Valley - Eco Exterior with Gardens",
+                        title: "Eco Exterior with Gardens"
+                    },
+                    {
+                        src: "assets/images/Project2/sustainable-interior.jpg",
+                        alt: "Sustainable Interior Design",
+                        title: "Sustainable Interior Design"
+                    },
+                    {
+                        src: "assets/images/Project2/rooftop-terrace-garden.jpg",
+                        alt: "Rooftop Terrace Garden",
+                        title: "Rooftop Terrace Garden"
+                    },
+                    {
+                        src: "assets/images/Project2/solar-panel-installation.jpg",
+                        alt: "Solar Panel Installation",
+                        title: "Solar Panel Installation"
+                    },
+                    {
+                        src: "assets/images/Project2/rainwater-harvesting.jpg",
+                        alt: "Rainwater Harvesting System",
+                        title: "Rainwater Harvesting System"
+                    },
+                    {
+                        src: "assets/images/Project2/community-green-spaces.jpg",
+                        alt: "Community Green Spaces",
+                        title: "Community Green Spaces"
+                    }
+                ],
+                video: {
+                    src: "assets/videos/Project2/eco-tour.mp4",
+                    poster: "assets/images/Project2/eco-exterior-gardens.jpg",
+                    title: "Green Valley - Eco-Friendly Living Tour"
+                },
+                highlights: [
+                    "1km from Whitefield Railway Station",
+                    "Walking distance to Columbia Asia Hospital",
+                    "Top-rated schools within 2km radius",
+                    "IGBC Green Building certified",
+                    "Rooftop terrace garden with organic farming",
+                    "Solar power backup system"
+                ],
+                amenities: [
+                    { icon: "fas fa-solar-panel", name: "Solar Power" },
+                    { icon: "fas fa-seedling", name: "Organic Garden" },
+                    { icon: "fas fa-recycle", name: "Waste Management" },
+                    { icon: "fas fa-tint", name: "Rainwater Harvesting" },
+                    { icon: "fas fa-leaf", name: "Green Certification" },
+                    { icon: "fas fa-wind", name: "Natural Ventilation" }
+                ],
+                documents: [
+                    { name: "Green Building Certificate", url: "#" },
+                    { name: "Eco-Friendly Features", url: "#" },
+                    { name: "Energy Efficiency Report", url: "#" },
+                    { name: "Sustainability Guide", url: "#" }
+                ],
+                description: "Green Valley Apartments offers sustainable living with eco-friendly features and excellent connectivity to Whitefield's business district."
+            },
+            project3: {
+                title: "Royal Heights",
+                location: "Koramangala, Bangalore",
+                price: "₹80 Lakhs - ₹1.5 Cr",
+                status: "Ultra Luxury",
+                rating: 5.0,
+                images: [
+                    {
+                        src: "assets/images/Project3/luxury-night-view.jpg",
+                        alt: "Royal Heights - Luxury Night View",
+                        title: "Luxury Night View"
+                    },
+                    {
+                        src: "assets/images/Project3/penthouse-interior.jpg",
+                        alt: "Penthouse Interior",
+                        title: "Penthouse Interior"
+                    },
+                    {
+                        src: "assets/images/Project3/premium-clubhouse.jpg",
+                        alt: "Premium Clubhouse",
+                        title: "Premium Clubhouse"
+                    },
+                    {
+                        src: "assets/images/Project3/panoramic-city-view.jpg",
+                        alt: "Panoramic City View",
+                        title: "Panoramic City View"
+                    },
+                    {
+                        src: "assets/images/Project3/grand-lobby-entrance.jpg",
+                        alt: "Grand Lobby Entrance",
+                        title: "Grand Lobby Entrance"
+                    },
+                    {
+                        src: "assets/images/Project3/infinity-pool-deck.jpg",
+                        alt: "Infinity Pool Deck",
+                        title: "Infinity Pool Deck"
+                    }
+                ],
+                video: {
+                    src: "assets/videos/Project3/luxury-showcase.mp4",
+                    poster: "assets/images/Project3/luxury-night-view.jpg",
+                    title: "Royal Heights - Ultra Luxury Showcase"
+                },
+                highlights: [
+                    "Prime location in Koramangala 5th Block",
+                    "Forum Mall within 1km distance",
+                    "Lalbagh Botanical Garden view from higher floors",
+                    "500m from major bus terminal",
+                    "Premium club house with concierge services",
+                    "Infinity swimming pool with city view"
+                ],
+                amenities: [
+                    { icon: "fas fa-crown", name: "Concierge Service" },
+                    { icon: "fas fa-spa", name: "Luxury Spa" },
+                    { icon: "fas fa-cocktail", name: "Rooftop Lounge" },
+                    { icon: "fas fa-dumbbell", name: "Premium Gym" },
+                    { icon: "fas fa-car-side", name: "Valet Parking" },
+                    { icon: "fas fa-swimming-pool", name: "Infinity Pool" }
+                ],
+                documents: [
+                    { name: "Luxury Amenities Guide", url: "#" },
+                    { name: "Premium Floor Plans", url: "#" },
+                    { name: "Concierge Services", url: "#" },
+                    { name: "Investment Portfolio", url: "#" }
+                ],
+                description: "Royal Heights brings you ultra-luxury living in the heart of Bangalore with panoramic city views and world-class amenities."
             }
         };
-        
+
+        // About Section Images
+        const aboutImages = [
+            {
+                src: "assets/images/about/team-photo.jpg",
+                alt: "Perfect Jagah Professional Team",
+                title: "Our Professional Team"
+            },
+            {
+                src: "assets/images/about/office-interior.jpg",
+                alt: "Modern Office Interior",
+                title: "Our Modern Office"
+            },
+            {
+                src: "assets/images/about/awards-ceremony.jpg",
+                alt: "Awards and Recognition",
+                title: "Awards & Recognition"
+            }
+        ];
+
+        let currentGallery = [];
+        let currentImageIndex = 0;
+
         // Navigation
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
-        
+
         hamburger?.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
-        
+
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1960,22 +2420,28 @@
                         top: offsetTop,
                         behavior: 'smooth'
                     });
+
+                    // Close mobile menu if open
+                    const navMenu = document.querySelector('.nav-menu');
+                    const hamburger = document.querySelector('.hamburger');
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
                 }
             });
         });
-        
+
         // Active navigation
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-link');
-        
+
         function updateActiveNav() {
             const scrollY = window.pageYOffset;
-            
+
             sections.forEach(section => {
                 const sectionHeight = section.offsetHeight;
                 const sectionTop = section.offsetTop - 120;
                 const sectionId = section.getAttribute('id');
-                
+
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                     navLinks.forEach(link => {
                         link.classList.remove('active');
@@ -1986,189 +2452,255 @@
                 }
             });
         }
-        
+
         window.addEventListener('scroll', updateActiveNav);
-        
-        // Project Modal
-        const modal = document.getElementById('projectModal');
-        const modalContent = document.getElementById('modalContent');
-        
+
+        // Enhanced Lightbox Functions
+        function openLightbox(images, startIndex = 0) {
+            currentGallery = images;
+            currentImageIndex = startIndex;
+            updateLightboxMedia();
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = 'auto';
+
+            // Stop any playing videos
+            const video = document.getElementById('lightboxVideo');
+            if (video) {
+                video.pause();
+                video.currentTime = 0;
+            }
+        }
+
+        function updateLightboxMedia() {
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxVideo = document.getElementById('lightboxVideo');
+            const lightboxCounter = document.getElementById('lightboxCounter');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+
+            const currentItem = currentGallery[currentImageIndex];
+
+            if (currentItem.type === 'video') {
+                // Show video
+                lightboxImage.style.display = 'none';
+                lightboxVideo.style.display = 'block';
+                lightboxVideo.querySelector('source').src = currentItem.src;
+                lightboxVideo.poster = currentItem.poster || '';
+                lightboxVideo.load();
+                lightboxTitle.textContent = currentItem.title;
+            } else {
+                // Show image
+                lightboxVideo.style.display = 'none';
+                lightboxImage.style.display = 'block';
+                lightboxImage.src = currentItem.src;
+                lightboxImage.alt = currentItem.alt;
+                lightboxTitle.textContent = currentItem.title;
+            }
+
+            lightboxCounter.textContent = `${currentImageIndex + 1} / ${currentGallery.length}`;
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % currentGallery.length;
+            updateLightboxMedia();
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + currentGallery.length) % currentGallery.length;
+            updateLightboxMedia();
+        }
+
+        // Enhanced Project Modal Function
         function openProjectModal(projectId) {
             const project = projectData[projectId];
             if (!project) return;
-            
+
+            // Create gallery array with images and video
+            const galleryItems = [...project.images];
+            if (project.video) {
+                galleryItems.push({
+                    type: 'video',
+                    src: project.video.src,
+                    poster: project.video.poster,
+                    title: project.video.title,
+                    alt: project.video.title
+                });
+            }
+
+            const modal = document.getElementById('projectModal');
+            const modalContent = document.getElementById('modalContent');
             modalContent.innerHTML = `
-                <div style="padding: 40px; color: white;">
-                    <div style="text-align: center; margin-bottom: 40px;">
-                        <h1 style="font-size: 2.5rem; margin-bottom: 16px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${project.title}</h1>
-                        <p style="font-size: 1.2rem; opacity: 0.8;"><i class="fas fa-map-marker-alt"></i> ${project.location}</p>
-                        <div style="font-size: 1.5rem; font-weight: 700; margin-top: 12px; color: #fbbf24;">${project.price}</div>
-                    </div>
-                    
-                    <div style="margin-bottom: 40px;">
-                        <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-images"></i> Project Gallery</h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-                            ${project.images.map(img => 
-                                `<div style="background: var(--glass-dark); padding: 40px 20px; border-radius: var(--radius-lg); text-align: center; font-size: 0.9rem; backdrop-filter: blur(10px);">${img}</div>`
-                            ).join('')}
+                        <div style="padding: 40px; color: white;">
+                            <div style="text-align: center; margin-bottom: 40px;">
+                                <h1 style="font-size: 2.5rem; margin-bottom: 16px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${project.title}</h1>
+                                <p style="font-size: 1.2rem; opacity: 0.8;"><i class="fas fa-map-marker-alt"></i> ${project.location}</p>
+                                <div style="font-size: 1.5rem; font-weight: 700; margin-top: 12px; color: #fbbf24;">${project.price}</div>
+                            </div>
+
+                            <div style="margin-bottom: 40px;">
+                                <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-images"></i> Project Gallery & Video</h3>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                                    ${project.images.map((img, index) =>
+                `<div style="background: var(--glass-dark); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(10px);" onclick="openLightbox(${JSON.stringify(galleryItems).replace(/"/g, '&quot;')}, ${index})">
+                                            <img src="${img.src}" alt="${img.alt}" style="width: 100%; height: 150px; object-fit: cover;">
+                                            <div style="padding: 12px; text-align: center; font-size: 0.9rem;">${img.title}</div>
+                                        </div>`
+            ).join('')}
+                                    ${project.video ?
+                    `<div style="background: var(--glass-dark); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(10px); position: relative;" onclick="openLightbox(${JSON.stringify(galleryItems).replace(/"/g, '&quot;')}, ${project.images.length})">
+                                            <img src="${project.video.poster}" alt="${project.video.title}" style="width: 100%; height: 150px; object-fit: cover;">
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                                <i class="fas fa-play" style="color: white; font-size: 1.2rem; margin-left: 3px;"></i>
+                                            </div>
+                                            <div style="padding: 12px; text-align: center; font-size: 0.9rem;">${project.video.title}</div>
+                                        </div>` : ''
+                }
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 40px;">
+                                <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-info-circle"></i> About This Project</h3>
+                                <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">${project.description}</p>
+                            </div>
+
+                            <div style="margin-bottom: 40px;">
+                                <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-pin"></i> Key Highlights</h3>
+                                <div style="display: grid; gap: 0.5rem;">
+                                    ${project.highlights.map(highlight =>
+                    `<div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: var(--glass-dark); border-radius: 8px; backdrop-filter: blur(10px);">
+                                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                                            <span>${highlight}</span>
+                                        </div>`
+                ).join('')}
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 40px;">
+                                <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-star"></i> Premium Amenities</h3>
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                                    ${project.amenities.map(amenity =>
+                    `<div style="background: var(--glass-dark); padding: 24px; border-radius: var(--radius-lg); text-align: center; backdrop-filter: blur(10px);">
+                                            <i class="${amenity.icon}" style="font-size: 2rem; margin-bottom: 12px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                                            <div style="font-size: 0.95rem; font-weight: 600;">${amenity.name}</div>
+                                        </div>`
+                ).join('')}
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                                <a href="tel:+919885588874" class="btn btn-primary">
+                                    <i class="fas fa-phone"></i>
+                                    <span>Call Now</span>
+                                </a>
+                                <a href="https://wa.me/919885588874?text=Hi, I'm interested in ${project.title}" class="btn btn-whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
+                                </a>
+                                <a href="#contact" class="btn btn-outline" onclick="closeModal()">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Send Inquiry</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div style="margin-bottom: 40px;">
-                        <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-play-circle"></i> Project Walkthrough</h3>
-                        <div style="background: var(--glass-dark); padding: 60px 20px; border-radius: var(--radius-lg); text-align: center; backdrop-filter: blur(10px);">${project.video}</div>
-                    </div>
-                    
-                    <div style="margin-bottom: 40px;">
-                        <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-info-circle"></i> About This Project</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">${project.description}</p>
-                    </div>
-                    
-                    <div style="margin-bottom: 40px;">
-                        <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-pin"></i> Location Highlights</h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px;">
-                            ${project.highlights.map(highlight => 
-                                `<div style="background: var(--glass-dark); padding: 16px 20px; border-radius: var(--radius-lg); display: flex; align-items: center; gap: 12px; backdrop-filter: blur(10px);">
-                                    <i class="fas fa-check-circle" style="color: #10b981; font-size: 1.2rem;"></i>
-                                    <span style="font-size: 0.95rem;">${highlight}</span>
-                                </div>`
-                            ).join('')}
-                        </div>
-                    </div>
-                    
-                    <div style="margin-bottom: 40px;">
-                        <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-star"></i> Premium Amenities</h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                            ${project.amenities.map(amenity => 
-                                `<div style="background: var(--glass-dark); padding: 24px; border-radius: var(--radius-lg); text-align: center; backdrop-filter: blur(10px);">
-                                    <i class="${amenity.icon}" style="font-size: 2rem; margin-bottom: 12px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                                    <div style="font-size: 0.95rem; font-weight: 600;">${amenity.name}</div>
-                                </div>`
-                            ).join('')}
-                        </div>
-                    </div>
-                    
-                    <div style="margin-bottom: 40px;">
-                        <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-file-download"></i> Documents & Brochures</h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-                            ${project.documents.map(doc => 
-                                `<a href="${doc.url}" style="background: var(--glass-dark); padding: 20px; border-radius: var(--radius-lg); text-decoration: none; color: white; display: flex; align-items: center; justify-content: center; gap: 12px; transition: var(--transition-smooth); backdrop-filter: blur(10px);" onmouseover="this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.background='var(--glass-dark)'">
-                                    <i class="fas fa-file-pdf" style="color: #ef4444;"></i>
-                                    <span>${doc.name}</span>
-                                    <i class="fas fa-download"></i>
-                                </a>`
-                            ).join('')}
-                        </div>
-                    </div>
-                    
-                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                        <a href="tel:+919885588874" class="btn btn-primary">
-                            <i class="fas fa-phone"></i>
-                            <span>Call Now</span>
-                        </a>
-                        <a href="https://wa.me/919885588874?text=Hi, I'm interested in ${project.title}" class="btn btn-whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>WhatsApp</span>
-                        </a>
-                        <a href="#contact" class="btn btn-outline" onclick="closeModal()">
-                            <i class="fas fa-envelope"></i>
-                            <span>Send Inquiry</span>
-                        </a>
-                    </div>
-                </div>
-            `;
-            
-            modal.style.display = 'block';
+                    `;
+
+            modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
-        
+
         function closeModal() {
-            modal.style.display = 'none';
+            const modal = document.getElementById('projectModal');
+            modal.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
-        
+
         document.querySelector('.modal-close').addEventListener('click', closeModal);
-        
+
         window.addEventListener('click', (e) => {
+            const modal = document.getElementById('projectModal');
             if (e.target === modal) {
                 closeModal();
             }
         });
-        
-        // ✅ **UPDATED FORM HANDLING FOR GOOGLE SHEETS**
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+
+        // Google Sheets Form Handling
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const submitBtn = document.getElementById('submitBtn');
             const btnText = document.getElementById('btnText');
             const btnIcon = document.getElementById('btnIcon');
             const formMessage = document.getElementById('formMessage');
-            
+
             // Show loading state
             const originalText = btnText.textContent;
             const originalIcon = btnIcon.className;
-            
+
             btnText.textContent = 'Sending...';
             btnIcon.className = 'fas fa-spinner fa-spin';
             submitBtn.disabled = true;
-            
+
             // Hide previous messages
             formMessage.style.display = 'none';
             formMessage.classList.remove('success', 'error');
-            
+
             // Create FormData from the form
             const formData = new FormData(this);
-            
+
             // Submit to Google Apps Script
             fetch(this.action, {
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    // Success state
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        // Success state
+                        formMessage.innerHTML = `
+                                <i class="fas fa-check-circle"></i>
+                                Thank you! Your message has been sent successfully. We'll get back to you soon!
+                            `;
+                        formMessage.classList.add('success');
+                        formMessage.style.display = 'block';
+
+                        // Reset form
+                        this.reset();
+
+                        // Success feedback on button
+                        btnText.textContent = 'Message Sent!';
+                        btnIcon.className = 'fas fa-check';
+
+                        // Reset button after 3 seconds
+                        setTimeout(() => {
+                            btnText.textContent = originalText;
+                            btnIcon.className = originalIcon;
+                            submitBtn.disabled = false;
+                        }, 3000);
+
+                    } else {
+                        throw new Error(data.message || 'Submission failed');
+                    }
+                })
+                .catch(error => {
+                    // Error state
                     formMessage.innerHTML = `
-                        <i class="fas fa-check-circle"></i> 
-                        Thank you! Your message has been sent successfully. We'll get back to you soon!
-                    `;
-                    formMessage.classList.add('success');
+                            <i class="fas fa-exclamation-circle"></i>
+                            Error: ${error.message}. Please try again or contact us directly.
+                        `;
+                    formMessage.classList.add('error');
                     formMessage.style.display = 'block';
-                    
-                    // Reset form
-                    this.reset();
-                    
-                    // Success feedback on button
-                    btnText.textContent = 'Message Sent!';
-                    btnIcon.className = 'fas fa-check';
-                    
-                    // Reset button after 3 seconds
-                    setTimeout(() => {
-                        btnText.textContent = originalText;
-                        btnIcon.className = originalIcon;
-                        submitBtn.disabled = false;
-                    }, 3000);
-                    
-                } else {
-                    throw new Error(data.message || 'Submission failed');
-                }
-            })
-            .catch(error => {
-                // Error state
-                formMessage.innerHTML = `
-                    <i class="fas fa-exclamation-circle"></i> 
-                    Error: ${error.message}. Please try again or contact us directly.
-                `;
-                formMessage.classList.add('error');
-                formMessage.style.display = 'block';
-                
-                // Reset button immediately on error
-                btnText.textContent = originalText;
-                btnIcon.className = originalIcon;
-                submitBtn.disabled = false;
-            });
+
+                    // Reset button immediately on error
+                    btnText.textContent = originalText;
+                    btnIcon.className = originalIcon;
+                    submitBtn.disabled = false;
+                });
         });
-        
+
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
@@ -2180,7 +2712,7 @@
                 navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.05)';
             }
         });
-        
+
         // Initialize
         updateActiveNav();
     </script>

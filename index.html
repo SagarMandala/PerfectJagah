@@ -834,7 +834,7 @@
             }
 
         .project-image {
-            height: 280px;
+            height: 750px;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -1287,26 +1287,29 @@
             height: auto;
         }
 
+        /* Fixed Lightbox Close Button Position */
         .lightbox-close {
             position: absolute;
-            top: -50px;
-            right: 0;
-            background: rgba(255, 255, 255, 0.2);
+            top: 20px; /* ✅ Changed from -50px to 20px */
+            right: 20px; /* ✅ Added padding from edge */
+            background: black;
             color: white;
             border: none;
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             cursor: pointer;
             transition: var(--transition-smooth);
             backdrop-filter: blur(10px);
+            z-index: 10001; /* ✅ Ensure it's on top */
         }
 
             .lightbox-close:hover {
-                background: rgba(255, 255, 255, 0.3);
+                background: black;
                 transform: scale(1.1);
             }
+
 
         .lightbox-nav {
             position: absolute;
@@ -1861,6 +1864,121 @@
                     height: 20px;
                 }
         }
+        /* Logo Image Styling */
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-logo .logo-img {
+            filter: brightness(0) invert(1); /* Makes logo white for dark nav */
+        }
+
+        .footer-logo .logo-img {
+            filter: brightness(0) invert(1); /* Makes logo white for dark footer */
+        }
+
+        /* Optional: Logo hover effects */
+        .nav-logo:hover .logo-img,
+        .footer-logo:hover .logo-img {
+            transform: scale(1.1);
+        }
+
+        /* Responsive logo sizing */
+        @media (max-width: 768px) {
+            .logo-img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+        /* Document Download Styles inside Project Card */
+        .project-documents .document-item {
+            background: var(--glass-dark);
+            padding: 12px;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+            .project-documents .document-item:hover {
+                background: rgba(255, 255, 255, 0.08);
+                transform: translateY(-2px);
+                border-color: rgba(255, 206, 84, 0.3);
+                text-decoration: none;
+            }
+
+        .project-documents .document-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gold-gradient);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            flex-shrink: 0;
+        }
+
+        .project-documents .document-details h5 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+            color: white;
+        }
+
+        .project-documents .document-meta {
+            display: flex;
+            gap: 8px;
+            font-size: 0.75rem;
+            opacity: 0.7;
+        }
+
+        .project-documents .download-indicator {
+            margin-left: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px;
+            border-radius: 50%;
+            transition: var(--transition-smooth);
+        }
+
+        .project-documents .document-item:hover .download-indicator {
+            background: var(--gold-gradient);
+            color: var(--text-primary);
+        }
+        /* Enhanced video display in lightbox */
+        #lightboxVideoFrame {
+            aspect-ratio: 16/9;
+            object-fit: contain;
+            background: #000;
+        }
+
+        /* Ensure lightbox container accommodates full-screen video */
+        .lightbox-media-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Mobile responsive video */
+        @media (max-width: 768px) {
+            #lightboxVideoFrame {
+                width: 95vw !important;
+                height: 60vh !important;
+            }
+        }
+
+
     </style>
 </head>
 <body>
@@ -1906,6 +2024,11 @@
                 <i class="fas fa-gem"></i>
                 <span>Perfect Jagah</span>
             </div>
+            <!--<div class="nav-logo">
+                <img src="assets/Logo.png" alt="Perfect Jagah Logo" class="logo-img">
+                <span>Perfect Jagah</span>
+            </div>-->
+
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -2071,11 +2194,11 @@
                 <!-- Project 1 -->
                 <div class="project-card" onclick="openProjectModal('project1')">
                     <div class="project-image has-image">
-                        <img src="assets/images/project1/exterior-golden-hour.jpg" alt="SRINIVASAM by PROTEK Realty" loading="lazy">
-                        <div class="project-badge"></div>
+                        <img src="assets/images/project1/0.jpg" alt="SRINIVASAM by PROTEK Realty" loading="lazy">
+                        <!--<div class="project-badge"></div>-->
 
                         <!-- NEW: Approval Icons -->
-                        <div class="approval-icons">
+                        <!--<div class="approval-icons">
                             <div class="approval-icon" title="RERA Approved">
                                 <img src="assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                                 <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
@@ -2084,7 +2207,7 @@
                                 <img src="assets/dtcp_approvedprojects_logo.jpeg" alt="DTCP Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                                 <div class="fallback-text" style="display: none;">DTCP<br>APPROVED</div>
                             </div>
-                        </div>
+                        </div>-->
 
                         <div class="project-overlay">
                             <button class="view-btn">
@@ -2128,6 +2251,57 @@
                                 <i class="fas fa-arrow-right"></i>
                             </button>
                         </div>
+                        <!-- NEW: Document Downloads -->
+                        <div class="project-documents" style="margin-top: 20px; display: grid; gap: 8px;">
+                            <a href="assets/documents/project1/SrinivasamBroucher2.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('SRINIVASAM by PROTEK Realty', 'Project Brochure')">
+                                <div class="document-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div class="document-details">
+                                    <h5>Project Brochure</h5>
+                                    <div class="document-meta">
+                                        <span><i class="fas fa-file"></i> PDF</span>
+                                        <span><i class="fas fa-hdd"></i> 4.03 MB</span>
+                                    </div>
+                                </div>
+                                <div class="download-indicator">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                            </a>
+
+                            <a href="assets/documents/project1/CertificateFile_63523.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('SRINIVASAM by PROTEK Realty', 'TG RERA Certificate')">
+                                <div class="document-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="document-details">
+                                    <h5>TG RERA Certificate</h5>
+                                    <div class="document-meta">
+                                        <span><i class="fas fa-file"></i> PDF</span>
+                                        <span><i class="fas fa-hdd"></i> 225 KB</span>
+                                    </div>
+                                </div>
+                                <div class="download-indicator">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                            </a>
+
+                            <a href="assets/documents/project1/TLP 103.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('SRINIVASAM by PROTEK Realty', 'LP Number Document')">
+                                <div class="document-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="document-details">
+                                    <h5>LP Number Document</h5>
+                                    <div class="document-meta">
+                                        <span><i class="fas fa-file"></i> PDF</span>
+                                        <span><i class="fas fa-hdd"></i> 555 KB</span>
+                                    </div>
+                                </div>
+                                <div class="download-indicator">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -2306,44 +2480,12 @@
                 title: "SRINIVASAM by PROTEK Realty",
                 location: "Vattimeenapally Grampanchayat",
                 price: "₹24 Lakhs - ₹50 Lakhs",
-                status: "",
+                /// status: "",
                 rating: 4.8,
-                images: [
-                    {
-                        src: "assets/images/project1/exterior-golden-hour.jpg",
-                        alt: "SRINIVASAM by PROTEK Realty",
-                        title: "Golden Hour Exterior View"
-                    },
-                    {
-                        src: "assets/images/project1/living-room-interior.jpg",
-                        alt: "Modern Living Room Interior",
-                        title: "Modern Living Room Interior"
-                    },
-                    {
-                        src: "assets/images/project1/master-bedroom.jpg",
-                        alt: "Spacious Master Bedroom",
-                        title: "Spacious Master Bedroom"
-                    },
-                    {
-                        src: "assets/images/project1/modular-kitchen.jpg",
-                        alt: "Modular Kitchen Design",
-                        title: "Modular Kitchen Design"
-                    },
-                    {
-                        src: "assets/images/project1/city-view-balcony.jpg",
-                        alt: "City View Balcony",
-                        title: "City View Balcony"
-                    },
-                    {
-                        src: "assets/images/project1/swimming-pool-amenities.jpg",
-                        alt: "Swimming Pool & Amenities",
-                        title: "Swimming Pool & Amenities"
-                    }
-                ],
-                video: {
-                    src: "assets/videos/project1/walkthrough.mp4",
-                    poster: "assets/images/project1/exterior-golden-hour.jpg",
-                    title: "SRINIVASAM by PROTEK Realty"
+                // NEW: Google Drive folder configuration
+                driveFolder: {
+                    folderId: "1fGw31-Mlx-5T4FzeOGZ4E8qa3atA9YLG", // Get from folder URL
+                    apiKey: "AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU" // Get from Google Console
                 },
                 highlights: [
                     "Very close proximity to Regional Ring Road",
@@ -2499,15 +2641,37 @@
             const currentItem = currentGallery[currentImageIndex];
 
             if (currentItem.type === 'video') {
-                // Show video
+                // ✅ FIX: Use full-screen iframe for Google Drive videos
                 lightboxImage.style.display = 'none';
-                lightboxVideo.style.display = 'block';
-                lightboxVideo.querySelector('source').src = currentItem.src;
-                lightboxVideo.poster = currentItem.poster || '';
-                lightboxVideo.load();
+                lightboxVideo.style.display = 'none';
+
+                // Create or update iframe for full-screen video playback
+                let videoFrame = document.getElementById('lightboxVideoFrame');
+                if (!videoFrame) {
+                    videoFrame = document.createElement('iframe');
+                    videoFrame.id = 'lightboxVideoFrame';
+                    videoFrame.allow = 'autoplay; fullscreen';
+                    videoFrame.allowFullscreen = true;
+                    document.querySelector('.lightbox-media-container').appendChild(videoFrame);
+                }
+
+                // ✅ FIX: Set full-screen dimensions and styling
+                videoFrame.style.display = 'block';
+                videoFrame.style.width = '90vw';
+                videoFrame.style.height = '80vh';
+                videoFrame.style.maxWidth = '1200px';
+                videoFrame.style.maxHeight = '700px';
+                videoFrame.style.border = 'none';
+                videoFrame.style.borderRadius = 'var(--radius-lg)';
+                videoFrame.style.backgroundColor = '#000';
+
+                videoFrame.src = currentItem.src;
                 lightboxTitle.textContent = currentItem.title;
             } else {
-                // Show image
+                // Hide iframe and show image
+                const videoFrame = document.getElementById('lightboxVideoFrame');
+                if (videoFrame) videoFrame.style.display = 'none';
+
                 lightboxVideo.style.display = 'none';
                 lightboxImage.style.display = 'block';
                 lightboxImage.src = currentItem.src;
@@ -2517,6 +2681,8 @@
 
             lightboxCounter.textContent = `${currentImageIndex + 1} / ${currentGallery.length}`;
         }
+
+
 
         function nextImage() {
             currentImageIndex = (currentImageIndex + 1) % currentGallery.length;
@@ -2528,153 +2694,149 @@
             updateLightboxMedia();
         }
 
-        // Enhanced Project Modal Function
-        // Enhanced Project Modal Function with Document Downloads + Approval Icons
-        function openProjectModal(projectId) {
+        async function openProjectModal(projectId) {
             const project = projectData[projectId];
             if (!project) return;
 
-            // Create gallery array with images and video
-            const galleryItems = [...project.images];
-            if (project.video) {
-                galleryItems.push({
-                    type: 'video',
-                    src: project.video.src,
-                    poster: project.video.poster,
-                    title: project.video.title,
-                    alt: project.video.title
-                });
-            }
-
+            // Show loading state
             const modal = document.getElementById('projectModal');
             const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = '<div style="padding: 40px; text-align: center; color: white;"><i class="fas fa-spinner fa-spin"></i> Loading gallery...</div>';
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // Load gallery items dynamically from Google Drive
+            const galleryItems = await loadGalleryFromGoogleDrive(project);
 
             modalContent.innerHTML = `
-            <div style="padding: 40px; color: white;">
-                <!-- Project Title & Basic Info -->
-                <div style="text-align: center; margin-bottom: 40px;">
-                    <h1 style="font-size: 2.5rem; margin-bottom: 16px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${project.title}</h1>
-                    <p style="font-size: 1.2rem; opacity: 0.8;"><i class="fas fa-map-marker-alt"></i> ${project.location}</p>
-                    <div style="font-size: 1.5rem; font-weight: 700; margin-top: 12px; color: #fbbf24;">${project.price}</div>
-                </div>
+        <div style="padding: 40px; color: white;">
+            <!-- Project Title & Basic Info -->
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 16px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${project.title}</h1>
+                <p style="font-size: 1.2rem; opacity: 0.8;"><i class="fas fa-map-marker-alt"></i> ${project.location}</p>
+                <div style="font-size: 1.5rem; font-weight: 700; margin-top: 12px; color: #fbbf24;">${project.price}</div>
+            </div>
 
-                <!-- NEW: Approval Icons in Modal -->
-                <div class="modal-approvals">
-                    <div class="modal-approval-item">
-                        <div class="modal-approval-icon">
-                            <img src="assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                            <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
-                        </div>
-                        <div class="modal-approval-label">RERA Approved</div>
+            <!-- Approval Icons -->
+            <div class="modal-approvals">
+                <div class="modal-approval-item">
+                    <div class="modal-approval-icon">
+                        <img src="assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
                     </div>
-                    <div class="modal-approval-item">
-                        <div class="modal-approval-icon">
-                            <img src="assets/dtcp_approvedprojects_logo.jpeg" alt="DTCP Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                            <div class="fallback-text" style="display: none;">DTCP<br>APPROVED</div>
-                        </div>
-                        <div class="modal-approval-label">DTCP Approved</div>
-                    </div>
+                    <div class="modal-approval-label">RERA Approved</div>
                 </div>
+                <div class="modal-approval-item">
+                    <div class="modal-approval-icon">
+                        <img src="assets/dtcp_approvedprojects_logo.jpeg" alt="DTCP Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="fallback-text" style="display: none;">DTCP<br>APPROVED</div>
+                    </div>
+                    <div class="modal-approval-label">DTCP Approved</div>
+                </div>
+            </div>
 
-                <!-- EXISTING: Project Gallery & Video -->
-                <div style="margin-bottom: 40px;">
-                    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-images"></i> Project Gallery & Video</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-                        ${project.images.map((img, index) =>
-                `<div style="background: var(--glass-dark); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(10px);" onclick="openLightbox(${JSON.stringify(galleryItems).replace(/"/g, '&quot;')}, ${index})">
-                                <img src="${img.src}" alt="${img.alt}" style="width: 100%; height: 150px; object-fit: cover;">
-                                <div style="padding: 12px; text-align: center; font-size: 0.9rem;">${img.title}</div>
-                            </div>`
+            <!-- Documents Section -->
+            <div style="margin-bottom: 40px;">
+                <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-file-download"></i> Documents & Brochures</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+                    ${project.documents.map(doc =>
+                `<a href="${doc.url}" class="document-item" download target="_blank" onclick="trackDocumentDownload('${project.title}', '${doc.name}')">
+                            <div class="document-icon">
+                                <i class="${doc.icon}"></i>
+                            </div>
+                            <div class="document-details">
+                                <h5>${doc.name}</h5>
+                                <div class="document-meta">
+                                    <span><i class="fas fa-file"></i> PDF</span>
+                                    <span><i class="fas fa-hdd"></i> ${doc.size}</span>
+                                </div>
+                            </div>
+                            <div class="download-indicator">
+                                <i class="fas fa-download"></i>
+                            </div>
+                        </a>`
             ).join('')}
-                        ${project.video ?
-                    `<div style="background: var(--glass-dark); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(10px); position: relative;" onclick="openLightbox(${JSON.stringify(galleryItems).replace(/"/g, '&quot;')}, ${project.images.length})">
-                                <img src="${project.video.poster}" alt="${project.video.title}" style="width: 100%; height: 150px; object-fit: cover;">
+                </div>
+            </div>
+            <!-- ✅ FIX: About This Project -->
+<div style="margin-bottom: 40px;">
+    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-info-circle"></i> About This Project</h3>
+    <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">${project.description}</p>
+</div>
+
+<!-- ✅ FIX: Key Highlights (MISSING SECTION ADDED) -->
+<div style="margin-bottom: 40px;">
+    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-pin"></i> Key Highlights</h3>
+    <div style="display: grid; gap: 0.5rem;">
+        ${project.highlights.map(highlight =>
+            `<div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: var(--glass-dark); border-radius: 8px; backdrop-filter: blur(10px);">
+                <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                <span>${highlight}</span>
+            </div>`
+        ).join('')}
+    </div>
+</div>
+
+<!-- ✅ FIX: Premium Amenities (MISSING SECTION ADDED) -->
+<div style="margin-bottom: 40px;">
+    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-star"></i> Premium Amenities</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+        ${project.amenities.map(amenity =>
+            `<div style="background: var(--glass-dark); padding: 24px; border-radius: var(--radius-lg); text-align: center; backdrop-filter: blur(10px);">
+                <i class="${amenity.icon}" style="font-size: 2rem; margin-bottom: 12px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                <div style="font-size: 0.95rem; font-weight: 600;">${amenity.name}</div>
+            </div>`
+        ).join('')}
+    </div>
+</div>
+
+            <!-- DYNAMIC: Project Gallery from Google Drive -->
+            <div style="margin-bottom: 40px;">
+                <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-images"></i> Project Gallery (${galleryItems.length} items loaded)
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                    ${galleryItems.length > 0 ? galleryItems.map((item, index) => {
+                if (item.type === 'video') {
+                    return `<div style="background: var(--glass-dark); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(10px); position: relative;" onclick="openLightbox(${JSON.stringify(galleryItems).replace(/"/g, '&quot;')}, ${index})">
+                                <iframe src="${item.src}" style="width: 100%; height: 150px; pointer-events: none;" frameborder="0"></iframe>
                                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
                                     <i class="fas fa-play" style="color: white; font-size: 1.2rem; margin-left: 3px;"></i>
                                 </div>
-                                <div style="padding: 12px; text-align: center; font-size: 0.9rem;">${project.video.title}</div>
-                            </div>` : ''
+                                <div style="padding: 12px; text-align: center; font-size: 0.9rem;">${item.title}</div>
+                            </div>`;
+                } else {
+                    return `<div style="background: var(--glass-dark); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(10px);" onclick="openLightbox(${JSON.stringify(galleryItems).replace(/"/g, '&quot;')}, ${index})">
+                                <img src="${item.src}" alt="${item.alt}" style="width: 100%; height: 150px; object-fit: cover;" onerror="this.parentElement.innerHTML='<div style=&quot;padding: 20px; text-align: center; color: rgba(255,255,255,0.5);&quot;>Image not available</div>';">
+                                <div style="padding: 12px; text-align: center; font-size: 0.9rem;">${item.title}</div>
+                            </div>`;
                 }
-                    </div>
-                </div>
-
-                <!-- EXISTING: About This Project -->
-                <div style="margin-bottom: 40px;">
-                    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-info-circle"></i> About This Project</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">${project.description}</p>
-                </div>
-
-                <!-- EXISTING: Key Highlights -->
-                <div style="margin-bottom: 40px;">
-                    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-pin"></i> Key Highlights</h3>
-                    <div style="display: grid; gap: 0.5rem;">
-                        ${project.highlights.map(highlight =>
-                    `<div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: var(--glass-dark); border-radius: 8px; backdrop-filter: blur(10px);">
-                                <i class="fas fa-check-circle" style="color: #10b981;"></i>
-                                <span>${highlight}</span>
-                            </div>`
-                ).join('')}
-                    </div>
-                </div>
-
-                <!-- EXISTING: Premium Amenities -->
-                <div style="margin-bottom: 40px;">
-                    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-star"></i> Premium Amenities</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                        ${project.amenities.map(amenity =>
-                    `<div style="background: var(--glass-dark); padding: 24px; border-radius: var(--radius-lg); text-align: center; backdrop-filter: blur(10px);">
-                                <i class="${amenity.icon}" style="font-size: 2rem; margin-bottom: 12px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                                <div style="font-size: 0.95rem; font-weight: 600;">${amenity.name}</div>
-                            </div>`
-                ).join('')}
-                    </div>
-                </div>
-
-                <!-- NEW: Documents & Brochures Section -->
-                <div style="margin-bottom: 40px;">
-                    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-file-download"></i> Documents & Brochures</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
-                        ${project.documents.map(doc =>
-                    `<a href="${doc.url}" class="document-item" download target="_blank" onclick="trackDocumentDownload('${project.title}', '${doc.name}')">
-                                <div class="document-icon">
-                                    <i class="${doc.icon}"></i>
-                                </div>
-                                <div class="document-details">
-                                    <h5>${doc.name}</h5>
-                                    <div class="document-meta">
-                                        <span><i class="fas fa-file"></i> PDF</span>
-                                        <span><i class="fas fa-hdd"></i> ${doc.size}</span>
-                                    </div>
-                                </div>
-                                <div class="download-indicator">
-                                    <i class="fas fa-download"></i>
-                                </div>
-                            </a>`
-                ).join('')}
-                    </div>
-                </div>
-
-                <!-- EXISTING: Action Buttons -->
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <a href="tel:+919885588874" class="btn btn-primary">
-                        <i class="fas fa-phone"></i>
-                        <span>Call Now</span>
-                    </a>
-                    <a href="https://wa.me/919885588874?text=Hi, I'm interested in ${project.title}" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp</span>
-                    </a>
-                    <a href="#contact" class="btn btn-outline" onclick="closeModal()">
-                        <i class="fas fa-envelope"></i>
-                        <span>Send Inquiry</span>
-                    </a>
+            }).join('') : '<p style="text-align: center; opacity: 0.7;">No media files found in the folder</p>'}
                 </div>
             </div>
-        `;
 
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
+            
+
+            <!-- Action Buttons -->
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:+919885588874" class="btn btn-primary">
+                    <i class="fas fa-phone"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="https://wa.me/919885588874?text=Hi, I'm interested in ${project.title}" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="#contact" class="btn btn-outline" onclick="closeModal()">
+                    <i class="fas fa-envelope"></i>
+                    <span>Send Inquiry</span>
+                </a>
+            </div>
+        </div>
+    `;
         }
+
+
 
 
         function closeModal() {
@@ -2726,9 +2888,9 @@
                     if (data.status === 'success') {
                         // Success state
                         formMessage.innerHTML = `
-                                    <i class="fas fa-check-circle"></i>
-                                    Thank you! Your message has been sent successfully. We'll get back to you soon!
-                                `;
+                                            <i class="fas fa-check-circle"></i>
+                                            Thank you! Your message has been sent successfully. We'll get back to you soon!
+                                        `;
                         formMessage.classList.add('success');
                         formMessage.style.display = 'block';
 
@@ -2753,9 +2915,9 @@
                 .catch(error => {
                     // Error state
                     formMessage.innerHTML = `
-                                <i class="fas fa-exclamation-circle"></i>
-                                Error: ${error.message}. Please try again or contact us directly.
-                            `;
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        Error: ${error.message}. Please try again or contact us directly.
+                                    `;
                     formMessage.classList.add('error');
                     formMessage.style.display = 'block';
 
@@ -2780,6 +2942,48 @@
 
         // Initialize
         updateActiveNav();
+
+        // Load gallery items dynamically from Google Drive
+        async function loadGalleryFromGoogleDrive(project) {
+            const { folderId, apiKey } = project.driveFolder;
+            const galleryItems = [];
+
+            try {
+                const response = await fetch(
+                    `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}&fields=files(id,name,mimeType)`
+                );
+
+                const data = await response.json();
+
+                if (data.files) {
+                    data.files.forEach(file => {
+                        if (file.mimeType.startsWith('image/')) {
+                            galleryItems.push({
+                                type: 'image',
+                                // ✅ FIX: Use thumbnail URL for display and full size for lightbox
+                                src: `https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`,
+                                alt: file.name,
+                                title: file.name.replace(/\.[^/.]+$/, "")
+                            });
+                        } else if (file.mimeType.startsWith('video/')) {
+                            galleryItems.push({
+                                type: 'video',
+                                src: `https://drive.google.com/file/d/${file.id}/preview`,
+                                title: file.name.replace(/\.[^/.]+$/, ""),
+                                alt: file.name
+                            });
+                        }
+                    });
+                }
+
+                return galleryItems;
+            } catch (error) {
+                console.error('Error loading from Google Drive:', error);
+                return [];
+            }
+        }
+
+
     </script>
 </body>
 </html>

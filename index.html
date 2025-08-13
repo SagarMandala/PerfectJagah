@@ -1977,6 +1977,53 @@
                 height: 60vh !important;
             }
         }
+        /* Enhanced CTA button with text */
+        .cta-btn-with-text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.1);
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+            .cta-btn-with-text:hover {
+                background: rgba(255, 255, 255, 0.2);
+                color: white;
+                transform: translateY(-2px);
+                border-color: rgba(255, 255, 255, 0.4);
+            }
+
+        .cta-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* Responsive behavior */
+        @media (max-width: 1024px) {
+            .cta-text {
+                display: none; /* Hide text on smaller screens, show only icon */
+            }
+
+            .cta-btn-with-text {
+                width: 40px;
+                height: 40px;
+                justify-content: center;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-cta {
+                display: none; /* Hide in mobile hamburger menu */
+            }
+        }
 
 
     </style>
@@ -2046,8 +2093,9 @@
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-cta">
-                <a href="tel:+919885588874" class="cta-btn">
+                <a href="tel:+919885588874" class="cta-btn-with-text">
                     <i class="fas fa-phone"></i>
+                    <span class="cta-text">+91 98855 88874</span>
                 </a>
                 <a href="https://wa.me/919885588874" class="cta-btn">
                     <i class="fab fa-whatsapp"></i>

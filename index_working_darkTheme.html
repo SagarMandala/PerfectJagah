@@ -10,29 +10,23 @@
     <style>
         /* CSS Variables */
         :root {
-            /* UPDATED: Professional White Theme Colors */
-            --primary-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            --secondary-gradient: linear-gradient(135deg, #1e40af 0%, #3730a3 100%);
-            --gold-gradient: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
-            --purple-gradient: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-            --blue-gradient: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-            --orange-gradient: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
-            --success-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            /* UPDATED: Professional Text Colors for White Background */
-            --text-primary: #0f172a; /* Dark navy for headings */
-            --text-secondary: #334155; /* Medium gray for body text */
-            --text-accent: #1e40af; /* Professional blue for links */
-            --text-muted: #64748b; /* Light gray for captions */
-            /* UPDATED: White Theme Backgrounds */
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gold-gradient: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            --purple-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            --blue-gradient: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+            --orange-gradient: linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%);
+            --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            --text-primary: #0f0f23;
+            --text-secondary: #6b7280;
+            --text-accent: #8b5cf6;
             --bg-primary: #ffffff;
-            --bg-glass: rgba(248, 250, 252, 0.8);
-            --bg-dark: #f8fafc;
-            /* UPDATED: Professional Shadows */
-            --shadow-soft: 0 4px 16px rgba(15, 23, 42, 0.08);
-            --shadow-harsh: 0 20px 40px rgba(15, 23, 42, 0.12);
-            --shadow-glow: 0 0 40px rgba(30, 64, 175, 0.15);
-            --border-glass: 1px solid rgba(226, 232, 240, 0.3);
-            /* Keep existing radius and transition values */
+            --bg-glass: rgba(255, 255, 255, 0.15);
+            --bg-dark: #0f0f23;
+            --shadow-soft: 0 4px 16px rgba(31, 38, 135, 0.2);
+            --shadow-harsh: 0 20px 40px rgba(0, 0, 0, 0.1);
+            --shadow-glow: 0 0 40px rgba(139, 92, 246, 0.3);
+            --border-glass: 1px solid rgba(255, 255, 255, 0.1);
             --radius-sm: 12px;
             --radius-md: 20px;
             --radius-lg: 28px;
@@ -40,7 +34,6 @@
             --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-
 
         /* Reset & Base */
         * {
@@ -53,29 +46,13 @@
             scroll-behavior: smooth;
         }
 
-        /* UPDATED: Clean White Background */
         body {
             font-family: 'Outfit', sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
             overflow-x: hidden;
-            background: #ffffff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-
-        /* UPDATED: Subtle Light Gray Animated Background */
-        .animated-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(45deg, #f8fafc, #f1f5f9, #e2e8f0, #cbd5e1);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-            opacity: 0.3; /* ✅ Make it very subtle */
-        }
-
 
         /* Fix for Font Awesome icons */
         .feature-icon i,
@@ -91,6 +68,18 @@
             -moz-osx-font-smoothing: grayscale !important;
         }
 
+        /* Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
 
         .floating-shapes {
             position: fixed;
@@ -102,15 +91,12 @@
             overflow: hidden;
         }
 
-        /* UPDATED: Light Gray Floating Shapes */
         .shape {
             position: absolute;
-            background: rgba(226, 232, 240, 0.4); /* ✅ Very light gray bubbles */
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             animation: float 20s infinite linear;
-            opacity: 0.6; /* ✅ Make them subtle */
         }
-
 
             .shape:nth-child(1) {
                 width: 80px;
@@ -190,18 +176,18 @@
 
         /* Glass Morphism Components */
         .glass {
-            background: rgba(255, 255, 255, 0.9);
+            background: var(--bg-glass);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(226, 232, 240, 0.5);
+            border: var(--border-glass);
             box-shadow: var(--shadow-soft);
         }
 
         .glass-dark {
-            background: rgba(248, 250, 252, 0.9);
+            background: rgba(15, 15, 35, 0.2);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(226, 232, 240, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         /* Navigation */
@@ -212,11 +198,10 @@
             right: 0;
             z-index: 1000;
             transition: var(--transition-smooth);
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(226, 232, 240, 0.5);
-            box-shadow: 0 2px 12px rgba(15, 23, 42, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .nav-container {
@@ -234,8 +219,8 @@
             gap: 12px;
             font-weight: 800;
             font-size: 1.3rem;
-            color: var(--text-primary); /* ✅ Dark text for white nav */
-            text-shadow: none; /* ✅ Remove shadow */
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
             .nav-logo i {
@@ -253,7 +238,7 @@
         }
 
         .nav-link {
-            color: var(--text-secondary); /* ✅ Professional gray */
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
@@ -282,8 +267,8 @@
 
             .nav-link:hover,
             .nav-link.active {
-                color: var(--text-primary); /* ✅ Darker on hover */
-                background: rgba(30, 64, 175, 0.08);
+                color: white;
+                background: rgba(255, 255, 255, 0.1);
             }
 
         .nav-cta {
@@ -343,7 +328,7 @@
 
         .hero-content {
             max-width: 900px;
-            color: var(--text-primary); /* ✅ Dark text instead of white */
+            color: white;
             animation: fadeInUp 1s ease-out;
         }
 
@@ -351,9 +336,9 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: rgba(30, 64, 175, 0.1);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(30, 64, 175, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 12px 24px;
             border-radius: var(--radius-xl);
             margin-bottom: 30px;
@@ -362,7 +347,6 @@
             letter-spacing: 0.5px;
             text-transform: uppercase;
             animation: pulse 2s infinite;
-            color: var(--text-accent); /* ✅ Professional blue text */
         }
 
             /* Rotating Certificate Icon */
@@ -371,7 +355,7 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
-                font-size: 2rem;
+                font-size: 1.1rem;
                 display: inline-block;
                 animation: rotate-continuous 4s linear infinite;
             }
@@ -392,17 +376,19 @@
             font-weight: 800;
             line-height: 1.1;
             margin-bottom: 24px;
-            color: var(--text-primary); /* ✅ Dark text */
-            text-shadow: none; /* ✅ Remove shadow */
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
         .hero-subtitle {
             font-size: 1.4rem;
-            opacity: 0.8;
+            opacity: 0.9;
             margin-bottom: 40px;
             font-weight: 300;
             line-height: 1.6;
-            color: var(--text-secondary); /* ✅ Medium gray */
         }
 
         .hero-stats {
@@ -415,27 +401,18 @@
 
         .stat-item {
             text-align: center;
-            padding: 30px 20px;
+            padding: 20px;
             border-radius: var(--radius-lg);
             backdrop-filter: blur(10px);
-            background: rgba(248, 250, 252, 0.95); /* ✅ Solid background for white theme */
-            border: 1px solid rgba(226, 232, 240, 0.5);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: var(--transition-smooth);
-            color: var(--text-primary);
-            min-width: 180px;
-            min-height: 120px; /* ✅ Ensures box appears */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08); /* ✅ Subtle shadow */
         }
 
             .stat-item:hover {
                 transform: translateY(-8px);
-                background: rgba(255, 255, 255, 0.98);
-                box-shadow: 0 8px 25px rgba(15, 23, 42, 0.12);
+                background: rgba(255, 255, 255, 0.2);
             }
-
 
         .stat-number {
             font-size: 3rem;
@@ -625,21 +602,19 @@
             margin-bottom: 80px;
         }
 
-        /* UPDATED: Section Styling for White Background */
         .section-badge {
             display: inline-flex;
             align-items: center;
             gap: 10px;
             padding: 10px 20px;
-            background: rgba(30, 64, 175, 0.1);
-            color: var(--text-accent);
+            background: var(--glass-dark);
+            color: white;
             border-radius: var(--radius-xl);
             font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 24px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            border: 1px solid rgba(30, 64, 175, 0.2);
         }
 
         .section-title {
@@ -648,12 +623,12 @@
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 20px;
-            color: var(--text-primary); /* ✅ Dark text */
+            color: white;
         }
 
         .section-subtitle {
             font-size: 1.2rem;
-            color: var(--text-secondary);
+            color: rgba(255, 255, 255, 0.8);
             max-width: 600px;
             margin: 0 auto;
             line-height: 1.6;
@@ -680,7 +655,7 @@
         }
 
         .about-content {
-            color: var(--text-primary);
+            color: white;
         }
 
         .about-text {
@@ -688,7 +663,6 @@
             line-height: 1.8;
             margin-bottom: 40px;
             opacity: 0.9;
-            color: var(--text-secondary);
         }
 
         .features-grid {
@@ -727,11 +701,11 @@
         .feature-content h4 {
             font-size: 1.2rem;
             margin-bottom: 8px;
-            color: var(--text-primary);
+            color: white;
         }
 
         .feature-content p {
-            color: var(--text-muted);
+            color: rgba(255, 255, 255, 0.7);
             line-height: 1.6;
         }
 
@@ -829,14 +803,12 @@
         }
 
         .project-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: var(--glass-dark);
             border-radius: var(--radius-xl);
             overflow: hidden;
             transition: var(--transition-smooth);
             position: relative;
             cursor: pointer;
-            border: 1px solid rgba(226, 232, 240, 0.3);
-            box-shadow: var(--shadow-soft);
         }
 
             .project-card::before {
@@ -946,12 +918,10 @@
 
         .project-content {
             padding: 32px;
-            color: var(--text-primary); /* ✅ Dark text */
+            color: white;
             position: relative;
             z-index: 2;
         }
-
-       
 
         .project-header {
             display: flex;
@@ -964,11 +934,10 @@
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 8px;
-            color: var(--text-primary);
         }
 
         .project-location {
-            color: var(--text-muted);
+            color: rgba(255, 255, 255, 0.7);
             display: flex;
             align-items: center;
             gap: 6px;
@@ -1058,7 +1027,7 @@
         }
 
         .contact-info {
-            color: var(--text-primary);
+            color: white;
         }
 
         .contact-methods {
@@ -1098,11 +1067,11 @@
         .contact-details h4 {
             font-size: 1.2rem;
             margin-bottom: 8px;
-            color: var(--text-primary);
+            color: white;
         }
 
         .contact-details p {
-            color: var(--text-muted);
+            color: rgba(255, 255, 255, 0.7);
             line-height: 1.6;
         }
 
@@ -1124,18 +1093,17 @@
 
         /* Contact Form */
         .contact-form-container {
-            background: rgba(255, 255, 255, 0.9);
+            background: var(--glass);
             border-radius: var(--radius-xl);
             padding: 40px;
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(226, 232, 240, 0.3);
-            box-shadow: var(--shadow-soft);
+            border: var(--border-glass);
         }
 
         .form-title {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--text-primary);
+            color: white;
             margin-bottom: 32px;
             text-align: center;
         }
@@ -1154,10 +1122,10 @@
         .form-input, .form-select, .form-textarea {
             width: 100%;
             padding: 16px 20px;
-            background: rgba(248, 250, 252, 0.8) !important;
-            border: 2px solid rgba(226, 232, 240, 0.5);
+            background: rgba(255, 255, 255, 0.1) !important;
+            border: 2px solid rgba(255, 255, 255, 0.2);
             border-radius: var(--radius-md);
-            color: var(--text-primary) !important;
+            color: white !important;
             font-size: 1rem;
             transition: var(--transition-smooth);
             backdrop-filter: blur(10px);
@@ -1165,7 +1133,7 @@
 
             .form-input::placeholder,
             .form-textarea::placeholder {
-                color: var(--text-muted);
+                color: rgba(255, 255, 255, 0.6);
             }
 
         /* Enhanced Select Dropdown */
@@ -1196,9 +1164,9 @@
             .form-select:focus,
             .form-textarea:focus {
                 outline: none;
-                border-color: var(--text-accent);
-                background: rgba(255, 255, 255, 0.9);
-                box-shadow: 0 0 20px rgba(30, 64, 175, 0.1);
+                border-color: rgba(255, 206, 84, 0.8);
+                background: rgba(255, 255, 255, 0.15);
+                box-shadow: 0 0 20px rgba(255, 206, 84, 0.2);
             }
 
         .form-textarea {
@@ -2056,180 +2024,6 @@
                 display: none; /* Hide in mobile hamburger menu */
             }
         }
-        /* ===== WHITE TEXT FIXES FOR WHITE THEME ===== */
-
-        /* 1. FIX: Header Phone Number and WhatsApp */
-        .nav-cta a,
-        .cta-btn,
-        .cta-btn-with-text {
-            color: var(--text-secondary) !important; /* Dark gray instead of white */
-        }
-
-            .cta-btn:hover,
-            .cta-btn-with-text:hover {
-                color: var(--text-primary) !important; /* Even darker on hover */
-            }
-
-        .cta-text {
-            color: var(--text-secondary) !important;
-        }
-
-        /* 2. FIX: "Book a visit" Button */
-        .btn-outline {
-            background: rgba(30, 64, 175, 0.1);
-            color: var(--text-accent) !important; /* Professional blue instead of white */
-            border: 2px solid rgba(30, 64, 175, 0.3);
-            backdrop-filter: blur(10px);
-        }
-
-            .btn-outline:hover {
-                background: rgba(30, 64, 175, 0.2);
-                color: var(--text-primary) !important; /* Dark text on hover */
-                border-color: rgba(30, 64, 175, 0.6);
-            }
-
-        /* 3. FIX: Project Highlights and Document Buttons */
-        .highlight-tag {
-            background: rgba(30, 64, 175, 0.1);
-            color: var(--text-accent) !important; /* Professional blue */
-            padding: 6px 14px;
-            border-radius: var(--radius-lg);
-            font-size: 0.8rem;
-            font-weight: 500;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(30, 64, 175, 0.2);
-        }
-
-        /* Fix Document Download Buttons */
-        .document-item {
-            background: rgba(248, 250, 252, 0.9) !important;
-            color: var(--text-primary) !important; /* Dark text */
-        }
-
-            .document-item:hover {
-                color: var(--text-primary) !important; /* Keep dark on hover */
-            }
-
-        .document-details h5 {
-            color: var(--text-primary) !important;
-        }
-
-        .document-meta {
-            color: var(--text-muted) !important;
-        }
-
-        /* Fix Project Documents in Cards */
-        .project-documents .document-item {
-            background: rgba(248, 250, 252, 0.9) !important;
-            color: var(--text-primary) !important;
-        }
-
-        .project-documents .document-details h5 {
-            color: var(--text-primary) !important;
-        }
-
-        .project-documents .document-meta {
-            color: var(--text-muted) !important;
-        }
-
-        /* 4. FIX: Footer Text Colors */
-        .footer {
-            background: var(--bg-dark) !important; /* Light gray background instead of dark */
-            color: var(--text-primary) !important; /* Dark text */
-            border-top: 1px solid rgba(226, 232, 240, 0.3);
-        }
-
-        .footer-logo {
-            color: var(--text-primary) !important;
-        }
-
-        .footer-text {
-            color: var(--text-secondary) !important;
-        }
-
-        .footer-section h4 {
-            color: var(--text-primary) !important;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary) !important;
-        }
-
-            .footer-links a:hover {
-                color: var(--text-primary) !important;
-            }
-
-        .footer-bottom {
-            color: var(--text-muted) !important;
-            border-top: 1px solid rgba(226, 232, 240, 0.3);
-        }
-
-        /* Fix Social Links in Footer */
-        .social-link {
-            background: rgba(30, 64, 175, 0.1);
-            color: var(--text-accent) !important;
-        }
-
-            .social-link:hover {
-                background: var(--gold-gradient);
-                color: white !important;
-            }
-
-        /* FIX: Additional Elements That May Show White */
-        .explore-btn {
-            background: var(--gold-gradient);
-            color: white !important; /* Keep white text on colored background */
-        }
-
-        .btn-primary {
-            background: var(--gold-gradient);
-            color: white !important; /* Keep white text on colored background */
-        }
-
-        .btn-whatsapp {
-            background: #25d366;
-            color: white !important; /* Keep white text on colored background */
-        }
-
-        /* Fix Modal Content */
-        .modal-content {
-            background: rgba(248, 250, 252, 0.95);
-            color: var(--text-primary) !important;
-        }
-
-        /* Fix Contact Form Text */
-        .form-title {
-            color: var(--text-primary) !important;
-        }
-
-        /* Fix Any Remaining White Text Issues */
-        .section-title,
-        .section-subtitle,
-        .about-text,
-        .contact-details h4,
-        .contact-details p {
-            color: var(--text-primary) !important;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            color: var(--text-primary) !important;
-        }
-
-        p, span, div {
-            color: var(--text-secondary) !important;
-        }
-
-        /* Exception: Keep white text on dark/colored backgrounds */
-        .btn-primary,
-        .btn-whatsapp,
-        .explore-btn,
-        .submit-btn,
-        .feature-icon,
-        .contact-icon,
-        .document-icon {
-            color: white !important;
-        }
-
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17460502198">
@@ -2677,6 +2471,8 @@
                             <select name="property_interest" class="form-select" required>
                                 <option value="">Select Property Interest</option>
                                 <option value="skyline">SRINIVASAM by PROTEK Realty</option>
+                                <option value="green-valley">Green Valley Apartments</option>
+                                <option value="royal-heights">Royal Heights</option>
                                 <option value="general">General Inquiry</option>
                                 <option value="site-visit">Schedule Site Visit</option>
                             </select>

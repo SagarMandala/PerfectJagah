@@ -2481,15 +2481,15 @@
                         <!--<div class="project-badge"></div>-->
                         <!-- NEW: Approval Icons -->
                         <!--<div class="approval-icons">
-                            <div class="approval-icon" title="RERA Approved">
-                                <img src="assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
-                            </div>
-                            <div class="approval-icon" title="DTCP Approved">
-                                <img src="assets/dtcp_approvedprojects_logo.jpeg" alt="DTCP Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="fallback-text" style="display: none;">DTCP<br>APPROVED</div>
-                            </div>
-                        </div>-->
+                <div class="approval-icon" title="RERA Approved">
+                    <img src="assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
+                </div>
+                <div class="approval-icon" title="DTCP Approved">
+                    <img src="assets/dtcp_approvedprojects_logo.jpeg" alt="DTCP Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="fallback-text" style="display: none;">DTCP<br>APPROVED</div>
+                </div>
+            </div>-->
 
                         <div class="project-overlay">
                             <button class="view-btn">
@@ -2582,6 +2582,107 @@
                                     <i class="fas fa-download"></i>
                                 </div>
                             </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" onclick="openProjectModal('project2')">
+                    <div class="project-image has-image">
+                        <img src="assets/images/project2/0.jpg" alt="Newmark Gardenia" loading="lazy">
+                        <div class="project-overlay">
+                            <button class="view-btn">
+                                <i class="fas fa-eye"></i>
+                                <span>View Details</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Newmark Gardenia</h3>
+                                <p class="project-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Thummaluru, Srisailam Highway, Hyderabad
+                                </p>
+                            </div>
+                            <div class="project-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="project-highlights">
+                            <span class="highlight-tag">70% Bank Loan available on MARKET Price</span>
+                            <span class="highlight-tag">10 min to ORR</span>
+                            <span class="highlight-tag">5 min to Pharma City</span>
+                            <span class="highlight-tag">15 mins to TCS Adibatla</span>
+                            <span class="highlight-tag">15 mins to Airport & GMR AERO City</span>
+                        </div>
+
+                        <div class="project-footer">
+                            <div class="project-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price-value">27,000 /- Per square yard</span>
+                            </div>
+                            <button class="explore-btn" onclick="event.stopPropagation(); openProjectModal('project2')">
+                                <span>Explore</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <!-- NEW: Document Downloads -->
+                        <div class="project-documents" style="margin-top: 20px; display: grid; gap: 8px;">
+                            <a href="assets/documents/project1/SrinivasamBroucher2.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('SRINIVASAM by PROTEK Realty', 'Project Brochure')">
+                                <div class="document-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div class="document-details">
+                                    <h5>Project Brochure</h5>
+                                    <div class="document-meta">
+                                        <span><i class="fas fa-file"></i> PDF</span>
+                                        <span><i class="fas fa-hdd"></i> 6.92 MB</span>
+                                    </div>
+                                </div>
+                                <div class="download-indicator">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                            </a>
+
+                            <!--<a href="assets/documents/project1/CertificateFile_63523.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('SRINIVASAM by PROTEK Realty', 'TG RERA Certificate')">
+                    <div class="document-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="document-details">
+                        <h5>TG RERA Certificate</h5>
+                        <div class="document-meta">
+                            <span><i class="fas fa-file"></i> PDF</span>
+                            <span><i class="fas fa-hdd"></i> 225 KB</span>
+                        </div>
+                    </div>
+                    <div class="download-indicator">
+                        <i class="fas fa-download"></i>
+                    </div>
+                </a>
+
+                <a href="assets/documents/project1/TLP 103.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('SRINIVASAM by PROTEK Realty', 'LP Number Document')">
+                    <div class="document-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="document-details">
+                        <h5>LP Number Document</h5>
+                        <div class="document-meta">
+                            <span><i class="fas fa-file"></i> PDF</span>
+                            <span><i class="fas fa-hdd"></i> 555 KB</span>
+                        </div>
+                    </div>
+                    <div class="download-indicator">
+                        <i class="fas fa-download"></i>
+                    </div>
+                </a>-->
                         </div>
 
                     </div>
@@ -2811,6 +2912,62 @@
                     }
                 ],
                 description: "We have 9 acres villa plots geated community layout on Shankerpally to Vikarabad Highway.It is a DTCP approved & RERA certified project."
+            },
+            project2: {
+                title: "Newmark Gardenia",
+                location: "Thummaluru, Srisailam Highway, Hyderabad",
+                price: "₹27,000 /- Per square yard",
+                /// status: "",
+                rating: 4.8,
+                // NEW: Google Drive folder configuration
+                driveFolder: {
+                    folderId: "136qlxWbNM9fAUci_xtA7HPC4B89pHH0X", // Get from folder URL
+                    apiKey: "AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU" // Get from Google Console
+                },
+                highlights: [
+                    "5min to Pharma City",
+                    "10min to ORR",
+                    "15min to Fab City",
+                    "15min to Hardward Part",
+                    "15min to TCS Adibatla",
+                    "15min to Airport & GMR AERO City",
+                    "25min to Shamshabad",
+                    "40min to Financial City",
+                    
+                ],
+                amenities: [
+                    { icon: "fas fa-file-contract", name: "100% Clear Title" },
+                    { icon: "fas fa-road", name: "CC Roads" },
+                    { icon: "fas fa-shield-alt", name: "24x7 Security" },
+                    { icon: "fas fa-tint", name: "Underground Water Supply" },
+                    { icon: "fas fa-water", name: "Underground Drainage System" },
+                    { icon: "fas fa-compass", name: "100% Vastu Plotting" },
+                    { icon: "fas fa-child", name: "Children Play Area" },
+                    { icon: "fas fa-bolt", name: "Electricity" },
+                    { icon: "fas fa-lightbulb", name: "Street Lights" },
+                    { icon: "fas fa-tree", name: "Avenue Plantation" }
+                ],
+                documents: [
+                    {
+                        name: "Project Brochure",
+                        url: "assets/documents/project2/Newmark_Brochure.pdf",
+                        icon: "fas fa-file-pdf",
+                        size: "6.92 MB"
+                    },
+                    //{
+                    //    name: "TG RERA Certificate",
+                    //    url: "assets/documents/project1/CertificateFile_63523.pdf",
+                    //    icon: "fas fa-certificate",
+                    //    size: "225 KB"
+                    //},
+                    //{
+                    //    name: "LP Number Document",
+                    //    url: "assets/documents/project1/PRO103.pdf",
+                    //    icon: "fas fa-file-alt",
+                    //    size: "555 KB"
+                    //}
+                ],
+                description: "We have 18 acres villa plots geated community layout on Shankerpally to Vikarabad Highway.It is a DTCP approved & RERA certified project."
             }
         };
 

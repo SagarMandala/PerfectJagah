@@ -951,7 +951,7 @@
             z-index: 2;
         }
 
-       
+
 
         .project-header {
             display: flex;
@@ -2229,7 +2229,6 @@
         .document-icon {
             color: white !important;
         }
-
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17460502198">
@@ -2246,7 +2245,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -2481,15 +2480,15 @@
                         <!--<div class="project-badge"></div>-->
                         <!-- NEW: Approval Icons -->
                         <!--<div class="approval-icons">
-                <div class="approval-icon" title="RERA Approved">
-                    <img src="assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
-                </div>
-                <div class="approval-icon" title="DTCP Approved">
-                    <img src="assets/dtcp_approvedprojects_logo.jpeg" alt="DTCP Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div class="fallback-text" style="display: none;">DTCP<br>APPROVED</div>
-                </div>
-            </div>-->
+                            <div class="approval-icon" title="RERA Approved">
+                                <img src="assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
+                            </div>
+                            <div class="approval-icon" title="DTCP Approved">
+                                <img src="assets/dtcp_approvedprojects_logo.jpeg" alt="DTCP Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="fallback-text" style="display: none;">DTCP<br>APPROVED</div>
+                            </div>
+                        </div>-->
 
                         <div class="project-overlay">
                             <button class="view-btn">
@@ -2668,6 +2667,111 @@
                             </a>
 
                             <a href="assets/documents/project2/Gardenia HMDA permission .pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('Newmark Gardenia RERA', 'HMDA')">
+                                <div class="document-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="document-details">
+                                    <h5>HMDA Permission</h5>
+                                    <!--<div class="document-meta">
+                                        <span><i class="fas fa-file"></i> PDF</span>
+                                        <span><i class="fas fa-hdd"></i> 553 KB</span>
+                                    </div>-->
+                                </div>
+                                <div class="download-indicator">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" onclick="openProjectModal('project3')">
+                    <div class="project-image has-image">
+                        <img src="assets/images/project3/0.jpeg" alt="Newmark Gardenia" loading="lazy">
+                        <div class="project-overlay">
+                            <button class="view-btn">
+                                <i class="fas fa-eye"></i>
+                                <span>View Details</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">SVR Flora</h3>
+                                <p class="project-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    JANGAON, Warangal Highway, Telangana
+                                </p>
+                            </div>
+                            <div class="project-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="project-highlights">
+                            <span class="highlight-tag">3 mins from Warangal highway</span>
+                            <span class="highlight-tag">5 mins from Jangoan District</span>
+                            <span class="highlight-tag">20 mins from Allair Town</span>
+                            <span class="highlight-tag">30 mins from Rampur IT Sez</span>
+                            <span class="highlight-tag">35 mins from Hanumakonda,Khazipeta and Warangal</span>
+                            <span class="highlight-tag">40 mins from Yadadri Swamy temple</span>
+                            <span class="highlight-tag">40 mins from Regional Ring Road</span>
+
+                        </div>
+
+                        <div class="project-footer">
+                            <div class="project-price">
+                                <span class="price-label">Starting from</span>
+                                <span class="price-value">2,699 /- Per square yard</span>
+                            </div>
+                            <button class="explore-btn" onclick="event.stopPropagation(); openProjectModal('project3')">
+                                <span>Explore</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <!-- NEW: Document Downloads -->
+                        <div class="project-documents" style="margin-top: 20px; display: grid; gap: 8px;">
+                            <a href="assets/documents/project3/SVG Flora Farms & Resorts Brochure.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('SVG Flora', 'Project Brochure')">
+                                <div class="document-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div class="document-details">
+                                    <h5>Project Brochure</h5>
+                                    <!--<div class="document-meta">
+                                        <span><i class="fas fa-file"></i> PDF</span>
+                                        <span><i class="fas fa-hdd"></i> 6.92 MB</span>
+                                    </div>-->
+                                </div>
+                                <div class="download-indicator">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                            </a>
+
+                            <a href="assets/documents/project3/SVG Flora Farms & Resorts Layout.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('Layout', 'Layout')">
+                                <div class="document-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="document-details">
+                                    <h5>Resorts Layout</h5>
+                                    <!--<div class="document-meta">
+                                        <span><i class="fas fa-file"></i> PDF</span>
+                                        <span><i class="fas fa-hdd"></i> 543 KB</span>
+                                    </div>-->
+                                </div>
+                                <div class="download-indicator">
+                                    <i class="fas fa-download"></i>
+                                </div>
+                            </a>
+
+                            
+                            <a href="assets/documents/project3/SVG FLORA FARMS & RESORTS A4 Flyer.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('Layout details', 'Layout')">
                                 <div class="document-icon">
                                     <i class="fas fa-file-alt"></i>
                                 </div>
@@ -2932,7 +3036,7 @@
                     "15min to Airport & GMR AERO City",
                     "25min to Shamshabad",
                     "40min to Financial City",
-                    
+
                 ],
                 amenities: [
                     { icon: "fas fa-file-contract", name: "100% Clear Title" },
@@ -2967,6 +3071,61 @@
                     }
                 ],
                 description: "We have 18 acres villa plots geated community layout on Thummaluru, Srisailam Highway, Hyderabad.It is a DTCP approved & RERA certified project."
+            },
+            project3: {
+                title: "SVG Flora",
+                location: "Jangaon, Warangal Highway,Telangana",
+                price: "₹2,699 /- Per square yard",
+                /// status: "",
+                rating: 4.8,
+                // NEW: Google Drive folder configuration
+                driveFolder: {
+                    folderId: "1cXpHOYrzA-YtdpkTZ3H-p-Yd7SqQ9F7w", // Get from folder URL
+                    apiKey: "AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU" // Get from Google Console
+                },
+                highlights: [
+                    "3 mins from Warangal highway",
+"5 mins from Jangoan District",
+"20 mins from Allair Town",
+"30 mins from Rampur IT Sez",
+"35 mins from Hanumakonda,Khazipeta and Warangal",
+"40 mins from Yadadri Swamy temple",
+"40 mins from Regional Ring Road",
+
+                ],
+                amenities: [
+                    { icon: "fas fa-file-contract", name: "Grand Reception" },
+                    { icon: "fas fa-road", name: "Business center" },
+                    { icon: "fas fa-shield-alt", name: "Mega Club House" },
+                    { icon: "fas fa-tint", name: "Swimming Pool" },
+                    { icon: "fas fa-water", name: "Meditation Center" },
+                    { icon: "fas fa-compass", name: "Flower Garden" },
+                    { icon: "fas fa-child", name: "Internal Roads" },
+                    { icon: "fas fa-bolt", name: "Indore & Outdoor Sprots" },
+                    { icon: "fas fa-lightbulb", name: "Restaurant & Dining area" },
+                    { icon: "fas fa-tree", name: "Sandpit area" }
+                ],
+                documents: [
+                    {
+                        name: "Project Brochure",
+                        url: "assets/documents/project3/SVG Flora Farms & Resorts Brochure.pdf",
+                        icon: "fas fa-file-pdf",
+                        size: "6.92 MB"
+                    },
+                    {
+                        name: "Resorts Layout",
+                        url: "assets/documents/project3/SVG Flora Farms & Resorts Layout.pdf",
+                        icon: "fas fa-certificate",
+                        size: "225 KB"
+                    },
+                    {
+                        name: "Resorts Layout Flyer",
+                        url: "assets/documents/project3/SVG FLORA FARMS & RESORTS A4 Flyer.pdf",
+                        icon: "fas fa-file-alt",
+                        size: "555 KB"
+                    }
+                ],
+                description: "We have 100 acres villa plots geated community layout on Jangaon, Warangal Highway."
             }
         };
 
@@ -3129,31 +3288,11 @@
             currentImageIndex = (currentImageIndex - 1 + currentGallery.length) % currentGallery.length;
             updateLightboxMedia();
         }
-
-        async function openProjectModal(projectId) {
-            const project = projectData[projectId];
-            if (!project) return;
-
-            // Show loading state
-            const modal = document.getElementById('projectModal');
-            const modalContent = document.getElementById('modalContent');
-            modalContent.innerHTML = '<div style="padding: 40px; text-align: center; color: white;"><i class="fas fa-spinner fa-spin"></i> Loading gallery...</div>';
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-
-            // Load gallery items dynamically from Google Drive
-            const galleryItems = await loadGalleryFromGoogleDrive(project);
-
-            modalContent.innerHTML = `
-            <div style="padding: 40px; color: white;">
-                <!-- Project Title & Basic Info -->
-                <div style="text-align: center; margin-bottom: 40px;">
-                    <h1 style="font-size: 2.5rem; margin-bottom: 16px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${project.title}</h1>
-                    <p style="font-size: 1.2rem; opacity: 0.8;"><i class="fas fa-map-marker-alt"></i> ${project.location}</p>
-                    <div style="font-size: 1.5rem; font-weight: 700; margin-top: 12px; color: #fbbf24;">${project.price}</div>
-                </div>
-
-                <!-- Approval Icons -->
+        // Function to get approval icons based on project ID
+        function getApprovalIcons(projectId) {
+            switch (projectId) {
+                case 'project1':
+                    return `
                 <div class="modal-approvals">
                     <div class="modal-approval-item">
                         <div class="modal-approval-icon">
@@ -3170,102 +3309,179 @@
                         <div class="modal-approval-label">DTCP Approved</div>
                     </div>
                 </div>
+            `;
 
-                <!-- Documents Section -->
-                <div style="margin-bottom: 40px;">
-                    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-file-download"></i> Documents & Brochures</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
-                        ${project.documents.map(doc =>
-                `<a href="${doc.url}" class="document-item" download target="_blank" onclick="trackDocumentDownload('${project.title}', '${doc.name}')">
-                                <div class="document-icon">
-                                    <i class="${doc.icon}"></i>
-                                </div>
-                                <div class="document-details">
-                                    <h5>${doc.name}</h5>
-                                </div>
-                                <div class="download-indicator">
-                                    <i class="fas fa-download"></i>
-                                </div>
-                            </a>`
-            ).join('')}
+                case 'project2':
+                    return `
+                <div class="modal-approvals">
+                    <div class="modal-approval-item">
+                        <div class="modal-approval-icon">
+                            <img src="assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
+                        </div>
+                        <div class="modal-approval-label">RERA Approved</div>
+                    </div>
+                    <div class="modal-approval-item">
+                        <div class="modal-approval-icon">
+                            <img src="assets/hmda.png" alt="HMDA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="fallback-text" style="display: none;">HMDA<br>APPROVED</div>
+                        </div>
+                        <div class="modal-approval-label">HMDA Approved</div>
                     </div>
                 </div>
-                <!-- ✅ FIX: About This Project -->
+            `;
+
+                case 'project3':
+                    return `
+                <div class="modal-approvals">
+                    
+                </div>
+            `;
+
+                default:
+                    return `
+                <div class="modal-approvals">
+                    <div class="modal-approval-item">
+                        <div class="modal-approval-icon">
+                            <img src="assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
+                        </div>
+                        <div class="modal-approval-label">RERA Approved</div>
+                    </div>
+                    <div class="modal-approval-item">
+                        <div class="modal-approval-icon">
+                            <img src="assets/dtcp_approvedprojects_logo.jpeg" alt="DTCP Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="fallback-text" style="display: none;">DTCP<br>APPROVED</div>
+                        </div>
+                        <div class="modal-approval-label">DTCP Approved</div>
+                    </div>
+                </div>
+            `;
+            }
+        }
+
+
+        async function openProjectModal(projectId) {
+            const project = projectData[projectId];
+            if (!project) return;
+
+            // Show loading state
+            const modal = document.getElementById('projectModal');
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = '<div style="padding: 40px; text-align: center; color: white;"><i class="fas fa-spinner fa-spin"></i> Loading gallery...</div>';
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // Load gallery items dynamically from Google Drive
+            const galleryItems = await loadGalleryFromGoogleDrive(project);
+
+            modalContent.innerHTML = `
+                <div style="padding: 40px; color: white;">
+                    <!-- Project Title & Basic Info -->
+                    <div style="text-align: center; margin-bottom: 40px;">
+                        <h1 style="font-size: 2.5rem; margin-bottom: 16px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${project.title}</h1>
+                        <p style="font-size: 1.2rem; opacity: 0.8;"><i class="fas fa-map-marker-alt"></i> ${project.location}</p>
+                        <div style="font-size: 1.5rem; font-weight: 700; margin-top: 12px; color: #fbbf24;">${project.price}</div>
+                    </div>
+
+                    <!-- ✅ CONDITIONAL: Approval Icons -->
+            ${getApprovalIcons(projectId)}
+
+                    <!-- Documents Section -->
+                    <div style="margin-bottom: 40px;">
+                        <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-file-download"></i> Documents & Brochures</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+                            ${project.documents.map(doc =>
+                `<a href="${doc.url}" class="document-item" download target="_blank" onclick="trackDocumentDownload('${project.title}', '${doc.name}')">
+                                    <div class="document-icon">
+                                        <i class="${doc.icon}"></i>
+                                    </div>
+                                    <div class="document-details">
+                                        <h5>${doc.name}</h5>
+                                    </div>
+                                    <div class="download-indicator">
+                                        <i class="fas fa-download"></i>
+                                    </div>
+                                </a>`
+            ).join('')}
+                        </div>
+                    </div>
+                    <!-- ✅ FIX: About This Project -->
 <div style="margin-bottom: 40px;">
-        <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-info-circle"></i> About This Project</h3>
-        <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">${project.description}</p>
+            <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-info-circle"></i> About This Project</h3>
+            <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">${project.description}</p>
 </div>
 
 <!-- ✅ FIX: Key Highlights (MISSING SECTION ADDED) -->
 <div style="margin-bottom: 40px;">
-        <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-pin"></i> Key Highlights</h3>
-        <div style="display: grid; gap: 0.5rem;">
-            ${project.highlights.map(highlight =>
+            <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-pin"></i> Key Highlights</h3>
+            <div style="display: grid; gap: 0.5rem;">
+                ${project.highlights.map(highlight =>
                 `<div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: var(--glass-dark); border-radius: 8px; backdrop-filter: blur(10px);">
-                    <i class="fas fa-check-circle" style="color: #10b981;"></i>
-                    <span>${highlight}</span>
-                </div>`
+                        <i class="fas fa-check-circle" style="color: #10b981;"></i>
+                        <span>${highlight}</span>
+                    </div>`
             ).join('')}
-        </div>
+            </div>
 </div>
 
 <!-- ✅ FIX: Premium Amenities (MISSING SECTION ADDED) -->
 <div style="margin-bottom: 40px;">
-        <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-star"></i> Premium Amenities</h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-            ${project.amenities.map(amenity =>
+            <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-star"></i> Premium Amenities</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                ${project.amenities.map(amenity =>
                 `<div style="background: var(--glass-dark); padding: 24px; border-radius: var(--radius-lg); text-align: center; backdrop-filter: blur(10px);">
-                    <i class="${amenity.icon}" style="font-size: 2rem; margin-bottom: 12px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                    <div style="font-size: 0.95rem; font-weight: 600;">${amenity.name}</div>
-                </div>`
+                        <i class="${amenity.icon}" style="font-size: 2rem; margin-bottom: 12px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                        <div style="font-size: 0.95rem; font-weight: 600;">${amenity.name}</div>
+                    </div>`
             ).join('')}
-        </div>
+            </div>
 </div>
 
-                <!-- DYNAMIC: Project Gallery from Google Drive -->
-                <div style="margin-bottom: 40px;">
-                    <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fas fa-images"></i> Project Gallery (${galleryItems.length} items loaded)
-                    </h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-                        ${galleryItems.length > 0 ? galleryItems.map((item, index) => {
+                    <!-- DYNAMIC: Project Gallery from Google Drive -->
+                    <div style="margin-bottom: 40px;">
+                        <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-images"></i> Project Gallery (${galleryItems.length} items loaded)
+                        </h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                            ${galleryItems.length > 0 ? galleryItems.map((item, index) => {
                 if (item.type === 'video') {
                     return `<div style="background: var(--glass-dark); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(10px); position: relative;" onclick="openLightbox(${JSON.stringify(galleryItems).replace(/"/g, '&quot;')}, ${index})">
-                                    <iframe src="${item.src}" style="width: 100%; height: 150px; pointer-events: none;" frameborder="0"></iframe>
-                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-play" style="color: white; font-size: 1.2rem; margin-left: 3px;"></i>
-                                    </div>
-                                    <div style="padding: 12px; text-align: center; font-size: 0.9rem;">${item.title}</div>
-                                </div>`;
+                                        <iframe src="${item.src}" style="width: 100%; height: 150px; pointer-events: none;" frameborder="0"></iframe>
+                                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                            <i class="fas fa-play" style="color: white; font-size: 1.2rem; margin-left: 3px;"></i>
+                                        </div>
+                                        
+                                    </div>`;
                 } else {
                     return `<div style="background: var(--glass-dark); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(10px);" onclick="openLightbox(${JSON.stringify(galleryItems).replace(/"/g, '&quot;')}, ${index})">
-                                    <img src="${item.src}" alt="${item.alt}" style="width: 100%; height: 150px; object-fit: cover;" onerror="this.parentElement.innerHTML='<div style=&quot;padding: 20px; text-align: center; color: rgba(255,255,255,0.5);&quot;>Image not available</div>';">
-                                    <div style="padding: 12px; text-align: center; font-size: 0.9rem;">${item.title}</div>
-                                </div>`;
+                                        <img src="${item.src}" alt="${item.alt}" style="width: 100%; height: 150px; object-fit: cover;" onerror="this.parentElement.innerHTML='<div style=&quot;padding: 20px; text-align: center; color: rgba(255,255,255,0.5);&quot;>Image not available</div>';">
+                                        
+                                    </div>`;
                 }
             }).join('') : '<p style="text-align: center; opacity: 0.7;">No media files found in the folder</p>'}
+                        </div>
+                    </div>
+
+
+
+                    <!-- Action Buttons -->
+                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                        <a href="tel:+919885588874" class="btn btn-primary">
+                            <i class="fas fa-phone"></i>
+                            <span>Call Now</span>
+                        </a>
+                        <a href="https://wa.me/919885588874?text=Hi, I'm interested in ${project.title}" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline" onclick="closeModal()">
+                            <i class="fas fa-envelope"></i>
+                            <span>Send Inquiry</span>
+                        </a>
                     </div>
                 </div>
-
-
-
-                <!-- Action Buttons -->
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <a href="tel:+919885588874" class="btn btn-primary">
-                        <i class="fas fa-phone"></i>
-                        <span>Call Now</span>
-                    </a>
-                    <a href="https://wa.me/919885588874?text=Hi, I'm interested in ${project.title}" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp</span>
-                    </a>
-                    <a href="#contact" class="btn btn-outline" onclick="closeModal()">
-                        <i class="fas fa-envelope"></i>
-                        <span>Send Inquiry</span>
-                    </a>
-                </div>
-            </div>
-        `;
+            `;
         }
 
 
@@ -3320,9 +3536,9 @@
                     if (data.status === 'success') {
                         // Success state
                         formMessage.innerHTML = `
-                                                <i class="fas fa-check-circle"></i>
-                                                Thank you! Your message has been sent successfully. We'll get back to you soon!
-                                            `;
+                                                    <i class="fas fa-check-circle"></i>
+                                                    Thank you! Your message has been sent successfully. We'll get back to you soon!
+                                                `;
                         formMessage.classList.add('success');
                         formMessage.style.display = 'block';
 
@@ -3347,9 +3563,9 @@
                 .catch(error => {
                     // Error state
                     formMessage.innerHTML = `
-                                            <i class="fas fa-exclamation-circle"></i>
-                                            Error: ${error.message}. Please try again or contact us directly.
-                                        `;
+                                                <i class="fas fa-exclamation-circle"></i>
+                                                Error: ${error.message}. Please try again or contact us directly.
+                                            `;
                     formMessage.classList.add('error');
                     formMessage.style.display = 'block';
 
@@ -3413,7 +3629,7 @@
                 console.error('Error loading from Google Drive:', error);
                 return [];
             }
-        }   
+        }
 
     </script>
 </body>

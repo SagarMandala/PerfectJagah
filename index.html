@@ -890,6 +890,49 @@
         .project-card:hover .project-image img {
             transform: scale(1.05);
         }
+        @media screen and (max-width: 768px) {
+            .project-image {
+                height: 450px; /* smaller height for mobile */
+                font-size: 0.9rem; /* optional: adjust font size for better mobile readability */
+            }
+        }
+
+        .project-image3 {
+            height: 570px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+            .project-image3.has-image {
+                background-image: none;
+            }
+
+            .project-image3 img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: var(--transition-smooth);
+            }
+
+        .project-card:hover .project-image3 img {
+            transform: scale(1.05);
+        }
+
+        @media screen and (max-width: 768px) {
+            .project-image3 {
+                height: 350px; /* smaller height for mobile */
+                font-size: 0.9rem; /* optional: adjust font size for better mobile readability */
+            }
+        }
 
         .project-badge {
             position: absolute;
@@ -2688,7 +2731,7 @@
 
                 <!-- Project 3 -->
                 <div class="project-card" onclick="openProjectModal('project3')">
-                    <div class="project-image has-image" style="height: 570px !important">
+                    <div class="project-image3 has-image">
                         <img src="assets/images/project3/0.jpeg" alt="Newmark Gardenia" loading="lazy">
                         <div class="project-overlay">
                             <button class="view-btn">
@@ -2700,7 +2743,7 @@
                     <div class="project-content">
                         <div class="project-header">
                             <div>
-                                <h3 class="project-title">SVR Flora</h3>
+                                <h3 class="project-title">SVR Flora (2,699 /- Per SqYd)</h3>
                                 <p class="project-location">
                                     <i class="fas fa-map-marker-alt"></i>
                                     JANGAON, Warangal Highway, Telangana

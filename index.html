@@ -320,12 +320,11 @@
             text-shadow: none; /* ✅ Remove shadow */
         }
 
-            .nav-logo i {
-                font-size: 1.6rem;
-                background: var(--gold-gradient);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
+            .nav-logo .logo-img {
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
+                /*filter: brightness(0) invert(1);*/ /* Makes logo white for dark nav */
             }
 
         .nav-menu {
@@ -2030,9 +2029,9 @@
             transition: var(--transition-smooth);
         }
 
-        .nav-logo .logo-img {
-            filter: brightness(0) invert(1); /* Makes logo white for dark nav */
-        }
+        /*.nav-logo .logo-img {
+            filter: brightness(0) invert(1);*/ /* Makes logo white for dark nav */
+        /*}*/
 
         .footer-logo .logo-img {
             filter: brightness(0) invert(1); /* Makes logo white for dark footer */
@@ -2428,13 +2427,9 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <i class="fas fa-gem"></i>
+                <img src="assets/Logo.png" alt="Perfect Jagah" class="logo-img">
                 <span>Perfect Jagah</span>
             </div>
-            <!--<div class="nav-logo">
-                <img src="assets/Logo.png" alt="Perfect Jagah Logo" class="logo-img">
-                <span>Perfect Jagah</span>
-            </div>-->
 
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
@@ -3592,6 +3587,7 @@
             switch (projectId) {
                 case 'project1':
                     return `
+
                 <div class="modal-approvals">
                     <div class="modal-approval-item">
                         <div class="modal-approval-icon">
@@ -3632,6 +3628,7 @@
 
                 case 'project3':
                     return `
+
                 <div class="modal-approvals">
                     
                 </div>
@@ -3721,8 +3718,9 @@
                                     <div class="download-indicator">
                                         <i class="fas fa-download"></i>
                                     </div>
-                                </a>`
+                                </a>` 
             ).join('')}
+
                         </div>
                     </div>
                     <!-- ✅ FIX: About This Project -->
@@ -3752,7 +3750,7 @@
                 `<div style="background: var(--glass-dark); padding: 24px; border-radius: var(--radius-lg); text-align: center; backdrop-filter: blur(10px);">
                         <i class="${amenity.icon}" style="font-size: 2rem; margin-bottom: 12px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
                         <div style="font-size: 0.95rem; font-weight: 600;">${amenity.name}</div>
-                    </div>`
+                    </div>` 
             ).join('')}
             </div>
 </div>

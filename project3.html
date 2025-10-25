@@ -12,9 +12,56 @@
     <link rel="apple-touch-icon" href="assets/Logo.png">
     <meta name="theme-color" content="#ffffff">
     <link href="assets/css/common.css" rel="stylesheet">
+    <style>
+        /* Navbar styles from index.html */
+        .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all .4s cubic-bezier(0.25,0.46,0.45,0.94);background:rgba(255,255,255,.95);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);border-bottom:1px solid rgba(226,232,240,.5);box-shadow:02px12px rgba(15,23,42,.08)}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px20px}
+        .nav-logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.3rem;color:#0f172a;text-shadow:none}
+        .nav-logo a{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+        .nav-logo .logo-img{width:40px;height:40px;object-fit:contain;transition:all .4s cubic-bezier(0.25,0.46,0.45,0.94)}
+        .nav-menu{display:flex;list-style:none;gap:32px}
+        .nav-link{color:#334155;text-decoration:none;font-weight:500;font-size:.95rem;padding:8px16px;border-radius:12px;position:relative;transition:all .4s cubic-bezier(0.25,0.46,0.45,0.94)}
+        .nav-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(135deg,#0ea5e90%,#0284c7100%);transition:all .4s cubic-bezier(0.25,0.46,0.45,0.94);border-radius:2px}
+        .nav-link:hover::after,.nav-link.active::after{width:100%}
+        .nav-link:hover,.nav-link.active{color:#0f172a;background:rgba(30,64,175,.08)}
+        .nav-cta{display:flex;gap:12px}
+        .cta-btn-with-text{display:flex;align-items:center;gap:8px;padding:8px16px;border-radius:12px;text-decoration:none;color:#334155;background:rgba(255,255,255,.1);transition:all .4s cubic-bezier(0.25,0.46,0.45,0.94);border:1px solid rgba(255,255,255,.2)}
+        .cta-btn-with-text:hover{transform:translateY(-2px);color:#0f172a}
+        .cta-btn{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#334155;background:rgba(255,255,255,.1);transition:all .4s cubic-bezier(0.25,0.46,0.45,0.94)}
+        .hamburger{display:none;flex-direction:column;cursor:pointer;gap:4px}
+        .hamburger span{width:26px;height:3px;background:#334155;border-radius:2px;transition:all .4s cubic-bezier(0.25,0.46,0.45,0.94)}
+        @media(max-width:768px){.hamburger{display:flex}.nav-menu{position:fixed;top:70px;left:-100%;width:100%;height:calc(100vh -70px);background:rgba(15,15,35,.95);backdrop-filter:blur(20px);flex-direction:column;justify-content:flex-start;align-items:center;padding-top=60px;gap:40px;transition=all .4s cubic-bezier(0.25,0.46,0.45,0.94);border-top=1px solid rgba(255,255,255,.1)}.nav-menu.active{left:0}.nav-cta{display:none}.logo-img{width:35px;height:35px}}
+    </style>
 </head>
 <body>
-    <nav class="navbar"><div class="nav-container"><div class="nav-logo"><img src="assets/Logo.png" alt="Perfect Jagah" class="logo-img"><span>Perfect Jagah</span></div><ul class="nav-menu"><li><a href="index.html#projects">Projects</a></li></ul><div class="nav-cta"><a href="tel:+919885588874" class="cta-btn-with-text"><i class="fas fa-phone"></i><span class="cta-text">+919885588874</span></a><a class="cta-btn" href="https://wa.me/919885588874"><i class="fab fa-whatsapp"></i></a></div></div></nav>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><img src="assets/Logo.png" alt="Perfect Jagah" class="logo-img"><span>Perfect Jagah</span></a>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="tel:+919885588874" class="cta-btn-with-text">
+                    <i class="fas fa-phone"></i>
+                    <span class="cta-text">+919885588874</span>
+                </a>
+                <a href="https://wa.me/919885588874" class="cta-btn">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
     <main class="container">
         <div class="project-hero project-section-card">
             <h1>SVG Flora</h1>
@@ -44,6 +91,8 @@
     </main>
     <div class="lightbox" id="lightbox"><button class="lightbox-close" onclick="closeLightbox()">&times;</button><img id="lightboxImage"></div>
     <script>
+        // Drive config for project3
+        window.PROJECT_GALLERY = { folderId: '1cXpHOYrzA-YtdpkTZ3H-p-Yd7SqQ9F7w', apiKey: 'AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU' };
         const amenities = [
             { icon: 'fas fa-file-contract', name: 'Grand Reception' },
             { icon: 'fas fa-road', name: 'Business center' },
@@ -57,7 +106,24 @@
             { icon: 'fas fa-tree', name: 'Sandpit area' }
         ];
         const grid = document.getElementById('amenitiesGrid'); amenities.forEach(a => { const d = document.createElement('div'); d.className = 'amenity'; d.innerHTML = `<i class="${a.icon}"></i><div style="margin-top:8px">${a.name}</div>`; grid.appendChild(d); });
-        const gallery = ['assets/images/project3/0.jpeg']; function openLightbox(i) { document.getElementById('lightboxImage').src = gallery[i]; document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden' } function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); document.getElementById('lightboxImage').src = ''; document.body.style.overflow = 'auto' }
+
+        function openLightboxFromSrc(src) { const lb = document.getElementById('lightbox'); const img = document.getElementById('lightboxImage'); img.style.display = 'block'; img.src = src; lb.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); document.getElementById('lightboxImage').src = ''; document.body.style.overflow = 'auto'; }
+
+        async function loadGallery() {
+            const cfg = window.PROJECT_GALLERY || {};
+            const grid = document.querySelector('.gallery-grid');
+            if (!cfg.folderId || !cfg.apiKey) { const local = ['assets/images/project3/0.jpeg']; grid.innerHTML = ''; local.forEach(src => { const g = document.createElement('div'); g.className = 'gallery-item'; g.innerHTML = `<img src="${src}" alt="">`; g.addEventListener('click', () => openLightboxFromSrc(src)); grid.appendChild(g); }); return; }
+            grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.8">Loading gallery...</div>';
+            try { const res = await fetch(`https://www.googleapis.com/drive/v3/files?q='${cfg.folderId}'+in+parents&key=${cfg.apiKey}&fields=files(id,name,mimeType)`); const data = await res.json(); grid.innerHTML = ''; if (data.files && data.files.length) { const items = []; data.files.forEach(file => { if (file.mimeType.startsWith('image/')) items.push({ type: 'image', src: `https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`, alt: file.name }); else if (file.mimeType.startsWith('video/')) items.push({ type: 'video', src: `https://drive.google.com/file/d/${file.id}/preview`, alt: file.name }); }); if (items.length ===0) grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.7">No media files found</div>'; items.forEach(it => { const g = document.createElement('div'); g.className = 'gallery-item'; if (it.type === 'image') { g.innerHTML = `<img src="${it.src}" alt="${it.alt}">`; g.addEventListener('click', () => openLightboxFromSrc(it.src)); } else { g.innerHTML = `<div style="height:110px;display:flex;align-items:center;justify-content:center;background:#000;color:#fff">Video</div>`; } grid.appendChild(g); }); } else { grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.7">No media files found</div>'; } } catch (e) { grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.7">Error loading gallery</div>'; console.error(e); } }
+
+        loadGallery();
+
+        // nav behavior
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger?.addEventListener('click', () => { hamburger.classList.toggle('active'); navMenu.classList.toggle('active'); });
+        document.querySelectorAll('.nav-menu a, .nav-cta a').forEach(a => a.addEventListener('click', ()=>{ navMenu.classList.remove('active'); hamburger?.classList.remove('active'); }));
     </script>
 </body>
 </html>

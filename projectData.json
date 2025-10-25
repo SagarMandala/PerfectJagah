@@ -1,0 +1,351 @@
+﻿{
+  "projects": [
+    {
+      "id": "project1",
+      "title": "SRINIVASAM by PROTEK Realty",
+      "location": "Vattimeenapally Grampanchayat",
+      "price": "₹24 Lakhs - ₹50 Lakhs",
+      "rating": 4.8,
+      "driveFolder": {
+        "folderId": "1fGw31-Mlx-5T4FzeOGZ4E8qa3atA9YLG",
+        "apiKey": "AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU"
+      },
+      "highlights": [
+        "Very close proximity to Regional Ring Road",
+        "near to Nawabpet",
+        "20 mins drive from Shankerpally",
+        "5 mins drive from Telangana Mobility Valley a project which is initiated in3000 acres by Central & State Govt.",
+        "5 mins from Mehtabkhan guda junction",
+        "2 mins drive from Nawabpet.",
+        "40 mins from Patancheru.",
+        "30 mins drive from Mokilla",
+        "40 mins from Neopolis(Kokapet)."
+      ],
+      "amenities": [
+        {
+          "icon": "fas fa-file-contract",
+          "name": "100% Clear Title"
+        },
+        {
+          "icon": "fas fa-road",
+          "name": "CC Roads"
+        },
+        {
+          "icon": "fas fa-shield-alt",
+          "name": "24x7 Security"
+        },
+        {
+          "icon": "fas fa-tint",
+          "name": "Underground Water Supply"
+        },
+        {
+          "icon": "fas fa-water",
+          "name": "Underground Drainage System"
+        },
+        {
+          "icon": "fas fa-compass",
+          "name": "100% Vastu Plotting"
+        },
+        {
+          "icon": "fas fa-child",
+          "name": "Children Play Area"
+        },
+        {
+          "icon": "fas fa-bolt",
+          "name": "Electricity"
+        },
+        {
+          "icon": "fas fa-lightbulb",
+          "name": "Street Lights"
+        },
+        {
+          "icon": "fas fa-tree",
+          "name": "Avenue Plantation"
+        }
+      ],
+      "documents": [
+        {
+          "name": "Project Brochure",
+          "url": "assets/documents/project1/SrinivasamBroucher2.pdf",
+          "icon": "fas fa-file-pdf",
+          "size": "4.03 MB"
+        },
+        {
+          "name": "TG RERA Certificate",
+          "url": "assets/documents/project1/CertificateFile_63523.pdf",
+          "icon": "fas fa-certificate",
+          "size": "225 KB"
+        },
+        {
+          "name": "LP Number Document",
+          "url": "assets/documents/project1/PRO103.pdf",
+          "icon": "fas fa-file-alt",
+          "size": "555 KB"
+        }
+      ],
+      "description": "We have9 acres villa plots gated community layout on Shankerpally to Vikarabad Highway. It is a DTCP approved & RERA certified project."
+    },
+    {
+      "id": "project2",
+      "title": "Newmark Gardenia",
+      "location": "Thummaluru, Srisailam Highway, Hyderabad",
+      "price": "₹27,000 /- Per square yard",
+      "rating": 4.8,
+      "driveFolder": {
+        "folderId": "136qlxWbNM9fAUci_xtA7HPC4B89pHH0X",
+        "apiKey": "AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU"
+      },
+      "highlights": [
+        "5min to Pharma City",
+        "10min to ORR",
+        "15min to Fab City",
+        "15min to Hardward Part",
+        "15min to TCS Adibatla",
+        "15min to Airport & GMR AERO City",
+        "25min to Shamshabad",
+        "40min to Financial City"
+      ],
+      "amenities": [
+        {
+          "icon": "fas fa-file-contract",
+          "name": "100% Clear Title"
+        },
+        {
+          "icon": "fas fa-road",
+          "name": "CC Roads"
+        },
+        {
+          "icon": "fas fa-shield-alt",
+          "name": "24x7 Security"
+        },
+        {
+          "icon": "fas fa-tint",
+          "name": "Underground Water Supply"
+        },
+        {
+          "icon": "fas fa-water",
+          "name": "Underground Drainage System"
+        },
+        {
+          "icon": "fas fa-compass",
+          "name": "100% Vastu Plotting"
+        },
+        {
+          "icon": "fas fa-child",
+          "name": "Children Play Area"
+        },
+        {
+          "icon": "fas fa-bolt",
+          "name": "Electricity"
+        },
+        {
+          "icon": "fas fa-lightbulb",
+          "name": "Street Lights"
+        },
+        {
+          "icon": "fas fa-tree",
+          "name": "Avenue Plantation"
+        }
+      ],
+      "documents": [
+        {
+          "name": "Project Brochure",
+          "url": "assets/documents/project2/Newmark_Brochure.pdf",
+          "icon": "fas fa-file-pdf",
+          "size": "6.92 MB"
+        },
+        {
+          "name": "TG RERA Certificate",
+          "url": "assets/documents/project2/Newmark Gardenia RERA.pdf",
+          "icon": "fas fa-certificate",
+          "size": "225 KB"
+        },
+        {
+          "name": "HMDA Permission",
+          "url": "assets/documents/project2/Gardenia HMDA permission .pdf",
+          "icon": "fas fa-file-alt",
+          "size": "555 KB"
+        }
+      ],
+      "description": "We have18 acres villa plots gated community layout on Thummaluru, Srisailam Highway, Hyderabad. It is a DTCP approved & RERA certified project."
+    },
+    {
+      "id": "project3",
+      "title": "SVG Flora",
+      "location": "Jangaon, Warangal Highway, Telangana",
+      "price": "₹2,699 /- Per square yard",
+      "rating": 4.8,
+      "driveFolder": {
+        "folderId": "1cXpHOYrzA-YtdpkTZ3H-p-Yd7SqQ9F7w",
+        "apiKey": "AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU"
+      },
+      "highlights": [
+        "3 mins from Warangal highway",
+        "5 mins from Jangoan District",
+        "20 mins from Allair Town",
+        "30 mins from Rampur IT Sez",
+        "35 mins from Hanumakonda,Khazipeta and Warangal",
+        "40 mins from Yadadri Swamy temple",
+        "40 mins from Regional Ring Road"
+      ],
+      "amenities": [
+        {
+          "icon": "fas fa-file-contract",
+          "name": "Grand Reception"
+        },
+        {
+          "icon": "fas fa-road",
+          "name": "Business center"
+        },
+        {
+          "icon": "fas fa-shield-alt",
+          "name": "Mega Club House"
+        },
+        {
+          "icon": "fas fa-tint",
+          "name": "Swimming Pool"
+        },
+        {
+          "icon": "fas fa-water",
+          "name": "Meditation Center"
+        },
+        {
+          "icon": "fas fa-compass",
+          "name": "Flower Garden"
+        },
+        {
+          "icon": "fas fa-child",
+          "name": "Internal Roads"
+        },
+        {
+          "icon": "fas fa-bolt",
+          "name": "Indoor & Outdoor Sports"
+        },
+        {
+          "icon": "fas fa-lightbulb",
+          "name": "Restaurant & Dining area"
+        },
+        {
+          "icon": "fas fa-tree",
+          "name": "Sandpit area"
+        }
+      ],
+      "documents": [
+        {
+          "name": "Project Brochure",
+          "url": "assets/documents/project3/SVG Flora Farms & Resorts Brochure.pdf",
+          "icon": "fas fa-file-pdf",
+          "size": "6.92 MB"
+        },
+        {
+          "name": "Resorts Layout",
+          "url": "assets/documents/project3/SVG Flora Farms & Resorts Layout.pdf",
+          "icon": "fas fa-certificate",
+          "size": "225 KB"
+        },
+        {
+          "name": "Resorts Layout Flyer",
+          "url": "assets/documents/project3/SVG FLORA FARMS & RESORTS A4 Flyer.pdf",
+          "icon": "fas fa-file-alt",
+          "size": "555 KB"
+        }
+      ],
+      "description": "We have100 acres villa plots gated community layout on Jangaon, Warangal Highway."
+    },
+    {
+      "id": "project4",
+      "title": "West County Villas",
+      "location": "Nandigama",
+      "price": "₹6,500 /- Per square feet",
+      "rating": 4.8,
+      "driveFolder": {
+        "folderId": "19loFoYv5_bae2S2waJ4alDxVoUJhu6BA",
+        "apiKey": "AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU"
+      },
+      "highlights": [
+        "3 mins from ORR Exit3(Muttangi)",
+        "3 km from ODF shopping complex",
+        "7 min from Kondakal IT SEZ",
+        "5 min from Edurunagalapalli Railway Yard",
+        "5 min from Gadium International school",
+        "20 min from IT Financial District",
+        "30 min from AIRPORT"
+      ],
+      "amenities": [
+        {
+          "icon": "fas fa-file-contract",
+          "name": "Grand Reception"
+        },
+        {
+          "icon": "fas fa-road",
+          "name": "Business center"
+        },
+        {
+          "icon": "fas fa-shield-alt",
+          "name": "Mega Club House"
+        },
+        {
+          "icon": "fas fa-tint",
+          "name": "Swimming Pool"
+        },
+        {
+          "icon": "fas fa-water",
+          "name": "Meditation Center"
+        },
+        {
+          "icon": "fas fa-compass",
+          "name": "Flower Garden"
+        },
+        {
+          "icon": "fas fa-child",
+          "name": "Internal Roads"
+        },
+        {
+          "icon": "fas fa-bolt",
+          "name": "Indoor & Outdoor Sports"
+        },
+        {
+          "icon": "fas fa-lightbulb",
+          "name": "Restaurant & Dining area"
+        },
+        {
+          "icon": "fas fa-tree",
+          "name": "Sandpit area"
+        }
+      ],
+      "documents": [
+        {
+          "name": "Project Brochure",
+          "url": "assets/documents/project4/CLUBHOUSE.pdf",
+          "icon": "fas fa-file-pdf",
+          "size": "6.92 MB"
+        },
+        {
+          "name": "TG RERA Certificate",
+          "url": "assets/documents/project4/CSKRERA.pdf",
+          "icon": "fas fa-certificate",
+          "size": "225 KB"
+        },
+        {
+          "name": "House Plan",
+          "url": "assets/documents/project4/PATANCHERUPRESENTATIONPLANS.pdf",
+          "icon": "fas fa-file-alt",
+          "size": "555 KB"
+        },
+        {
+          "name": "Site Plan",
+          "url": "assets/documents/project4/RENDEREDPLANDETAILS20250521.pdf",
+          "icon": "fas fa-file-alt",
+          "size": "555 KB"
+        },
+        {
+          "name": "MORTGAGE LETTER",
+          "url": "assets/documents/project4/SROLetter_011687_LO_HMDA_3089_SKP_2024.pdf",
+          "icon": "fas fa-file-alt",
+          "size": "555 KB"
+        }
+      ],
+      "description": "We have100 acres villa plots gated community layout on Jangaon, Warangal Highway."
+    }
+  ]
+}

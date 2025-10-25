@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{TITLE}} — Perfect Jagah</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link href="assets/css/common.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo"><i class="fas fa-gem"></i><span>Perfect Jagah</span></div>
+            <ul class="nav-menu"><li><a href="index.html#home">Home</a></li><li><a href="index.html#projects">Projects</a></li><li><a href="index.html#contact">Contact</a></li></ul>
+            <div class="nav-cta"><a class="cta-btn-with-text" href="tel:+919885588874"><i class="fas fa-phone"></i><span class="cta-text">+919885588874</span></a><a class="cta-btn" href="https://wa.me/919885588874"><i class="fab fa-whatsapp"></i></a></div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="project-hero project-section-card">
+            <h1>{{TITLE}}</h1>
+            <div class="project-meta"><div>{{LOCATION}}</div><div class="project-price">{{PRICE}}</div></div>
+        </div>
+
+        <div class="project-section-card">
+            <h3>About This Project</h3>
+            <p>{{DESCRIPTION}}</p>
+        </div>
+
+        <div class="project-section-card">
+            <h3>Key Highlights</h3>
+            <div id="highlights" style="display:grid;gap:8px;margin-top:8px"></div>
+        </div>
+
+        <div class="project-section-card">
+            <h3>Premium Amenities</h3>
+            <div class="grid-amenities" id="amenities"> <!--AMENITIES_PLACEHOLDER--> </div>
+        </div>
+
+        <div class="project-section-card">
+            <h3>Documents & Brochures</h3>
+            <div class="documents-grid"> <!--DOCUMENTS_PLACEHOLDER--> </div>
+        </div>
+
+        <div class="project-section-card">
+            <h3>Project Gallery</h3>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+
+        <div class="actions"><a class="btn btn-primary" href="tel:+919885588874"><i class="fas fa-phone"></i> Call Now</a><a class="btn btn-whatsapp" href="https://wa.me/919885588874"><i class="fab fa-whatsapp"></i> WhatsApp</a></div>
+
+    </main>
+
+    <!--DRIVE_SCRIPT-->
+
+    <script>
+        // populate highlights from data attribute if available
+        (function () {
+            const meta = document.querySelector('meta[name="project-highlights-data"]');
+            if (meta) {
+                try { const highlights = JSON.parse(meta.getAttribute('content')); const cont = document.getElementById('highlights'); highlights.forEach(h => { const el = document.createElement('div'); el.style.display = 'flex'; el.style.alignItems = 'center'; el.style.gap = '8px'; el.style.padding = '12px'; el.style.background = 'var(--bg-glass)'; el.style.borderRadius = '10px'; el.innerHTML = `<i class="fas fa-check-circle" style="color:#10b981"></i><span>${h}</span>`; cont.appendChild(el); }); } catch (e) { }
+            }
+        })();
+
+        // load gallery if PROJECT_GALLERY is present
+        (function () {
+            if (window.PROJECT_GALLERY && window.PROJECT_GALLERY.folderId) {
+                const folderId = window.PROJECT_GALLERY.folderId; const apiKey = window.PROJECT_GALLERY.apiKey; const grid = document.getElementById('galleryGrid'); grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.8">Loading gallery...</div>';
+                fetch(`https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}&fields=files(id,name,mimeType)`).then(r => r.json()).then(data => { grid.innerHTML = ''; if (data.files && data.files.length) { const items = []; data.files.forEach(file => { if (file.mimeType.startsWith('image/')) items.push({ type: 'image', src: `https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`, alt: file.name }); else if (file.mimeType.startsWith('video/')) items.push({ type: 'video', src: `https://drive.google.com/file/d/${file.id}/preview`, alt: file.name }); }); items.forEach((it, idx) => { const g = document.createElement('div'); g.className = 'gallery-item'; if (it.type === 'image') { g.innerHTML = `<img src="${it.src}" alt="${it.alt}">`; g.addEventListener('click', () => { const lb = document.getElementById('lightbox'); const img = document.getElementById('lightboxImage'); img.style.display = 'block'; img.src = it.src; lb.classList.add('active'); document.body.style.overflow = 'hidden'; }); } else { g.innerHTML = `<div style="height:110px;display:flex;align-items:center;justify-content:center;background:#000;color:#fff">Video</div>`; } grid.appendChild(g); }); } else { grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.7">No media files found</div>'; } }).catch(e => { grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.7">Error loading gallery</div>'; console.error(e); });
+            }
+        })();
+    </script>
+
+    <!-- lightbox -->
+    <div class="lightbox" id="lightbox" style="display:none"><div class="lightbox-media-container"><img id="lightboxImage" style="display:none"></div><button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('active');document.body.style.overflow='auto'">&times;</button></div>
+
+</body>
+</html>

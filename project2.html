@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Newmark Gardenia — Perfect Jagah</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link href="assets/css/common.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar"><div class="nav-container"><div class="nav-logo"><i class="fas fa-gem"></i><span>Perfect Jagah</span></div><ul class="nav-menu"><li><a href="index.html#home">Home</a></li><li><a href="index.html#projects">Projects</a></li></ul><div class="nav-cta"><a href="tel:+919885588874" class="cta-btn-with-text"><i class="fas fa-phone"></i><span class="cta-text">+919885588874</span></a><a class="cta-btn" href="https://wa.me/919885588874"><i class="fab fa-whatsapp"></i></a></div></div></nav>
+
+    <main class="container">
+        <div class="project-hero project-section-card">
+            <h1>Newmark Gardenia</h1>
+            <p>Thummaluru, Srisailam Highway, Hyderabad</p>
+            <div class="project-meta"><div class="project-price">Starting from &#8377;27,000 /- Per square yard</div></div>
+        </div>
+
+        <div class="project-section-card">
+            <h3>Documents & Brochures</h3>
+            <div class="documents-grid">
+                <a class="document-item" href="assets/documents/project2/Newmark_Brochure.pdf" download target="_blank"><div class="document-icon"><i class="fas fa-file-pdf"></i></div><div><strong>Project Brochure</strong></div></a>
+                <a class="document-item" href="assets/documents/project2/Newmark Gardenia RERA.pdf" download target="_blank"><div class="document-icon"><i class="fas fa-certificate"></i></div><div><strong>TG RERA Certificate</strong></div></a>
+            </div>
+        </div>
+
+        <div class="project-section-card">
+            <h3>Key Highlights</h3>
+            <div style="display:grid;gap:8px;margin-top:8px">
+                <div style="display:flex;align-items:center;gap:8px;padding:12px;background:var(--bg-glass);border-radius:8px"><i class="fas fa-check-circle" style="color:#10b981"></i><span>5min to Pharma City</span></div>
+                <div style="display:flex;align-items:center;gap:8px;padding:12px;background:var(--bg-glass);border-radius:8px"><i class="fas fa-check-circle" style="color:#10b981"></i><span>10min to ORR</span></div>
+            </div>
+        </div>
+
+        <div class="project-section-card">
+            <h3>Premium Amenities</h3>
+            <div class="grid-amenities" id="amenitiesGrid">
+                <!-- will populate via JS to ensure parity -->
+            </div>
+        </div>
+
+        <div class="project-section-card">
+            <h3>Gallery</h3>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+
+        <div class="actions"><a class="btn btn-primary" href="tel:+919885588874"><i class="fas fa-phone"></i> Call</a><a class="btn btn-whatsapp" href="https://wa.me/919885588874?text=I%20am%20interested%20in%20Newmark%20Gardenia"><i class="fab fa-whatsapp"></i> WhatsApp</a><a class="btn" href="index.html">Back</a></div>
+    </main>
+    <div class="lightbox" id="lightbox"><button class="lightbox-close" onclick="closeLightbox()">&times;</button><img id="lightboxImage"></div>
+    <script>
+        const amenities = [
+            { icon: 'fas fa-file-contract', name: '100% Clear Title' },
+            { icon: 'fas fa-road', name: 'CC Roads' },
+            { icon: 'fas fa-shield-alt', name: '24x7 Security' },
+            { icon: 'fas fa-tint', name: 'Underground Water Supply' },
+            { icon: 'fas fa-water', name: 'Underground Drainage System' },
+            { icon: 'fas fa-compass', name: '100% Vastu Plotting' },
+            { icon: 'fas fa-child', name: 'Children Play Area' },
+            { icon: 'fas fa-bolt', name: 'Electricity' },
+            { icon: 'fas fa-lightbulb', name: 'Street Lights' },
+            { icon: 'fas fa-tree', name: 'Avenue Plantation' }
+        ];
+        const grid = document.getElementById('amenitiesGrid');
+        amenities.forEach(a => { const d = document.createElement('div'); d.className = 'amenity'; d.innerHTML = `<i class="${a.icon}"></i><div style="margin-top:8px">${a.name}</div>`; grid.appendChild(d); });
+        // simple gallery fallback
+        const gallery = ['assets/images/project2/0.jpg', 'assets/images/project2/1.jpg']; const gg = document.getElementById('galleryGrid'); gallery.forEach(s => { const g = document.createElement('div'); g.className = 'gallery-item'; g.innerHTML = `<img src="${s}">`; g.addEventListener('click', () => { document.getElementById('lightboxImage').src = s; document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden' }); gg.appendChild(g); });
+        function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); document.getElementById('lightboxImage').src = ''; document.body.style.overflow = 'auto' }
+    </script>
+</body>
+</html>

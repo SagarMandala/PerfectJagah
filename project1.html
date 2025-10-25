@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SRINIVASAM by PROTEK Realty — Perfect Jagah</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link href="assets/css/common.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation (matches index) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo"><i class="fas fa-gem"></i><span>Perfect Jagah</span></div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a class="cta-btn-with-text" href="tel:+919885588874"><i class="fas fa-phone"></i><span class="cta-text">+919885588874</span></a>
+                <a class="cta-btn" href="https://wa.me/919885588874"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="project-hero project-section-card">
+            <h1 id="title">SRINIVASAM by PROTEK Realty</h1>
+            <div class="project-meta">
+                <div id="location"><i class="fas fa-map-marker-alt"></i> Vattimeenapally Grampanchayat</div>
+                <div class="project-price" id="price">₹24 Lakhs - ₹50 Lakhs</div>
+            </div>
+        </div>
+
+        <div class="project-section-card">
+            <h3>About This Project</h3>
+            <p id="description">We have9 acres villa plots gated community layout on Shankerpally to Vikarabad Highway. It is a DTCP approved & RERA certified project.</p>
+        </div>
+
+        <div class="project-section-card">
+            <h3>Key Highlights</h3>
+            <div id="highlights" style="display:grid;gap:8px;margin-top:8px"></div>
+        </div>
+
+        <div class="project-section-card">
+            <h3>Premium Amenities</h3>
+            <div class="grid-amenities" id="amenities"></div>
+        </div>
+
+        <div class="project-section-card">
+            <h3>Documents & Brochures</h3>
+            <div class="documents-grid" id="documents"></div>
+        </div>
+
+        <div class="project-section-card">
+            <h3>Project Gallery</h3>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+
+        <div class="actions">
+            <a class="btn btn-primary" href="tel:+919885588874"><i class="fas fa-phone"></i> Call Now</a>
+            <a class="btn btn-whatsapp" id="waBtn" href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a class="btn" href="index.html">Back to Projects</a>
+        </div>
+
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <div class="lightbox-media-container">
+            <img id="lightboxImage" src="" alt="" style="display:none">
+        </div>
+    </div>
+
+    <!-- Drive config for this project -->
+    <script>
+        window.PROJECT_GALLERY = { folderId: '1fGw31-Mlx-5T4FzeOGZ4E8qa3atA9YLG', apiKey: 'AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU' };
+        const PROJECT_DATA = {
+            id: 'project1',
+            title: 'SRINIVASAM by PROTEK Realty',
+            location: 'Vattimeenapally Grampanchayat',
+            price: '₹24 Lakhs - ₹50 Lakhs',
+            description: 'We have9 acres villa plots gated community layout on Shankerpally to Vikarabad Highway. It is a DTCP approved & RERA certified project.',
+            highlights: [
+                'Very close proximity to Regional Ring Road',
+                'near to Nawabpet',
+                '20 mins drive from Shankerpally',
+                '5 mins drive from Telangana Mobility Valley a project which is initiated in3000 acres by Central & State Govt.',
+                '5 mins from Mehtabkhan guda junction',
+                '2 mins drive from Nawabpet.',
+                '40 mins from Patancheru.',
+                '30 mins drive from Mokilla',
+                '40 mins from Neopolis(Kokapet).'
+            ],
+            amenities: [
+                { icon: 'fas fa-file-contract', name: '100% Clear Title' },
+                { icon: 'fas fa-road', name: 'CC Roads' },
+                { icon: 'fas fa-shield-alt', name: '24x7 Security' },
+                { icon: 'fas fa-tint', name: 'Underground Water Supply' },
+                { icon: 'fas fa-water', name: 'Underground Drainage System' },
+                { icon: 'fas fa-compass', name: '100% Vastu Plotting' },
+                { icon: 'fas fa-child', name: 'Children Play Area' },
+                { icon: 'fas fa-bolt', name: 'Electricity' },
+                { icon: 'fas fa-lightbulb', name: 'Street Lights' },
+                { icon: 'fas fa-tree', name: 'Avenue Plantation' }
+            ],
+            documents: [
+                { name: 'Project Brochure', url: 'assets/documents/project1/SrinivasamBroucher2.pdf', icon: 'fas fa-file-pdf' },
+                { name: 'TG RERA Certificate', url: 'assets/documents/project1/CertificateFile_63523.pdf', icon: 'fas fa-certificate' },
+                { name: 'LP Number Document', url: 'assets/documents/project1/TLP103.pdf', icon: 'fas fa-file-alt' }
+            ]
+        };
+    </script>
+
+    <script>
+        // Populate static content
+        document.getElementById('title').textContent = PROJECT_DATA.title;
+        document.getElementById('location').innerHTML = '<i class="fas fa-map-marker-alt"></i> ' + PROJECT_DATA.location;
+        document.getElementById('price').textContent = PROJECT_DATA.price;
+        document.getElementById('description').textContent = PROJECT_DATA.description;
+
+        // Highlights
+        const highlightsContainer = document.getElementById('highlights');
+        PROJECT_DATA.highlights.forEach(h => {
+            const el = document.createElement('div');
+            el.style.display = 'flex'; el.style.alignItems = 'center'; el.style.gap = '8px'; el.style.padding = '12px'; el.style.background = 'var(--bg-glass)'; el.style.borderRadius = '10px';
+            el.innerHTML = `<i class="fas fa-check-circle" style="color:#10b981"></i><span>${h}</span>`;
+            highlightsContainer.appendChild(el);
+        });
+
+        // Amenities
+        const amenitiesContainer = document.getElementById('amenities');
+        PROJECT_DATA.amenities.forEach(a => {
+            const d = document.createElement('div'); d.className = 'amenity';
+            d.innerHTML = `<i class="${a.icon}"></i><div style="margin-top:8px">${a.name}</div>`;
+            amenitiesContainer.appendChild(d);
+        });
+
+        // Documents
+        const docsContainer = document.getElementById('documents');
+        PROJECT_DATA.documents.forEach(d => {
+            const a = document.createElement('a'); a.className = 'document-item'; a.href = d.url; a.target = '_blank'; a.download = '';
+            a.innerHTML = `<div class="document-icon"><i class="${d.icon}"></i></div><div><strong>${d.name}</strong></div><div class="download-indicator"><i class="fas fa-download"></i></div>`;
+            docsContainer.appendChild(a);
+        });
+
+        // WhatsApp CTA
+        document.getElementById('waBtn').href = `https://wa.me/919885588874?text=${encodeURIComponent('Hi, I am interested in ' + PROJECT_DATA.title)}`;
+
+        // Load gallery from Google Drive
+        async function loadGallery() {
+            const cfg = window.PROJECT_GALLERY || {};
+            const grid = document.getElementById('galleryGrid');
+            if (!cfg.folderId || !cfg.apiKey) {
+                // fallback: show local images if available
+                const local = ['assets/images/project1/0.jpg', 'assets/images/project1/1.jpg', 'assets/images/project1/2.jpg'];
+                grid.innerHTML = '';
+                local.forEach(src => { const g = document.createElement('div'); g.className = 'gallery-item'; g.innerHTML = `<img src="${src}" alt="">`; g.addEventListener('click', () => openLightboxFromSrc(src)); grid.appendChild(g); });
+                return;
+            }
+
+            grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.8">Loading gallery...</div>';
+            try {
+                const res = await fetch(`https://www.googleapis.com/drive/v3/files?q='${cfg.folderId}'+in+parents&key=${cfg.apiKey}&fields=files(id,name,mimeType)`);
+                const data = await res.json();
+                grid.innerHTML = '';
+                if (data.files && data.files.length) {
+                    const items = [];
+                    data.files.forEach(file => {
+                        if (file.mimeType.startsWith('image/')) items.push({ type: 'image', src: `https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`, alt: file.name });
+                        else if (file.mimeType.startsWith('video/')) items.push({ type: 'video', src: `https://drive.google.com/file/d/${file.id}/preview`, alt: file.name });
+                    });
+                    if (items.length === 0) grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.7">No media files found</div>';
+                    items.forEach(it => {
+                        const g = document.createElement('div'); g.className = 'gallery-item';
+                        if (it.type === 'image') { g.innerHTML = `<img src="${it.src}" alt="${it.alt}">`; g.addEventListener('click', () => openLightboxFromSrc(it.src)); }
+                        else { g.innerHTML = `<div style="height:110px;display:flex;align-items:center;justify-content:center;background:#000;color:#fff">Video</div>`; }
+                        grid.appendChild(g);
+                    });
+                } else {
+                    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.7">No media files found</div>';
+                }
+            } catch (e) {
+                grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.7">Error loading gallery</div>';
+                console.error(e);
+            }
+        }
+
+        function openLightboxFromSrc(src) { const lb = document.getElementById('lightbox'); const img = document.getElementById('lightboxImage'); img.style.display = 'block'; img.src = src; lb.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); document.getElementById('lightboxImage').src = ''; document.body.style.overflow = 'auto'; }
+
+        loadGallery();
+    </script>
+</body>
+</html>

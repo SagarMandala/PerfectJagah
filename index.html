@@ -15,79 +15,140 @@
 
     <!-- JSON-LD structured data: ItemList of projects -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Perfect Jagah - Featured Projects",
-  "description": "Featured projects from Perfect Jagah. Click a project to view details.",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "item": {
-        "@type": "Product",
-        "name": "SRINIVASAM by PROTEK Realty",
-        "url": "https://yourdomain.com/PerfectJagah/project1.html",
-        "image": "https://yourdomain.com/PerfectJagah/assets/images/project1/0.jpg",
-        "description": "DTCP approved & RERA certified villa plots gated community on Shankerpally to Vikarabad Highway.",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "28"
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Perfect Jagah - Featured Projects",
+          "description": "Featured projects from Perfect Jagah. Click a project to view details.",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "Product",
+                "name": "SRINIVASAM by PROTEK Realty",
+                "url": "https://perfectjagah.com/plot/project1.html",
+                "image": "https://perfectjagah.com/assets/images/project1/0.jpg",
+                "description": "DTCP approved & RERA certified villa plots gated community on Shankerpally to Vikarabad Highway.",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.8",
+                  "reviewCount": "28"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "Product",
+                "name": "Newmark Gardenia",
+                "url": "https://perfectjagah.com/plot/project2.html",
+                "image": "https://perfectjagah.com/assets/images/project2/0.jpg",
+                "description": "Premium villa plots at Thummaluru on Srisailam Highway near Pharma City and ORR.",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.7",
+                  "reviewCount": "18"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "Product",
+                "name": "SVG Flora",
+                "url": "https://perfectjagah.com/plot/project3.html",
+                "image": "https://perfectjagah.com/assets/images/project3/0.jpeg",
+                "description": "SVG Flora villa plots near Jangaon on Warangal Highway with resort-style amenities.",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.6",
+                  "reviewCount": "12"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "Product",
+                "name": "West County Villas",
+                "url": "https://perfectjagah.com/villa/project4.html",
+                "image": "https://perfectjagah.com/assets/images/project4/0.png",
+                "description": "Premium villas at Nandigama with excellent connectivity to ORR and IT hubs.",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.8",
+                  "reviewCount": "22"
+                }
+              }
+            }
+          ]
         }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "item": {
-        "@type": "Product",
-        "name": "Newmark Gardenia",
-        "url": "https://yourdomain.com/PerfectJagah/project2.html",
-        "image": "https://yourdomain.com/PerfectJagah/assets/images/project2/0.jpg",
-        "description": "Premium villa plots at Thummaluru on Srisailam Highway near Pharma City and ORR.",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.7",
-          "reviewCount": "18"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "item": {
-        "@type": "Product",
-        "name": "SVG Flora",
-        "url": "https://yourdomain.com/PerfectJagah/project3.html",
-        "image": "https://yourdomain.com/PerfectJagah/assets/images/project3/0.jpeg",
-        "description": "SVG Flora villa plots near Jangaon on Warangal Highway with resort-style amenities.",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.6",
-          "reviewCount": "12"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "item": {
-        "@type": "Product",
-        "name": "West County Villas",
-        "url": "https://yourdomain.com/PerfectJagah/project4.html",
-        "image": "https://yourdomain.com/PerfectJagah/assets/images/project4/0.png",
-        "description": "Premium villas at Nandigama with excellent connectivity to ORR and IT hubs.",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "22"
-        }
-      }
-    }
-  ]
-}
     </script>
+
+    <!-- Structured data: Site navigation and important pages to help search engines surface sitelinks -->
+    <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "WebSite",
+ "@id": "https://perfectjagah.com/#website",
+ "url": "https://perfectjagah.com/",
+ "name": "Perfect Jagah",
+ "description": "Perfect Jagah - Premium real estate projects in Hyderabad with legally verified layouts.",
+ "publisher": {
+ "@type": "Organization",
+ "name": "Perfect Jagah",
+ "logo": { "@type": "ImageObject", "url": "https://perfectjagah.com/assets/Logo.png" }
+ }
+ },
+ {
+ "@type": "SiteNavigationElement",
+ "@id": "https://perfectjagah.com/#sitenav",
+ "name": "Main Site Navigation",
+ "url": "https://perfectjagah.com/",
+ "hasPart": [
+ { "@type": "SiteNavigationElement", "name": "Villas near Golden Triangle", "url": "https://perfectjagah.com/villa/Villa_GoldenTriangle.html" },
+ { "@type": "SiteNavigationElement", "name": "Open plots near Srisailam Highway", "url": "https://perfectjagah.com/plot/Plot_Srisailam.html" },
+ { "@type": "SiteNavigationElement", "name": "Open plots near Vikarabad Highway", "url": "https://perfectjagah.com/plot/Plot_Vikarabad.html" },
+ { "@type": "SiteNavigationElement", "name": "Open plots near Warangal Highway", "url": "https://perfectjagah.com/plot/Plot_Warangal.html" }
+ ]
+ },
+ {
+ "@type": "WebPage",
+ "@id": "https://perfectjagah.com/villa/Villa_GoldenTriangle.html#webpage",
+ "url": "https://perfectjagah.com/villa/Villa_GoldenTriangle.html",
+ "name": "Villas near Golden Triangle",
+ "isPartOf": { "@id": "https://perfectjagah.com/#website" }
+ },
+ {
+ "@type": "WebPage",
+ "@id": "https://perfectjagah.com/plot/Plot_Srisailam.html#webpage",
+ "url": "https://perfectjagah.com/plot/Plot_Srisailam.html",
+ "name": "Open plots near Srisailam Highway",
+ "isPartOf": { "@id": "https://perfectjagah.com/#website" }
+ },
+ {
+ "@type": "WebPage",
+ "@id": "https://perfectjagah.com/PerfectJagah/plot/Plot_Vikarabad.html#webpage",
+ "url": "https://perfectjagah.com/PerfectJagah/plot/Plot_Vikarabad.html",
+ "name": "Open plots near Vikarabad Highway",
+ "isPartOf": { "@id": "https://perfectjagah.com/PerfectJagah/#website" }
+ },
+ {
+ "@type": "WebPage",
+ "@id": "https://perfectjagah.com/plot/Plot_Warangal.html#webpage",
+ "url": "https://perfectjagah.com/plot/Plot_Warangal.html",
+ "name": "Open plots near Warangal Highway",
+ "isPartOf": { "@id": "https://perfectjagah.com/#website" }
+ }
+ ]
+ }
+ </script>
 
     <style>
         /* CSS Variables */
@@ -2695,7 +2756,7 @@
                             <h4 style="margin:0;"><a href="#">Golden Triangle (Kolluru, Mokila, Nandigoan, Bhanur, Shankarpally)</a></h4>
                             <h4 style="margin:0;"><a href="plot/Plot_Srisailam.html">Srisailan Highway</a></h4>
                             <h4 style="margin:0;"><a href="#" title="Coming soon">Mumbai Highway</a></h4>
-                            <h4 style="margin:0;"><a href="plot/Plot_Vikarabad.html" title="Coming soon">Vikarabad Highway (Mehtab khan gudem)</a></h4>
+                            <h4 style="margin:0;"><a href="plot/Plot_Vikarabad.html">Vikarabad Highway (Mehtab khan gudem)</a></h4>
                             <h4 style="margin:0;"><a href="plot/Plot_Warangal.html">Warangal Highway</a></h4>
                             <h4 style="margin:0;"><a href="#" title="Coming soon">Karimnagar Highway</a></h4>
                             <h4 style="margin:0;"><a href="#" title="Coming soon">Medchal Highway</a></h4>
@@ -3488,7 +3549,6 @@
                 </div>
             `;
         }
-
 
 
 

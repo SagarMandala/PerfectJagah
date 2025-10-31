@@ -2746,7 +2746,7 @@
 
                 galleryImages = local.map((src, index) => ({
                     src: src,
-                    alt: `SSLR Suprabhatha Gallery Image ${index + 1}`,
+                    alt: `Image ${index + 1}`,
                     title: `Villa Image ${index + 1}`,
                     type: 'image'
                 }));
@@ -2771,7 +2771,7 @@
                                 src: `https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`,
                                 fullSrc: `https://drive.google.com/thumbnail?id=${file.id}&sz=w2000`, // Higher res for lightbox
                                 alt: file.name,
-                                title: `SSLR Suprabhatha - ${file.name.replace(/\.[^/.]+$/, "")}`
+                                title: `${file.name.replace(/\.[^/.]+$/, "")}`
                             });
                         } else if (file.mimeType.startsWith('video/')) {
                             galleryImages.push({
@@ -2779,7 +2779,7 @@
                                 src: `https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`, // Thumbnail for grid
                                 fullSrc: `https://drive.google.com/file/d/${file.id}/preview`, // Full video for lightbox
                                 alt: file.name,
-                                title: `SSLR Suprabhatha - ${file.name.replace(/\.[^/.]+$/, "")}`
+                                title: `${file.name.replace(/\.[^/.]+$/, "")}`
                             });
                         }
                     });

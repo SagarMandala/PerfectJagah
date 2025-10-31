@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfect Jagah - Real Estate Hyderabad | Verified Layouts, Villas & Apartments</title>
-    <meta name="description" content="Perfect Jagah - Premium real estate projects in Hyderabad with legally verified layouts. Buy flats, villas & open plots near IT hubs. 14+ years experience, 1000+ happy families. Contact: +91 98855 88874">
+    <title>RajaBhoomi Aananda — Perfect Jagah</title>
+    <meta name="description" content="RajaBhoomi Aananda - DTCP & RERA approved villa plots near Shankarpally. Contact: +919885588874">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- favicons -->
@@ -16,76 +16,11 @@
     <!-- JSON-LD structured data: ItemList of projects -->
     <script type="application/ld+json">
         {
-          "@context": "https://schema.org",
-          "@type": "ItemList",
-          "name": "Perfect Jagah - Featured Projects",
-          "description": "Featured projects from Perfect Jagah. Click a project to view details.",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "item": {
-                "@type": "Product",
-                "name": "SRINIVASAM by PROTEK Realty",
-                "url": "https://yourdomain.com/PerfectJagah/project1.html",
-                "image": "https://yourdomain.com/PerfectJagah/assets/images/project1/0.jpg",
-                "description": "DTCP approved & RERA certified villa plots gated community on Shankerpally to Vikarabad Highway.",
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.8",
-                  "reviewCount": "28"
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "item": {
-                "@type": "Product",
-                "name": "Newmark Gardenia",
-                "url": "https://yourdomain.com/PerfectJagah/project2.html",
-                "image": "https://yourdomain.com/PerfectJagah/assets/images/project2/0.jpg",
-                "description": "Premium villa plots at Thummaluru on Srisailam Highway near Pharma City and ORR.",
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.7",
-                  "reviewCount": "18"
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "item": {
-                "@type": "Product",
-                "name": "SVG Flora",
-                "url": "https://yourdomain.com/PerfectJagah/project3.html",
-                "image": "https://yourdomain.com/PerfectJagah/assets/images/project3/0.jpeg",
-                "description": "SVG Flora villa plots near Jangaon on Warangal Highway with resort-style amenities.",
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.6",
-                  "reviewCount": "12"
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "item": {
-                "@type": "Product",
-                "name": "West County Villas",
-                "url": "https://yourdomain.com/PerfectJagah/project4.html",
-                "image": "https://yourdomain.com/PerfectJagah/assets/images/project4/0.png",
-                "description": "Premium villas at Nandigama with excellent connectivity to ORR and IT hubs.",
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.8",
-                  "reviewCount": "22"
-                }
-              }
-            }
-          ]
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Perfect Jagah - Featured Projects",
+        "description": "Featured projects from Perfect Jagah. Click a project to view details.",
+        "itemListElement": []
         }
     </script>
 
@@ -754,7 +689,7 @@
         }
 
         .about-grid {
-            /*display: grid;*/
+            display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 80px;
             align-items: center;
@@ -1193,11 +1128,11 @@
         }
 
         .price-value {
-            font-size: 2.5rem;
+            font-size: 1.4rem;
             font-weight: 800;
             background: var(--gold-gradient);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: red;
+            -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
@@ -1512,7 +1447,6 @@
                 background: black;
                 transform: scale(1.1);
             }
-
 
         .lightbox-nav {
             position: absolute;
@@ -2076,7 +2010,7 @@
         }
 
         /*.nav-logo .logo-img {
-            filter: brightness(0) invert(1);*/ /* Makes logo white for dark nav */
+        filter: brightness(0) invert(1);*/ /* Makes logo white for dark nav */
         /*}*/
 
         .footer-logo .logo-img {
@@ -2399,6 +2333,133 @@
         .document-icon {
             color: white !important;
         }
+
+        /* UPDATED: page-specific helpers (project page) */
+        /* UPDATED: page-specific helpers (project page) */
+        .project-hero {
+            padding: 28px20px;
+            background: var(--bg-glass);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            margin: 110px auto20px;
+            text-align: center;
+        }
+
+        .project-section-card {
+            background: var(--bg-primary);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .card-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .card-col {
+            flex: 1;
+            min-width: 220px;
+        }
+
+        .documents-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+            .documents-grid .document-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 12px;
+                color: var(--text-primary) !important;
+                background: rgba(248,250,252,0.9);
+                border-radius: 12px;
+            }
+
+        .grid-amenities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+            gap: 14px;
+        }
+
+        .amenity {
+            background: var(--glass-dark);
+            border-radius: 12px;
+            padding: 18px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            color: var(--text-primary);
+        }
+
+            .amenity i {
+                font-size: 1.6rem;
+                color: var(--text-accent);
+            }
+        /* Gallery: 4 columns on desktop, responsive 3/2/1 */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--bg-glass);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .gallery-item img {
+                width: 100%;
+                height: 140px; /* adjust if you want taller/shorter thumbnails */
+                object-fit: cover;
+                display: block;
+            }
+
+        @media (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item img {
+                height: 180px;
+            }
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin: 18px0;
+        }
+
+        @media (max-width:768px) {
+            .project-hero {
+                margin-top: 90px;
+            }
+
+            .card-row {
+                flex-direction: column;
+            }
+        }
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17460502198">
@@ -2432,43 +2493,8 @@
     </noscript>
     <!-- End Facebook Pixel Code -->
 </head>
+
 <body>
-    <!-- Animated Background -->
-    <div class="animated-bg"></div>
-    <div class="floating-shapes">
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-
-    <!-- Enhanced Lightbox Gallery -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-content">
-            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-            <button class="lightbox-nav lightbox-prev" onclick="prevImage()">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <div class="lightbox-media-container">
-                <img class="lightbox-image" id="lightboxImage" src="" alt="" style="display: none;">
-                <video class="lightbox-video" id="lightboxVideo" controls style="display: none;">
-                    <source src="" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <button class="lightbox-nav lightbox-next" onclick="nextImage()">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-            <div class="lightbox-info">
-                <div class="lightbox-counter" id="lightboxCounter">1 / 6</div>
-                <div class="lightbox-title" id="lightboxTitle">Image Title</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -2485,7 +2511,7 @@
             <div class="nav-cta">
                 <a href="tel:+919885588874" class="cta-btn-with-text">
                     <i class="fas fa-phone"></i>
-                    <span class="cta-text">+91 98855 88874</span>
+                    <span class="cta-text">+919885588874</span>
                 </a>
                 <a href="https://wa.me/919885588874" class="cta-btn">
                     <i class="fab fa-whatsapp"></i>
@@ -2498,929 +2524,19 @@
             </div>
         </div>
     </nav>
+    <!-- Main Content -->
 
-
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    Projects Near <span class="gradient-text">Vikarabad Highway</span>
-                </h2>
-            </div>
-
-            <div class="projects-grid">
-
-                <!-- Project 4 -->
-                <div class="project-card" onclick="location.href='project4.html';">
-                    <div class="project-image3 has-image">
-                        <img src="../assets/images/project4/0.png" alt="West County" loading="lazy">
-                        <div class="project-overlay">
-                            <button class="view-btn">
-                                <i class="fas fa-eye"></i>
-                                <span>View Details</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div>
-                                <h3 class="project-title">West County Villas</h3>
-                                <p class="project-location">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Nandigama
-                                </p>
-                            </div>
-                            <div class="project-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-
-                        <div class="project-highlights">
-                            <span class="highlight-tag">3 mins from ORR Exit 3 (Muttangi)</span>
-                            <span class="highlight-tag">3 km from ODF shopping complex</span>
-                            <span class="highlight-tag">7 min from Kondakal IT SEZ</span>
-                            <span class="highlight-tag">5 min from Edurunagalapalli Railway Yard</span>
-                            <span class="highlight-tag">5 min from Gadium International school</span>
-                            <span class="highlight-tag">20 min from IT Financial District</span>
-                            <span class="highlight-tag">30 min from AIRPORT</span>
-
-                        </div>
-
-                        <div class="project-footer">
-                            <div class="project-price">
-                                <span class="price-label">Starting from</span>
-                                <span class="price-value">6,500 /- Per sqft</span>
-                            </div>
-                            <button class="explore-btn" onclick="event.stopPropagation(); openProjectModal('project4')">
-                                <span>Explore</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                        <!-- NEW: Document Downloads -->
-                        <div class="project-documents" style="margin-top: 20px; display: grid; gap: 8px;">
-                            <a href="assets/documents/project4/CLUBHOUSE.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('Project Brochure', 'Project Brochure')">
-                                <div class="document-icon">
-                                    <i class="fas fa-file-pdf"></i>
-                                </div>
-                                <div class="document-details">
-                                    <h5>Project Brochure</h5>
-                                    <!--<div class="document-meta">
-                            <span><i class="fas fa-file"></i> PDF</span>
-                            <span><i class="fas fa-hdd"></i> 6.92 MB</span>
-                        </div>-->
-                                </div>
-                                <div class="download-indicator">
-                                    <i class="fas fa-download"></i>
-                                </div>
-                            </a>
-
-                            <a href="assets/documents/project4/CSKRERA.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('RERA', 'RERA Approval')">
-                                <div class="document-icon">
-                                    <i class="fas fa-certificate"></i>
-                                </div>
-                                <div class="document-details">
-                                    <h5>TG RERA Certificate</h5>
-                                    <!--<div class="document-meta">
-                            <span><i class="fas fa-file"></i> PDF</span>
-                            <span><i class="fas fa-hdd"></i> 543 KB</span>
-                        </div>-->
-                                </div>
-                                <div class="download-indicator">
-                                    <i class="fas fa-download"></i>
-                                </div>
-                            </a>
-
-
-                            <a href="assets/documents/project4/PATANCHERUPRESENTATIONPLANS.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('Floor Plan', 'Floor Plan')">
-                                <div class="document-icon">
-                                    <i class="fas fa-file-alt"></i>
-                                </div>
-                                <div class="document-details">
-                                    <h5>Floor Plan</h5>
-                                    <!--<div class="document-meta">
-                            <span><i class="fas fa-file"></i> PDF</span>
-                            <span><i class="fas fa-hdd"></i> 553 KB</span>
-                        </div>-->
-                                </div>
-                                <div class="download-indicator">
-                                    <i class="fas fa-download"></i>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Project 5: Mayfair Sunrise -->
-                <div class="project-card" onclick="location.href='project5.html';">
-                    <div class="project-image3 has-image">
-                        <img src="../assets/images/project5/1.jpeg" alt="Mayfair Sunrise" loading="lazy">
-                        <div class="project-overlay">
-                            <button class="view-btn">
-                                <i class="fas fa-eye"></i>
-                                <span>View Details</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div>
-                                <h3 class="project-title">Mayfair Sunrise</h3>
-                                <p class="project-location">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Kollur, Hyderabad
-                                </p>
-                            </div>
-                            <div class="project-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-
-                        <div class="project-highlights">
-                            <span class="highlight-tag">66 Acres |589 Luxury Villas</span>
-                            <span class="highlight-tag">300 –500 Sq.yds |3888 to6111 Sft</span>
-                            <span class="highlight-tag">Grand Entrance Plaza & waiting lounges</span>
-                            <span class="highlight-tag">80-ft main road &40-ft Internal Roads</span>
-                            <span class="highlight-tag">6 KM Jogging Track |14 Parks | Lush Green Spaces</span>
-                            <span class="highlight-tag">1,00,000 Sft Clubhouse |38,000 Sft Open Party Lawn</span>
-                            <span class="highlight-tag">World-class Pool, Jacuzzi &11,000 Sft Gym</span>
-                            <span class="highlight-tag">EV Charging | Solar Panels | Heat Pumps</span>
-                            <span class="highlight-tag">5 mins to RR7 |10 mins to ORR Exit2 &3</span>
-                        </div>
-
-                        <div class="project-footer">
-                            <div class="project-price">
-                                <span class="price-label">Starting from</span>
-                                <span class="price-value">5 Cr*</span>
-                            </div>
-                            <button class="explore-btn" onclick="event.stopPropagation(); openProjectModal('project5')">
-                                <span>Explore</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                        <!-- NEW: Document Downloads -->
-                        <div class="project-documents" style="margin-top: 20px; display: grid; gap: 8px;">
-                            <a href="assets/documents/project5/Mayfair_Sunrise_Brochure.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('Project Brochure', 'Project Brochure')">
-                                <div class="document-icon">
-                                    <i class="fas fa-file-pdf"></i>
-                                </div>
-                                <div class="document-details">
-                                    <h5>Project Brochure</h5>
-
-                                </div>
-                                <div class="download-indicator">
-                                    <i class="fas fa-download"></i>
-                                </div>
-                            </a>
-
-                            <a href="assets/documents/project4/LocationHighlights.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('LocationHighlights', 'LocationHighlights')">
-                                <div class="document-icon">
-                                    <i class="fas fa-certificate"></i>
-                                </div>
-                                <div class="document-details">
-                                    <h5>Location Highlights</h5>
-
-                                </div>
-                                <div class="download-indicator">
-                                    <i class="fas fa-download"></i>
-                                </div>
-                            </a>
-
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 8: APR Praveen's Eterno -->
-                <div class="project-card" onclick="location.href='project8.html';">
-                    <div class="project-image3 has-image">
-                        <img src="../assets/images/project8/0.jpg" alt="APR Praveen's Eterno" loading="lazy">
-                        <div class="project-overlay">
-                            <button class="view-btn">
-                                <i class="fas fa-eye"></i>
-                                <span>View Details</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div>
-                                <h3 class="project-title">APR Praveen's Eterno - The Luxury Living</h3>
-                                <p class="project-location">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    Patighanpur, Hyderabad
-                                </p>
-                            </div>
-                            <div class="project-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-
-                        <div class="project-highlights">
-                            <span class="highlight-tag">10 Acres | 112 Triplex Villas | 4 BHK Villas</span>
-                            <span class="highlight-tag">East & West Facing Villas</span>
-                            <span class="highlight-tag">3,420 - 3,860 Sq.ft Built-up Area</span>
-                            <span class="highlight-tag">G+2 Floors with Lift in Each Villa</span>
-                            <span class="highlight-tag">Home Theatre | Bar Lounge | Family Lounge</span>
-                            <span class="highlight-tag">Clubhouse with Swimming Pool & Gym</span>
-                            <span class="highlight-tag">5 mins to RR7 | 10 mins to ORR Exit 2 & 3</span>
-                            <span class="highlight-tag">15 mins to Financial District | 25 mins to Airport</span>
-                            <span class="highlight-tag">10 mins to Gaudium School | 15 mins to Delhi Public School</span>
-                        </div>
-
-                        <div class="project-footer">
-                            <div class="project-price">
-                                <span class="price-label">RERA: P01100006126</span>
-                                <span class="price-value">3.5 Cr</span>
-                            </div>
-                            <button class="explore-btn">
-                                <span>Explore</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                        <!-- NEW: Document Downloads -->
-                        <div class="project-documents" style="margin-top: 20px; display: grid; gap: 8px;">
-                            <a href="assets/documents/project8/Brochure.pdf" class="document-item" download target="_blank" onclick="trackDocumentDownload('APR Eterno Brochure', 'Project Brochure')">
-                                <div class="document-icon">
-                                    <i class="fas fa-file-pdf"></i>
-                                </div>
-                                <div class="document-details">
-                                    <h5>Project Brochure</h5>
-
-                                </div>
-                                <div class="download-indicator">
-                                    <i class="fas fa-download"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <main class="container">
+        <div class="project-hero project-section-card" style="padding-top:100px">
+            <h1 class="project-title" style="color:#0284c7 !important">APR Praveen's Eterno - The Luxury Living</h1>
+            <p class="project-title">
+                <i class="fas fa-map-marker-alt"></i>
+                Patighanpur, Hyderabad
+            </p>
+            <p><strong style="font-size: 2.5rem; font-weight: 700; margin-top: 12px; color: #0284c7;">RERA: P01100006126 </strong></p>
+            <p><strong style="font-size: 2.5rem; font-weight: 700; margin-top: 12px; color: #0284c7;">Price - </strong><strong style="font-size: 2.5rem; font-weight: 700; margin-top: 12px; color: red;">3.5 Cr</strong></p>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-phone"></i>
-                    <span>Get In Touch</span>
-                </div>
-                <h2 class="section-title">
-                    Ready to Find Your <span class="gradient-text">Dream Home?</span>
-                </h2>
-                <p class="section-subtitle">
-                    Connect with our property experts for personalized recommendations and site visits
-                </p>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-methods">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Visit Our Office</h4>
-                                <p>Hyderabad, Telangana</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Call Us Directly</h4>
-                                <p><a href="tel:+919885588874">+91 98855 88874</a></p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Email Us</h4>
-                                <p><a href="mailto:perfectjagah@gmail.com">perfectjagah@gmail.com</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="quick-actions">
-                        <a href="tel:+919885588874" class="btn btn-primary">
-                            <i class="fas fa-phone"></i>
-                            <span>Call Now</span>
-                        </a>
-                        <a href="https://wa.me/919885588874?text=Hi, I'm interested in your premium properties" class="btn btn-whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>WhatsApp</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="contact-form-container">
-                    <h3 class="form-title">Send us a Message</h3>
-                    <form id="contactForm" method="POST" action="https://script.google.com/macros/s/AKfycbyM9XGRKt5DxmPCOVu5V1tVw5wl2hvPdXOJfasCT8UQTwKpzvBQjRHpJ6OUHelHjd1odA/exec">
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <input type="text" name="first_name" class="form-input" placeholder="First Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="last_name" class="form-input" placeholder="Last Name" required>
-                            </div>
-                        </div>
-
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-input" placeholder="Email Address" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <select name="property_interest" class="form-select" required>
-                                <option value="">Select Property Interest</option>
-                                <option value="skyline">SRINIVASAM by PROTEK Realty</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="site-visit">Schedule Site Visit</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea name="message" class="form-textarea" placeholder="Tell us about your requirements..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn" id="submitBtn">
-                            <span id="btnText">Send Message</span>
-                            <i class="fas fa-paper-plane" id="btnIcon"></i>
-                        </button>
-
-                        <!-- Success/Error Message -->
-                        <div id="formMessage" class="form-message"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <i class="fas fa-gem"></i>
-                        <span>Perfect Jagah</span>
-                    </div>
-                    <p class="footer-text">
-                        Your trusted partner in premium real estate. Building dreams with legally verified layouts and transparent processes.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana</p>
-                    <p><i class="fas fa-phone"></i> +91 98855 88874</p>
-                    <p><i class="fas fa-envelope"></i> perfectjagah@gmail.com</p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2024 Perfect Jagah. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Project Modal -->
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <div id="modalContent">
-                <!-- Dynamic content loaded here -->
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Updated Project Data with Project1, Project2, Project3 folder structure
-        const projectData = {
-            project1: {
-                title: "SRINIVASAM by PROTEK Realty",
-                location: "Vattimeenapally Grampanchayat",
-                price: "₹24 Lakhs - ₹50 Lakhs",
-                /// status: "",
-                rating: 4.8,
-                // NEW: Google Drive folder configuration
-                driveFolder: {
-                    folderId: "1fGw31-Mlx-5T4FzeOGZ4E8qa3atA9YLG", // Get from folder URL
-                    apiKey: "AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU" // Get from Google Console
-                },
-                highlights: [
-                    "Very close proximity to Regional Ring Road",
-                    "near to Nawabpet",
-                    "20  mins drive from Shankerpally",
-                    "5 mins drive from Telangana Mobility Valley a project which is initiated in 3000 acres by Central & State Govt.",
-                    "5 mins from Mehtabkhan guda junction",
-                    "2 mins drive from Nawabpet.",
-                    "40 mins from Patancheru.",
-                    "30 mins drive from Mokilla",
-                    "40 mins from Neopolis(Kokapet)."
-                ],
-                amenities: [
-                    { icon: "fas fa-file-contract", name: "100% Clear Title" },
-                    { icon: "fas fa-road", name: "CC Roads" },
-                    { icon: "fas fa-shield-alt", name: "24x7 Security" },
-                    { icon: "fas fa-tint", name: "Underground Water Supply" },
-                    { icon: "fas fa-water", name: "Underground Drainage System" },
-                    { icon: "fas fa-compass", name: "100% Vastu Plotting" },
-                    { icon: "fas fa-child", name: "Children Play Area" },
-                    { icon: "fas fa-bolt", name: "Electricity" },
-                    { icon: "fas fa-lightbulb", name: "Street Lights" },
-                    { icon: "fas fa-tree", name: "Avenue Plantation" }
-                ],
-                documents: [
-                    {
-                        name: "Project Brochure",
-                        url: "assets/documents/project1/SrinivasamBroucher2.pdf",
-                        icon: "fas fa-file-pdf",
-                        size: "4.03 MB"
-                    },
-                    {
-                        name: "TG RERA Certificate",
-                        url: "assets/documents/project1/CertificateFile_63523.pdf",
-                        icon: "fas fa-certificate",
-                        size: "225 KB"
-                    },
-                    {
-                        name: "LP Number Document",
-                        url: "assets/documents/project1/PRO103.pdf",
-                        icon: "fas fa-file-alt",
-                        size: "555 KB"
-                    }
-                ],
-                description: "We have 9 acres villa plots geated community layout on Shankerpally to Vikarabad Highway.It is a DTCP approved & RERA certified project."
-            },
-            project2: {
-                title: "Newmark Gardenia",
-                location: "Thummaluru, Srisailam Highway, Hyderabad",
-                price: "₹27,000 /- Per square yard",
-                /// status: "",
-                rating: 4.8,
-                // NEW: Google Drive folder configuration
-                driveFolder: {
-                    folderId: "136qlxWbNM9fAUci_xtA7HPC4B89pHH0X", // Get from folder URL
-                    apiKey: "AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU" // Get from Google Console
-                },
-                highlights: [
-                    "5min to Pharma City",
-                    "10min to ORR",
-                    "15min to Fab City",
-                    "15min to Hardward Part",
-                    "15min to TCS Adibatla",
-                    "15min to Airport & GMR AERO City",
-                    "25min to Shamshabad",
-                    "40min to Financial City",
-
-                ],
-                amenities: [
-                    { icon: "fas fa-file-contract", name: "100% Clear Title" },
-                    { icon: "fas fa-road", name: "CC Roads" },
-                    { icon: "fas fa-shield-alt", name: "24x7 Security" },
-                    { icon: "fas fa-tint", name: "Underground Water Supply" },
-                    { icon: "fas fa-water", name: "Underground Drainage System" },
-                    { icon: "fas fa-compass", name: "100% Vastu Plotting" },
-                    { icon: "fas fa-child", name: "Children Play Area" },
-                    { icon: "fas fa-bolt", name: "Electricity" },
-                    { icon: "fas fa-lightbulb", name: "Street Lights" },
-                    { icon: "fas fa-tree", name: "Avenue Plantation" }
-                ],
-                documents: [
-                    {
-                        name: "Project Brochure",
-                        url: "assets/documents/project2/Newmark_Brochure.pdf",
-                        icon: "fas fa-file-pdf",
-                        size: "6.92 MB"
-                    },
-                    {
-                        name: "TG RERA Certificate",
-                        url: "assets/documents/project2/Newmark Gardenia RERA.pdf",
-                        icon: "fas fa-certificate",
-                        size: "225 KB"
-                    },
-                    {
-                        name: "HMDA Permission",
-                        url: "assets/documents/project2/Gardenia HMDA permission .pdf",
-                        icon: "fas fa-file-alt",
-                        size: "555 KB"
-                    }
-                ],
-                description: "We have 18 acres villa plots geated community layout on Thummaluru, Srisailam Highway, Hyderabad.It is a DTCP approved & RERA certified project."
-            },
-            project3: {
-                title: "SVG Flora",
-                location: "Jangaon, Warangal Highway,Telangana",
-                price: "₹2,699 /- Per square yard",
-                /// status: "",
-                rating: 4.8,
-                // NEW: Google Drive folder configuration
-                driveFolder: {
-                    folderId: "1cXpHOYrzA-YtdpkTZ3H-p-Yd7SqQ9F7w", // Get from folder URL
-                    apiKey: "AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU" // Get from Google Console
-                },
-                highlights: [
-                    "3 mins from Warangal highway",
-                    "5 mins from Jangoan District",
-                    "20 mins from Allair Town",
-                    "30 mins from Rampur IT Sez",
-                    "35 mins from Hanumakonda,Khazipeta and Warangal",
-                    "40 mins from Yadadri Swamy temple",
-                    "40 mins from Regional Ring Road",
-
-                ],
-                amenities: [
-                    { icon: "fas fa-file-contract", name: "Grand Reception" },
-                    { icon: "fas fa-road", name: "Business center" },
-                    { icon: "fas fa-shield-alt", name: "Mega Club House" },
-                    { icon: "fas fa-tint", name: "Swimming Pool" },
-                    { icon: "fas fa-water", name: "Meditation Center" },
-                    { icon: "fas fa-compass", name: "Flower Garden" },
-                    { icon: "fas fa-child", name: "Internal Roads" },
-                    { icon: "fas fa-bolt", name: "Indore & Outdoor Sprots" },
-                    { icon: "fas fa-lightbulb", name: "Restaurant & Dining area" },
-                    { icon: "fas fa-tree", name: "Sandpit area" }
-                ],
-                documents: [
-                    {
-                        name: "Project Brochure",
-                        url: "assets/documents/project3/SVG Flora Farms & Resorts Brochure.pdf",
-                        icon: "fas fa-file-pdf",
-                        size: "6.92 MB"
-                    },
-                    {
-                        name: "Resorts Layout",
-                        url: "assets/documents/project3/SVG Flora Farms & Resorts Layout.pdf",
-                        icon: "fas fa-certificate",
-                        size: "225 KB"
-                    },
-                    {
-                        name: "Resorts Layout Flyer",
-                        url: "assets/documents/project3/SVG FLORA FARMS & RESORTS A4 Flyer.pdf",
-                        icon: "fas fa-file-alt",
-                        size: "555 KB"
-                    }
-                ],
-                description: "We have 100 acres villa plots geated community layout on Jangaon, Warangal Highway."
-            },
-            project4: {
-                title: "West County Villas",
-                location: "Nandigama",
-                price: "₹6,500 /- Per square feet",
-                /// status: "",
-                rating: 4.8,
-                // NEW: Google Drive folder configuration
-                driveFolder: {
-                    folderId: "19loFoYv5_bae2S2waJ4alDxVoUJhu6BA", // Get from folder URL
-                    apiKey: "AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU" // Get from Google Console
-                },
-                highlights: [
-                    "3 mins from ORR Exit 3(Muttangi)",
-                    "3 km from ODF shopping complex",
-                    "7 min from Kondakal IT SEZ",
-                    "5 min from Edurunagalapalli Railway Yard",
-                    "5 min from Gadium International school",
-                    "20 min from IT Financial District",
-                    "30 min from AIRPORT",
-                ],
-                amenities: [
-                    { icon: "fas fa-file-contract", name: "Grand Reception" },
-                    { icon: "fas fa-road", name: "Business center" },
-                    { icon: "fas fa-shield-alt", name: "Mega Club House" },
-                    { icon: "fas fa-tint", name: "Swimming Pool" },
-                    { icon: "fas fa-water", name: "Meditation Center" },
-                    { icon: "fas fa-compass", name: "Flower Garden" },
-                    { icon: "fas fa-child", name: "Internal Roads" },
-                    { icon: "fas fa-bolt", name: "Indore & Outdoor Sprots" },
-                    { icon: "fas fa-lightbulb", name: "Restaurant & Dining area" },
-                    { icon: "fas fa-tree", name: "Sandpit area" }
-                ],
-                documents: [
-                    {
-                        name: "Project Brochure",
-                        url: "assets/documents/project4/CLUBHOUSE.pdf",
-                        icon: "fas fa-file-pdf",
-                        size: "6.92 MB"
-                    },
-                    {
-                        name: "TG RERA Certificate",
-                        url: "assets/documents/project4/CSKRERA.pdf",
-                        icon: "fas fa-certificate",
-                        size: "225 KB"
-                    },
-                    {
-                        name: "House Plan",
-                        url: "assets/documents/project4/PATANCHERUPRESENTATIONPLANS.pdf",
-                        icon: "fas fa-file-alt",
-                        size: "555 KB"
-                    },
-                    {
-                        name: "Site Plan",
-                        url: "assets/documents/project4/RENDEREDPLANDETAILS20250521.pdf",
-                        icon: "fas fa-file-alt",
-                        size: "555 KB"
-                    },
-                    {
-                        name: "MORTGAGE LETTER",
-                        url: "assets/documents/project4/SROLetter_011687_LO_HMDA_3089_SKP_2024.pdf",
-                        icon: "fas fa-file-alt",
-                        size: "555 KB"
-                    }
-
-
-                ],
-                description: "We have 100 acres villa plots geated community layout on Jangaon, Warangal Highway."
-            },
-            project5: {
-                title: "Mayfair Sunrise",
-                location: "Kollur, Hyderabad",
-                price: "₹2.88 Crores - ₹4.29 Crores",
-                /// status: "",
-                rating: 4.8,
-                // NEW: Google Drive folder configuration
-                driveFolder: {
-                    folderId: "1vUym1KDp6ogS4HJGgNiGBHiqycQ8HOb1", // Get from folder URL
-                    apiKey: "AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU" // Get from Google Console
-                },
-                highlights: [
-                    "66 Acres |589 Luxury Villas",
-                    "300 –500 Sq.yds |3888 to6111 Sft",
-                    "Grand Entrance Plaza & waiting lounges",
-                    "80-ft main road &40-ft Internal Roads",
-                    "6 KM Jogging Track |14 Parks | Lush Green Spaces",
-                    "1,00,000 Sft Clubhouse |38,000 Sft Open Party Lawn",
-                    "World-class Pool, Jacuzzi &11,000 Sft Gym",
-                    "EV Charging | Solar Panels | Heat Pumps",
-                    "5 mins to RR7 |10 mins to ORR Exit2 &3",
-                ],
-                amenities: [
-                    { icon: "fas fa-file-contract", name: "Grand Reception" },
-                    { icon: "fas fa-road", name: "Business center" },
-                    { icon: "fas fa-shield-alt", name: "Mega Club House" },
-                    { icon: "fas fa-tint", name: "Swimming Pool" },
-                    { icon: "fas fa-water", name: "Meditation Center" },
-                    { icon: "fas fa-compass", name: "Flower Garden" },
-                    { icon: "fas fa-child", name: "Internal Roads" },
-                    { icon: "fas fa-bolt", name: "Indore & Outdoor Sprots" },
-                    { icon: "fas fa-lightbulb", name: "Restaurant & Dining area" },
-                    { icon: "fas fa-tree", name: "Sandpit area" }
-                ],
-                documents: [
-                    {
-                        name: "Project Brochure",
-                        url: "assets/documents/project5/Mayfair_Sunrise_Brochure.pdf",
-                        icon: "fas fa-file-pdf",
-                        size: "7.5 MB"
-                    },
-                    {
-                        name: "TG RERA Certificate",
-                        url: "assets/documents/project5/Mayfair_Sunrise_RERA_Certificate.pdf",
-                        icon: "fas fa-certificate",
-                        size: "230 KB"
-                    },
-                    {
-                        name: "Site Plan",
-                        url: "assets/documents/project5/Site_Plan_Mayfair_Sunrise.pdf",
-                        icon: "fas fa-file-alt",
-                        size: "600 KB"
-                    }
-                ],
-                description: "Discover Mayfair Sunrise, an exquisite villa community by the prestigious Mayfair Group. Elegance, comfort, and world-class amenities await you."
-            }
-        };
-
-        // About Section Images
-        const aboutImages = [
-            {
-                src: "assets/images/about/team-photo.jpg",
-                alt: "Perfect Jagah Professional Team",
-                title: "Our Professional Team"
-            },
-            {
-                src: "assets/images/about/office-interior.jpg",
-                alt: "Modern Office Interior",
-                title: "Our Modern Office"
-            },
-            {
-                src: "assets/images/about/awards-ceremony.jpg",
-                alt: "Awards and Recognition",
-                title: "Awards & Recognition"
-            }
-        ];
-
-        let currentGallery = [];
-        let currentImageIndex = 0;
-
-        // Navigation
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-
-        hamburger?.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offsetTop = target.offsetTop - 70;
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-
-                    // Close mobile menu if open
-                    const navMenu = document.querySelector('.nav-menu');
-                    const hamburger = document.querySelector('.hamburger');
-                    navMenu.classList.remove('active');
-                    hamburger.classList.remove('active');
-                }
-            });
-        });
-
-        // Active navigation
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        function updateActiveNav() {
-            const scrollY = window.pageYOffset;
-
-            sections.forEach(section => {
-                const sectionHeight = section.offsetHeight;
-                const sectionTop = section.offsetTop - 120;
-                const sectionId = section.getAttribute('id');
-
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === `#${sectionId}`) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-            });
-        }
-
-        window.addEventListener('scroll', updateActiveNav);
-
-        // Enhanced Lightbox Functions
-        function openLightbox(images, startIndex = 0) {
-            currentGallery = images;
-            currentImageIndex = startIndex;
-            updateLightboxMedia();
-            document.getElementById('lightbox').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-            document.body.style.overflow = 'auto';
-
-            // Stop any playing videos
-            const video = document.getElementById('lightboxVideo');
-            if (video) {
-                video.pause();
-                video.currentTime = 0;
-            }
-        }
-
-        function updateLightboxMedia() {
-            const lightboxImage = document.getElementById('lightboxImage');
-            const lightboxVideo = document.getElementById('lightboxVideo');
-            const lightboxCounter = document.getElementById('lightboxCounter');
-            const lightboxTitle = document.getElementById('lightboxTitle');
-
-            const currentItem = currentGallery[currentImageIndex];
-
-            if (currentItem.type === 'video') {
-                // Hide image and show video
-                lightboxImage.style.display = 'none';
-                lightboxVideo.style.display = 'block';
-                lightboxVideo.src = currentItem.src;
-                lightboxTitle.textContent = currentItem.title;
-            } else {
-                // Hide video and show image
-                lightboxVideo.style.display = 'none';
-                lightboxImage.style.display = 'block';
-                lightboxImage.src = currentItem.src;
-                lightboxImage.alt = currentItem.alt;
-                lightboxTitle.textContent = currentItem.title;
-            }
-
-            lightboxCounter.textContent = `${currentImageIndex + 1} / ${currentGallery.length}`;
-        }
-
-
-
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % currentGallery.length;
-            updateLightboxMedia();
-        }
-
-        function prevImage() {
-            currentImageIndex = (currentImageIndex - 1 + currentGallery.length) % currentGallery.length;
-            updateLightboxMedia();
-        }
-        // Function to get approval icons based on project ID
-        function getApprovalIcons(projectId) {
-            switch (projectId) {
-                case 'project1':
-                    return `
-                    <div class="modal-approvals">
-                        <div class="modal-approval-item">
-                            <div class="modal-approval-icon">
-                                <img src="../assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
-                            </div>
-                            <div class="modal-approval-label">RERA Approved</div>
-                        </div>
-                        <div class="modal-approval-item">
-                            <div class="modal-approval-icon">
-                                <img src="../assets/dtcp_approvedprojects_logo.jpeg" alt="DTCP Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="fallback-text" style="display: none;">DTCP<br>APPROVED</div>
-                            </div>
-                            <div class="modal-approval-label">DTCP Approved</div>
-                        </div>
-                    </div>
-                `;
-
-                case 'project2':
-                    return `
-                    <div class="modal-approvals">
-                        <div class="modal-approval-item">
-                            <div class="modal-approval-icon">
-                                <img src="../assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
-                            </div>
-                            <div class="modal-approval-label">RERA Approved</div>
-                        </div>
-                        <div class="modal-approval-item">
-                            <div class="modal-approval-icon">
-                                <img src="../assets/hmda.png" alt="HMDA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="fallback-text" style="display: none;">HMDA<br>APPROVED</div>
-                            </div>
-                            <div class="modal-approval-label">HMDA Approved</div>
-                        </div>
-                    </div>
-                `;
-
-                case 'project3':
-                    return `
-
-                    <div class="modal-approvals">
-
-                    </div>
-                `;
-                case 'project4':
-                    return `
-        <div class="modal-approvals">
+        <div class="project-section-card" style="display:flex">
             <div class="modal-approval-item">
                 <div class="modal-approval-icon">
                     <img src="../assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -3430,328 +2546,284 @@
             </div>
             <div class="modal-approval-item">
                 <div class="modal-approval-icon">
-                    <img src="../assets/hmda.png" alt="HMDA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div class="fallback-text" style="display: none;">HMDA<br>APPROVED</div>
+                    <img src="../assets/dtcp_approvedprojects_logo.jpeg" alt="DTCP Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="fallback-text" style="display: none;">DTCP<br>APPROVED</div>
                 </div>
-                <div class="modal-approval-label">HMDA Approved</div>
+                <div class="modal-approval-label">DTCP Approved</div>
             </div>
         </div>
-`;
-
-                case 'project5':
-                    return `
-                    <div class="modal-approvals">
-                        <div class="modal-approval-item">
-                            <div class="modal-approval-icon">
-                                <img src="../assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
+        <div class="project-section-card">
+            <h3>Documents</h3>
+            <div class="card-row">
+                <div class="card-col">
+                    <div class="documents-grid">
+                        <a class="document-item" href="../assets/documents/project8/Brochure.pdf" download target="_blank">
+                            <div class="document-icon"><i class="fas fa-file-pdf"></i></div>
+                            <div><strong>Project Brochure</strong></div>
+                            <div class="document-meta">—</div>
+                            <div class="download-indicator">
+                                <i class="fas fa-download"></i>
                             </div>
-                            <div class="modal-approval-label">RERA Approved</div>
-                        </div>
-                        <div class="modal-approval-item">
-                            <div class="modal-approval-icon">
-                                <img src="../assets/hmda.png" alt="HMDA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="fallback-text" style="display: none;">HMDA<br>APPROVED</div>
-                            </div>
-                            <div class="modal-approval-label">HMDA Approved</div>
-                        </div>
+                        </a>
+                        
                     </div>
-`;
-
-                default:
-                    return `
-
-                    <div class="modal-approvals">
-                        <div class="modal-approval-item">
-                            <div class="modal-approval-icon">
-                                <img src="../assets/TSRera.jpg" alt="RERA Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="fallback-text" style="display: none;">RERA<br>APPROVED</div>
-                            </div>
-                            <div class="modal-approval-label">RERA Approved</div>
-                        </div>
-                        <div class="modal-approval-item">
-                            <div class="modal-approval-icon">
-                                <img src="../assets/dtcp_approvedprojects_logo.jpeg" alt="DTCP Approved" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="fallback-text" style="display: none;">DTCP<br>APPROVED</div>
-                            </div>
-                            <div class="modal-approval-label">DTCP Approved</div>
-                        </div>
-                    </div>
-                `;
-            }
-        }
-
-
-        async function openProjectModal(projectId) {
-            const project = projectData[projectId];
-            if (!project) return;
-
-            // Show loading state
-            const modal = document.getElementById('projectModal');
-            const modalContent = document.getElementById('modalContent');
-            modalContent.innerHTML = '<div style="padding: 40px; text-align: center; color: white;"><i class="fas fa-spinner fa-spin"></i> Loading gallery...</div>';
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-
-            // Load gallery items dynamically from Google Drive
-            const galleryItems = await loadGalleryFromGoogleDrive(project);
-
-            modalContent.innerHTML = `
-                    <div style="padding: 40px; color: white;">
-                        <!-- Project Title & Basic Info -->
-                        <div style="text-align: center; margin-bottom: 40px;">
-                            <h1 style="font-size: 2.5rem; margin-bottom: 16px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${project.title}</h1>
-                            <p style="font-size: 1.2rem; opacity: 0.8;"><i class="fas fa-map-marker-alt"></i> ${project.location}</p>
-                            <div style="font-size: 1.5rem; font-weight: 700; margin-top: 12px; color: #fbbf24;">${project.price}</div>
-                        </div>
-
-                        <!-- ✅ CONDITIONAL: Approval Icons -->
-                ${getApprovalIcons(projectId)}
-
-                        <!-- Documents Section -->
-                        <div style="margin-bottom: 40px;">
-                            <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-file-download"></i> Documents & Brochures</h3>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
-                                ${project.documents.map(doc =>
-                `<a href="${doc.url}" class="document-item" download target="_blank" onclick="trackDocumentDownload('${project.title}', '${doc.name}')">
-                                        <div class="document-icon">
-                                            <i class="${doc.icon}"></i>
-                                        </div>
-                                        <div class="document-details">
-                                            <h5>${doc.name}</h5>
-                                        </div>
-                                        <div class="download-indicator">
-                                            <i class="fas fa-download"></i>
-                                        </div>
-                                    </a>` 
-            ).join('')}
-                            </div>
-                        </div>
-                        <!-- ✅ FIX: About This Project -->
-<div style="margin-bottom: 40px;">
-                <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-info-circle"></i> About This Project</h3>
-                <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">${project.description}</p>
-</div>
-
-<!-- ✅ FIX: Key Highlights (MISSING SECTION ADDED) -->
-<div style="margin-bottom: 40px;">
-                <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-map-pin"></i> Key Highlights</h3>
-                <div style="display: grid; gap: 0.5rem;">
-                    ${project.highlights.map(highlight =>
-                `<div style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: var(--glass-dark); border-radius: 8px; backdrop-filter: blur(10px);">
-                            <i class="fas fa-check-circle" style="color: #10b981;"></i>
-                            <span>${highlight}</span>
-                        </div>`
-            ).join('')}
                 </div>
-</div>
+            </div>
+        </div>
 
-<!-- ✅ FIX: Premium Amenities (MISSING SECTION ADDED) -->
-<div style="margin-bottom: 40px;">
-                <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;"><i class="fas fa-star"></i> Premium Amenities</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                    ${project.amenities.map(amenity =>
-                `<div style="background: var(--glass-dark); padding: 24px; border-radius: var(--radius-lg); text-align: center; backdrop-filter: blur(10px);">
-                            <i class="${amenity.icon}" style="font-size: 2rem; margin-bottom: 12px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                            <div style="font-size: 0.95rem; font-weight: 600;">${amenity.name}</div>
-                        </div>`
-            ).join('')}
+        <!-- Project Overview Section -->
+        <div class="project-section-card" style="margin-bottom: 50px;  border-radius: 20px; padding: 40px; color: white; box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);">
+            <h3 style="margin-bottom: 30px; display: flex; align-items: center; gap: 15px; font-size: 2rem; font-weight: 700;">
+                <i class="fas fa-home" style="background: rgba(255,255,255,0.2); padding: 12px; border-radius: 12px; font-size: 1.2rem;"></i>
+                About This Project
+            </h3>
+
+            <div class="announcement-banner" style="background: rgba(255,255,255,0.15); border-radius: 15px; padding: 25px; margin-bottom: 30px; backdrop-filter: blur(10px);">
+                <h4 style="margin: 0 0 10px 0; font-size: 1.4rem; display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.8rem;">🏡</span> APR Praveen's Eterno - Classy and Commodious Villas by APR Group
+                </h4>
+                <p style="margin: 0; font-size: 1.1rem; opacity: 0.95;">
+                    Nestled in opulent splendour, this new luxurious home unveils a tapestry of joy and fulfilment. Sunlight dances through grand windows, illuminating rooms adorned with exquisite craftsmanship. Every corner resonates with comfort, inspiring tranquillity and relaxation. Amidst elegance and refinement, your happy life blossoms, a symphony of abundance and bliss.
+                </p>
+            </div>
+
+            <div class="project-highlights-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px;">
+                <div class="highlight-card" style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 20px;">
+                    <h5 style="margin: 0 0 15px 0; font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-road" style="color: #ffeb3b;"></i> Premium Villa Community
+                    </h5>
+                    <p style="margin: 0; line-height: 1.6; font-size: 1rem;">10 Acres | 112 Triplex Villas | 4 BHK | G+2 Floors with Lift in Each Villa</p>
                 </div>
-</div>
 
-                        <!-- DYNAMIC: Project Gallery from Google Drive -->
-                        <div style="margin-bottom: 40px;">
-                            <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                                <i class="fas fa-images"></i> Project Gallery (${galleryItems.length} items loaded)
-                            </h3>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-                                ${galleryItems.length > 0 ? galleryItems.map((item, index) => {
-                if (item.type === 'video') {
-                    return `<div style="background: var(--glass-dark); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(10px); position: relative;" onclick="openLightbox(${JSON.stringify(galleryItems).replace(/"/g, '&quot;')}, ${index})">
-                                            <iframe src="${item.src}" style="width: 100%; height: 150px; pointer-events: none;" frameborder="0"></iframe>
-                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
-                                                <i class="fas fa-play" style="color: white; font-size: 1.2rem; margin-left: 3px;"></i>
-                                            </div>
+                <div class="highlight-card" style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 20px;">
+                    <h5 style="margin: 0 0 15px 0; font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-building" style="color: #4caf50;"></i> Luxury Philosophy
+                    </h5>
+                    <p style="margin: 0; line-height: 1.6; font-size: 1rem;">Opulence Has Only One Address - A Home That Makes You Happy</p>
+                </div>
+            </div>
+        </div>
 
-                                        </div>`; 
-                } else {
-                    return `<div style="background: var(--glass-dark); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(10px);" onclick="openLightbox(${JSON.stringify(galleryItems).replace(/"/g, '&quot;')}, ${index})">
-                                            <img src="${item.src}" alt="${item.alt}" style="width: 100%; height: 150px; object-fit: cover;" onerror="this.parentElement.innerHTML='<div style=&quot;padding: 20px; text-align: center; color: rgba(255,255,255,0.5);&quot;>Image not available</div>';"> 
+        <!-- Key Features Section -->
+        <div class="project-section-card" style="margin-bottom: 50px; background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #f0f0f0;">
+            <h3 style="margin-bottom: 30px; display: flex; align-items: center; gap: 15px; color: #2c3e50; font-size: 2rem; font-weight: 700;">
+                <i class="fas fa-star" style="background: linear-gradient(45deg, #FF6B6B, #4ECDC4); color: white; padding: 12px; border-radius: 12px;"></i>
+                Villa Features & Specifications
+            </h3>
 
-                                        </div>`;
-                }
-            }).join('') : '<p style="text-align: center; opacity: 0.7;">No media files found in the folder</p>'}
-                            </div>
-                        </div>
-
-
-
-                        <!-- Action Buttons -->
-                        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                            <a href="tel:+919885588874" class="btn btn-primary">
-                                <i class="fas fa-phone"></i>
-                                <span>Call Now</span>
-                            </a>
-                            <a href="https://wa.me/919885588874?text=Hi, I'm interested in ${project.title}" class="btn btn-whatsapp">
-                                <i class="fab fa-whatsapp"></i>
-                                <span>WhatsApp</span>
-                            </a>
-                            <a href="#contact" class="btn btn-outline" onclick="closeModal()">
-                                <i class="fas fa-envelope"></i>
-                                <span>Send Inquiry</span>
-                            </a>
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+                <div class="feature-column">
+                    <div class="feature-item" style="display: flex; align-items: flex-start; gap: 15px; padding: 20px; background: #f8f9ff; border-radius: 12px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                        <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 1.2rem; margin-top: 2px;"></i>
+                        <div>
+                            <h6 style="margin: 0 0 5px 0; color: #2c3e50; font-weight: 600;">4 BHK Triplex Villas with Lift</h6>
+                            <p style="margin: 0; color: #666; font-size: 0.95rem;">G+2 floors with individual lift in each villa for convenience</p>
                         </div>
                     </div>
-                `;
-        }
+
+                    <div class="feature-item" style="display: flex; align-items: flex-start; gap: 15px; padding: 20px; background: #f8f9ff; border-radius: 12px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                        <i class="fas fa-certificate" style="color: #FF9800; font-size: 1.2rem; margin-top: 2px;"></i>
+                        <div>
+                            <h6 style="margin: 0 0 5px 0; color: #2c3e50; font-weight: 600;">3,420 - 3,860 Sq.ft Built-up Area</h6>
+                            <p style="margin: 0; color: #666; font-size: 0.95rem;">Spacious villas with 6 different villa types to choose from</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item" style="display: flex; align-items: flex-start; gap: 15px; padding: 20px; background: #f8f9ff; border-radius: 12px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                        <i class="fas fa-map-marked-alt" style="color: #9C27B0; font-size: 1.2rem; margin-top: 2px;"></i>
+                        <div>
+                            <h6 style="margin: 0 0 5px 0; color: #2c3e50; font-weight: 600;">East & West Facing Villas</h6>
+                            <p style="margin: 0; color: #666; font-size: 0.95rem;">Choice of orientation with plot areas from 222 to 266 Sq.yds</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item" style="display: flex; align-items: flex-start; gap: 15px; padding: 20px; background: #f8f9ff; border-radius: 12px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                        <i class="fas fa-route" style="color: #E91E63; font-size: 1.2rem; margin-top: 2px;"></i>
+                        <div>
+                            <h6 style="margin: 0 0 5px 0; color: #2c3e50; font-weight: 600;">Home Theatre & Bar Lounge</h6>
+                            <p style="margin: 0; color: #666; font-size: 0.95rem;">Entertainment spaces in each villa for luxury living</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-column">
+                    <div class="feature-item" style="display: flex; align-items: flex-start; gap: 15px; padding: 20px; background: #f8f9ff; border-radius: 12px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                        <i class="fas fa-rupee-sign" style="color: #4CAF50; font-size: 1.2rem; margin-top: 2px;"></i>
+                        <div>
+                            <h6 style="margin: 0 0 5px 0; color: #2c3e50; font-weight: 600;">Premium Finishes & Fittings</h6>
+                            <p style="margin: 0; color: #666; font-size: 0.95rem;">Vitrified tiles, teak wood, UPVC windows with modern fixtures</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item" style="display: flex; align-items: flex-start; gap: 15px; padding: 20px; background: #f8f9ff; border-radius: 12px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                        <i class="fas fa-road" style="color: #FF5722; font-size: 1.2rem; margin-top: 2px;"></i>
+                        <div>
+                            <h6 style="margin: 0 0 5px 0; color: #2c3e50; font-weight: 600;">Clubhouse with Swimming Pool & Gym</h6>
+                            <p style="margin: 0; color: #666; font-size: 0.95rem;">Community amenities for recreation and fitness</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item" style="display: flex; align-items: flex-start; gap: 15px; padding: 20px; background: #f8f9ff; border-radius: 12px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                        <i class="fas fa-industry" style="color: #607D8B; font-size: 1.2rem; margin-top: 2px;"></i>
+                        <div>
+                            <h6 style="margin: 0 0 5px 0; color: #2c3e50; font-weight: 600;">24/7 Security with Solar Fencing</h6>
+                            <p style="margin: 0; color: #666; font-size: 0.95rem;">Complete security with modern safety measures</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item" style="display: flex; align-items: flex-start; gap: 15px; padding: 20px; background: #f8f9ff; border-radius: 12px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                        <i class="fas fa-university" style="color: #3F51B5; font-size: 1.2rem; margin-top: 2px;"></i>
+                        <div>
+                            <h6 style="margin: 0 0 5px 0; color: #2c3e50; font-weight: 600;">100% Power Backup & Water Supply</h6>
+                            <p style="margin: 0; color: #666; font-size: 0.95rem;">Generators and hydropneumatic pumps for uninterrupted utilities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Specifications Section -->
+        <div class="project-section-card" style="margin-bottom: 50px; border-radius: 20px; padding: 40px; color: white; box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);">
+            <h3 style="margin-bottom: 30px; display: flex; align-items: center; gap: 15px; font-size: 2rem; font-weight: 700;">
+                <i class="fas fa-map-pin" style="background: rgba(255,255,255,0.2); padding: 12px; border-radius: 12px;"></i>
+                Prime Connectivity
+            </h3>
+
+            <div class="specs-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                <div class="spec-card" style="background: rgba(255,255,255,0.15); border-radius: 15px; padding: 25px; backdrop-filter: blur(10px);">
+                    <h4 style="margin: 0 0 15px 0; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-tree" style="color: #4CAF50;"></i> Transportation & Business
+                    </h4>
+                    <p style="margin: 0; line-height: 1.7; font-size: 1.05rem;">
+                        <strong>5 mins to RR7</strong> • <strong>10 mins to ORR Exit 2 & 3</strong> • <strong>15 mins to Financial District</strong> • <strong>25 mins to Airport</strong>
+                    </p>
+                </div>
+
+                <div class="spec-card" style="background: rgba(255,255,255,0.15); border-radius: 15px; padding: 25px; backdrop-filter: blur(10px);">
+                    <h4 style="margin: 0 0 15px 0; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-road" style="color: #FF9800;"></i> Educational Institutions
+                    </h4>
+                    <p style="margin: 0 0 15px 0; line-height: 1.7; font-size: 1.05rem;">
+                        <strong>10 mins to Gaudium School</strong> • <strong>15 mins to Delhi Public School</strong>
+                    </p>
+                    <p style="margin: 0; line-height: 1.7; font-size: 1.05rem;">
+                        Perfect location for families seeking quality education options with easy access to premium schools in the vicinity.
+                    </p>
+                </div>
+            </div>
+
+            <div class="cta-section" style="margin-top: 30px; text-align: center; background: rgba(255,255,255,0.1); border-radius: 15px; padding: 25px;">
+                <h4 style="margin: 0 0 10px 0; font-size: 1.4rem;">A Home That Makes You Happy</h4>
+                <p style="margin: 0; font-size: 1.1rem; opacity: 0.9;">Opulence Has Only One Address - Creating Perfection with APR Group</p>
+            </div>
+        </div>
+
+        <div class="project-section-card">
+            <h3>Premium Amenities</h3>
+            <div class="card-row">
+                <div class="card-col">
+                    <div class="grid-amenities" id="amenitiesGrid"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-section-card">
+            <h3>Gallery</h3>
+            <div class="card-row">
+                <div class="card-col">
+                    <div class="gallery-grid" id="galleryGrid"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a class="btn btn-primary" href="tel:+919885588874"><i class="fas fa-phone"></i> Call</a>
+            <a href="index.html" class="btn">Back</a>
+        </div>
+    </main>
 
 
-
-
-        function closeModal() {
-            const modal = document.getElementById('projectModal');
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        document.querySelector('.modal-close').addEventListener('click', closeModal);
-
-        window.addEventListener('click', (e) => {
-            const modal = document.getElementById('projectModal');
-            if (e.target === modal) {
-                closeModal();
-            }
+    <script>
+        // Drive config for RajaBhoomi Aananda (project6)
+        window.PROJECT_GALLERY = { folderId: '1vb3vPYOgnyZAOmsUHGpoUJI9NkUxz6Yk', apiKey: 'AIzaSyARUH55Lop807VjEaumn5xKEk3sAZs7-zU' };
+        const amenities = [
+            { icon: 'fas fa-file-contract', name: '100% Clear Title' },
+            { icon: 'fas fa-road', name: 'CC Roads' },
+            { icon: 'fas fa-shield-alt', name: '24x7 Security' },
+            { icon: 'fas fa-tint', name: 'Underground Water Supply' },
+            { icon: 'fas fa-water', name: 'Underground Drainage System' },
+            { icon: 'fas fa-compass', name: 'Vastu Plotting' },
+            { icon: 'fas fa-child', name: 'Children Play Area' },
+            { icon: 'fas fa-bolt', name: 'Electricity' },
+            { icon: 'fas fa-lightbulb', name: 'Street Lights' },
+            { icon: 'fas fa-tree', name: 'Avenue Plantation' }
+        ];
+        const grid = document.getElementById('amenitiesGrid');
+        grid.innerHTML = '';
+        amenities.forEach(a => {
+            const d = document.createElement('div');
+            d.className = 'amenity';
+            d.innerHTML = `<i class="${a.icon}"></i><div style="margin-top:8px">${a.name}</div>`;
+            grid.appendChild(d);
         });
 
-        // Google Sheets Form Handling
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const submitBtn = document.getElementById('submitBtn');
-            const btnText = document.getElementById('btnText');
-            const btnIcon = document.getElementById('btnIcon');
-            const formMessage = document.getElementById('formMessage');
-
-            // Show loading state
-            const originalText = btnText.textContent;
-            const originalIcon = btnIcon.className;
-
-            btnText.textContent = 'Sending...';
-            btnIcon.className = 'fas fa-spinner fa-spin';
-            submitBtn.disabled = true;
-
-            // Hide previous messages
-            formMessage.style.display = 'none';
-            formMessage.classList.remove('success', 'error');
-
-            // Create FormData from the form
-            const formData = new FormData(this);
-
-            // Submit to Google Apps Script
-            fetch(this.action, {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.status === 'success') {
-                        // Success state
-                        formMessage.innerHTML = `
-                                                        <i class="fas fa-check-circle"></i>
-                                                        Thank you! Your message has been sent successfully. We'll get back to you soon!
-                                                    `;
-                        formMessage.classList.add('success');
-                        formMessage.style.display = 'block';
-
-                        // Reset form
-                        this.reset();
-
-                        // Success feedback on button
-                        btnText.textContent = 'Message Sent!';
-                        btnIcon.className = 'fas fa-check';
-
-                        // Reset button after 3 seconds
-                        setTimeout(() => {
-                            btnText.textContent = originalText;
-                            btnIcon.className = originalIcon;
-                            submitBtn.disabled = false;
-                        }, 3000);
-
-                    } else {
-                        throw new Error(data.message || 'Submission failed');
-                    }
-                })
-                .catch(error => {
-                    // Error state
-                    formMessage.innerHTML = `
-                                                    <i class="fas fa-exclamation-circle"></i>
-                                                    Error: ${error.message}. Please try again or contact us directly.
-                                                `;
-                    formMessage.classList.add('error');
-                    formMessage.style.display = 'block';
-
-                    // Reset button immediately on error
-                    btnText.textContent = originalText;
-                    btnIcon.className = originalIcon;
-                    submitBtn.disabled = false;
+        async function loadGallery() {
+            const cfg = window.PROJECT_GALLERY || {};
+            const grid = document.getElementById('galleryGrid');
+            if (!cfg.folderId || !cfg.apiKey) {
+                const local = ['../assets/images/project6/0.jpg'];
+                grid.innerHTML = '';
+                local.forEach(src => {
+                    const g = document.createElement('div');
+                    g.className = 'gallery-item';
+                    g.innerHTML = `<img src="${src}" alt="">`;
+                    grid.appendChild(g);
                 });
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(15, 15, 35, 0.4)';
-                navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.1)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.08)';
-                navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.05)';
+                return;
             }
-        });
-
-        // Initialize
-        updateActiveNav();
-
-        // Load gallery items dynamically from Google Drive
-        async function loadGalleryFromGoogleDrive(project) {
-            const { folderId, apiKey } = project.driveFolder;
-            const galleryItems = [];
-
+            grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.8">Loading gallery...</div>';
             try {
-                const response = await fetch(
-                    `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}&fields=files(id,name,mimeType)`
-                );
-
-                const data = await response.json();
-
-                if (data.files) {
+                const res = await fetch(`https://www.googleapis.com/drive/v3/files?q='${cfg.folderId}'+in+parents&key=${cfg.apiKey}&fields=files(id,name,mimeType)`);
+                const data = await res.json();
+                grid.innerHTML = '';
+                if (data.files && data.files.length) {
+                    const items = [];
                     data.files.forEach(file => {
-                        if (file.mimeType.startsWith('image/')) {
-                            galleryItems.push({
-                                type: 'image',
-                                // ✅ FIX: Use thumbnail URL for display and full size for lightbox
-                                src: `https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`,
-                                alt: file.name,
-                                title: file.name.replace(/\.[^/.]+$/, "")
-                            });
-                        } else if (file.mimeType.startsWith('video/')) {
-                            galleryItems.push({
-                                type: 'video',
-                                src: `https://drive.google.com/file/d/${file.id}/preview`,
-                                title: file.name.replace(/\.[^/.]+$/, ""),
-                                alt: file.name
-                            });
-                        }
+                        if (file.mimeType.startsWith('image/')) items.push({ type: 'image', src: `https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`, alt: file.name });
+                        else if (file.mimeType.startsWith('video/')) items.push({ type: 'video', src: `https://drive.google.com/file/d/${file.id}/preview`, alt: file.name });
                     });
+                    if (items.length === 0) grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.7">No media files found</div>';
+                    items.forEach(it => {
+                        const g = document.createElement('div');
+                        g.className = 'gallery-item';
+                        if (it.type === 'image') {
+                            g.innerHTML = `<img src="${it.src}" alt="${it.alt}">`;
+                        } else {
+                            g.innerHTML = `<div style="height:110px;display:flex;align-items:center;justify-content:center;background:#000;color:#fff">Video</div>`;
+                        }
+                        grid.appendChild(g);
+                    });
+                } else {
+                    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.7">No media files found</div>';
                 }
-
-                return galleryItems;
-            } catch (error) {
-                console.error('Error loading from Google Drive:', error);
-                return [];
+            } catch (e) {
+                grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.7">Error loading gallery</div>';
+                console.error(e);
             }
         }
 
+        loadGallery();
+
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger?.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-menu a, .nav-cta a').forEach(a => a.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            hamburger?.classList.remove('active');
+        }));
     </script>
 </body>
 </html>

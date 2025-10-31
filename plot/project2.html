@@ -2615,6 +2615,20 @@
                 <div class="modal-approval-label">HMDA Approved</div>
             </div>
         </div>
+
+        <!-- ✅ FIX: About This Project -->
+        <div class="project-section-card" style="margin-bottom: 40px;">
+            <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap:10px;"><i class="fas fa-info-circle"></i> About This Project</h3>
+            <p style="font-size:1.1rem; line-height:1.8; opacity:0.9;">We have18 acres villa plots gated community layout on Thummaluru, Srisailam Highway, Hyderabad. It is a DTCP approved & RERA certified project.</p>
+        </div>
+        <div class="project-section-card">
+            <h3>Gallery</h3>
+            <div class="card-row">
+                <div class="card-col">
+                    <div class="gallery-grid" id="galleryGrid"></div>
+                </div>
+            </div>
+        </div>
         <div class="project-section-card">
             <h3>Documents</h3>
             <div class="card-row">
@@ -2651,11 +2665,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- ✅ FIX: About This Project -->
-        <div class="project-section-card" style="margin-bottom: 40px;">
-            <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap:10px;"><i class="fas fa-info-circle"></i> About This Project</h3>
-            <p style="font-size:1.1rem; line-height:1.8; opacity:0.9;">We have18 acres villa plots gated community layout on Thummaluru, Srisailam Highway, Hyderabad. It is a DTCP approved & RERA certified project.</p>
         </div>
         <!-- ✅ FIX: Key Highlights (MISSING SECTION ADDED) -->
         <div class="project-section-card" style="margin-bottom: 40px;">
@@ -2705,14 +2714,7 @@
             </div>
         </div>
 
-        <div class="project-section-card">
-            <h3>Gallery</h3>
-            <div class="card-row">
-                <div class="card-col">
-                    <div class="gallery-grid" id="galleryGrid"></div>
-                </div>
-            </div>
-        </div>
+
 
         <div class="actions">
             <a class="btn btn-primary" href="tel:+919885588874"><i class="fas fa-phone"></i> Call</a>
@@ -2749,45 +2751,211 @@
             grid.appendChild(d);
         });
 
+        // Enhanced Gallery with Google Drive and Lightbox
+        let currentImageIndex = 0;
+        let galleryImages = [];
+
         async function loadGallery() {
-            const cfg = window.PROJECT_GALLERY || {};
+            const cfg = window.PROJECT_GALLERY;
             const grid = document.getElementById('galleryGrid');
+
             if (!cfg.folderId || !cfg.apiKey) {
-                const local = ['assets/images/project2/0.jpg'];
-                grid.innerHTML = '';
-                local.forEach(src => {
-                    const g = document.createElement('div');
-                    g.className = 'gallery-item';
-                    g.innerHTML = `<img src="${src}" alt="">`;
-                    grid.appendChild(g);
-                });
+                // Fallback to local images if Google Drive is not configured
+                const local = [
+                    '../assets/images/project8/0.jpg',
+                    '../assets/images/project8/1.jpg',
+                    '../assets/images/project8/2.jpg',
+                    '../assets/images/project8/3.jpg',
+                    '../assets/images/project8/4.jpg',
+                    '../assets/images/project8/5.jpg'
+                ];
+
+                galleryImages = local.map((src, index) => ({
+                    src: src,
+                    alt: `Image ${index + 1}`,
+                    title: `Villa Image ${index + 1}`,
+                    type: 'image'
+                }));
+
+                renderGallery();
                 return;
             }
-            // original gallery loader continues unchanged (fetch from Drive)
-            const res = await fetch(`https://www.googleapis.com/drive/v3/files?q='${cfg.folderId}'+in+parents&key=${cfg.apiKey}&fields=files(id,name,mimeType)`);
-            const data = await res.json();
-            grid.innerHTML = '';
-            if (data.files && data.files.length) {
-                const items = [];
-                data.files.forEach(file => {
-                    if (file.mimeType.startsWith('image/')) items.push({ type: 'image', src: `https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`, alt: file.name });
-                    else if (file.mimeType.startsWith('video/')) items.push({ type: 'video', src: `https://drive.google.com/file/d/${file.id}/preview`, alt: file.name });
-                });
-                if (items.length ===0) grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.7">No media files found</div>';
-                items.forEach(it => {
-                    const g = document.createElement('div');
-                    g.className = 'gallery-item';
-                    if (it.type === 'image') {
-                        g.innerHTML = `<img src="${it.src}" alt="${it.alt}">`;
-                    } else {
-                        g.innerHTML = `<div style="height:110px;display:flex;align-items:center;justify-content:center;background:#000;color:#fff">Video</div>`;
-                    }
-                    grid.appendChild(g);
-                });
-            } else {
-                grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;opacity:0.7">No media files found</div>';
+
+            grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;opacity:0.8;">Loading gallery...</div>`;
+
+            try {
+                const res = await fetch(`https://www.googleapis.com/drive/v3/files?q='${cfg.folderId}'+in+parents&key=${cfg.apiKey}&fields=files(id,name,mimeType)`);
+                const data = await res.json();
+
+                galleryImages = [];
+
+                if (data.files && data.files.length) {
+                    data.files.forEach((file, index) => {
+                        if (file.mimeType.startsWith('image/')) {
+                            galleryImages.push({
+                                type: 'image',
+                                src: `https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`,
+                                fullSrc: `https://drive.google.com/thumbnail?id=${file.id}&sz=w2000`, // Higher res for lightbox
+                                alt: file.name,
+                                title: `${file.name.replace(/\.[^/.]+$/, "")}`
+                            });
+                        } else if (file.mimeType.startsWith('video/')) {
+                            galleryImages.push({
+                                type: 'video',
+                                src: `https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`, // Thumbnail for grid
+                                fullSrc: `https://drive.google.com/file/d/${file.id}/preview`, // Full video for lightbox
+                                alt: file.name,
+                                title: `${file.name.replace(/\.[^/.]+$/, "")}`
+                            });
+                        }
+                    });
+
+                    renderGallery();
+                } else {
+                    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;opacity:0.7;">No media files found</div>`;
+                }
+            } catch (e) {
+                grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;opacity:0.7;">Error loading gallery</div>`;
+                console.error(e);
             }
         }
+
+        function renderGallery() {
+            const grid = document.getElementById('galleryGrid');
+            grid.innerHTML = '';
+
+            if (galleryImages.length === 0) {
+                grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;opacity:0.7;">No images found</div>`;
+                return;
+            }
+
+            galleryImages.forEach((item, index) => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.style.cursor = 'pointer';
+                galleryItem.onclick = () => openLightbox(index);
+
+                if (item.type === 'image') {
+                    galleryItem.innerHTML = `
+                <img src="${item.src}" alt="${item.alt}" loading="lazy" style="width: 100%; height: 140px; object-fit: cover;">
+            `;
+                } else {
+                    galleryItem.innerHTML = `
+                <div style="height:140px;display:flex;align-items:center;justify-content:center;background:#000;color:#fff;border-radius:8px;position:relative;">
+                    <img src="${item.src}" alt="${item.alt}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem;">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+            `;
+                }
+
+                grid.appendChild(galleryItem);
+            });
+        }
+
+        // Lightbox Functions
+        function openLightbox(index) {
+            if (galleryImages.length === 0) return;
+
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxVideo = document.getElementById('lightboxVideo');
+            const lightboxCounter = document.getElementById('lightboxCounter');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+
+            const currentItem = galleryImages[currentImageIndex];
+
+            if (currentItem.type === 'image') {
+                lightboxImage.src = currentItem.fullSrc || currentItem.src;
+                lightboxImage.alt = currentItem.alt;
+                lightboxImage.style.display = 'block';
+                lightboxVideo.style.display = 'none';
+                lightboxVideo.src = ''; // Stop any playing video
+            } else {
+                lightboxVideo.src = currentItem.fullSrc;
+                lightboxVideo.style.display = 'block';
+                lightboxImage.style.display = 'none';
+            }
+
+            lightboxCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+            lightboxTitle.textContent = currentItem.title;
+
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxVideo = document.getElementById('lightboxVideo');
+
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restore background scrolling
+
+            // Stop video if playing
+            lightboxVideo.src = '';
+        }
+
+        function nextImage() {
+            if (galleryImages.length === 0) return;
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            updateLightboxContent();
+        }
+
+        function prevImage() {
+            if (galleryImages.length === 0) return;
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateLightboxContent();
+        }
+
+        function updateLightboxContent() {
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxVideo = document.getElementById('lightboxVideo');
+            const lightboxCounter = document.getElementById('lightboxCounter');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+
+            const currentItem = galleryImages[currentImageIndex];
+
+            if (currentItem.type === 'image') {
+                lightboxImage.src = currentItem.fullSrc || currentItem.src;
+                lightboxImage.alt = currentItem.alt;
+                lightboxImage.style.display = 'block';
+                lightboxVideo.style.display = 'none';
+                lightboxVideo.src = ''; // Stop any playing video
+            } else {
+                lightboxVideo.src = currentItem.fullSrc;
+                lightboxVideo.style.display = 'block';
+                lightboxImage.style.display = 'none';
+            }
+
+            lightboxCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+            lightboxTitle.textContent = currentItem.title;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function (e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                switch (e.key) {
+                    case 'Escape':
+                        closeLightbox();
+                        break;
+                    case 'ArrowLeft':
+                        prevImage();
+                        break;
+                    case 'ArrowRight':
+                        nextImage();
+                        break;
+                }
+            }
+        });
+
+        // Initialize gallery when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            loadGallery();
+        });
+
 
         // call existing init code
         loadGallery();
@@ -2803,5 +2971,37 @@
             hamburger?.classList.remove('active');
         }));
     </script>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-overlay" onclick="closeLightbox()"></div>
+        <div class="lightbox-content">
+            <!-- Close Button -->
+            <button class="lightbox-close" onclick="closeLightbox()">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Navigation Arrows -->
+            <button class="lightbox-nav lightbox-prev" onclick="prevImage()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <button class="lightbox-nav lightbox-next" onclick="nextImage()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Image Display -->
+            <div class="lightbox-media-container">
+                <img id="lightboxImage" class="lightbox-image" alt="Gallery Image">
+                <iframe id="lightboxVideo" class="lightbox-video" frameborder="0" allowfullscreen style="display:none;"></iframe>
+            </div>
+
+            <!-- Image Info -->
+            <div class="lightbox-info">
+                <div id="lightboxCounter" class="lightbox-counter">1 / 6</div>
+                <div id="lightboxTitle" class="lightbox-title">Gallery Image</div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
